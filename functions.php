@@ -208,8 +208,8 @@ add_filter('gettext_with_context', 'rename_post_formats', 10, 4);
 update_option('home','//www.skolahradecns.cz/');           */
 
 
-update_option('siteurl','https://localhost/hradecns.cz_180505_update');
-update_option('home','https://localhost/hradecns.cz_180505_update');
+update_option('siteurl','https://localhost/hradecns.cz_git');
+update_option('home','https://localhost/hradecns.cz_git');
 
 
 /*zjištění IP adresy pro odlišení */
