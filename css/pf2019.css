@@ -1,0 +1,101 @@
+#ny-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../img/pf2019/pattern_night.png);
+    color: #de9200;
+    vertical-align: middle;
+  }
+
+  #ny-close {
+    margin: 30px;
+    border: 5px solid #de9200;
+    width: 40px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    border-radius: 10px 10px;
+    background-color: #de9200;
+    color: #354050;
+    vertical-align: middle;
+    z-index: 1500;
+}
+
+#ny-close > a {
+    text-decoration: none;
+    color: #354050;
+}
+
+#ny-close:hover {
+    cursor: pointer;
+}
+
+#ny-pflogo{
+        background: url(../img/pf2019/pf_logo_mini.png) center no-repeat;
+        height: 305px;
+        width: 268px;
+        float: left;
+        position: relative;
+}
+
+#ny-container {
+    height: 310px;
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    width: 850px;
+    top: 50%;
+    left: 50%;
+    margin: -155px 0 0 -425px;
+}
+
+#ny-text {
+    vertical-align: middle;
+    text-align: left;
+    float: right;
+    max-width: 550px;
+    font-size: 38px;
+    font-family: Garamond, Serif;
+    padding-left: 25px;
+    padding-top: 65px;
+}
+#ny-from {
+    padding-top: 10px;
+    display: block;
+    padding: 10px 0px;
+    font-style: italic;
+    font-size: 30px;
+    text-align: right;
+}
+
+@media only screen and (max-width: 800px) {
+    #ny-container{
+        position: absolute;
+        display: block;
+        float: none;
+        margin: 0;
+        top:0;
+        left: 0;
+        padding: 30px 30px;
+        width: auto;
+        
+    }
+    #ny-pflogo{
+        float: none;
+        margin: auto;
+    }
+    #ny-text{
+        float: none;
+        margin: auto;
+        padding: 25px 0;
+        font-size: 25px;
+    }
+    #ny-from{
+        font-size: 20px;
+    }
+}
+
