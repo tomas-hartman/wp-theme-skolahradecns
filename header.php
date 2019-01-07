@@ -12,9 +12,7 @@
     <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->    
     <link href='/favicon.png' rel='shortcut icon'> 
     
-    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/pf2019.css" type="text/css">   
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" type="text/css">
-   <!--  <link rel="stylesheet" href="<?php //bloginfo('template_directory');?>/style.css" type="text/css"> -->    
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css">  
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'>    
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" />
@@ -23,7 +21,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-152x152-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-120x120-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-76x76-precomposed.png">
-    
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
     <!--[if lt IE9]>
@@ -90,9 +87,7 @@
                     y.classList.add("tap");
                 }
             }
-
-</script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/newyear.js"></script>                                                          
+</script>                                                         
     <?php wp_head(); ?>      
   </head>  
   <body>   
@@ -104,8 +99,6 @@
       <!--Mód bez banneru header-backhome klikací ploška po celém headeru-->
       <!--<a href="<?php echo home_url(); ?>"><div id="header-backhome"></div></a> -->
     </header>
-     
-      
     <nav class="main-menu">   
           <?php wp_nav_menu( array ('theme_location' => 'main-menu',
                                     'menu_class' => 'top-menu',
