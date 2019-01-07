@@ -1,12 +1,4 @@
 <?php
-
-
-//Css stylesheet (nepoužívám v tuto chvíli)
-/*function wp_css() {
-    wp_enqueue_style('style', get_stylesheet_uri());
-}
-add_action('wp_enqueue_scripts', 'wp_css');
-*/
 //Nastavení délky excerptu, pro čj asi 40 bude fajn, ale uvidíme.
 function custom_excerpt_length( $length ) {
 	return 35;
@@ -106,7 +98,6 @@ $pagination_args = array (
 $paginate_links = paginate_links($pagination_args);
    if ($paginate_links) {       
               echo "<nav class='next-previous-posts'>";
-                    //echo "<span class='page_numbers page_num'>Jste na stránce '.$paged.' z '.$num_pages.'.</span>";
                     echo $paginate_links;
               echo "</nav>";
    }
@@ -116,7 +107,6 @@ function custom_excerpt_more($more) {
 	return '…';
 	}
 add_filter('excerpt_more', 'custom_excerpt_more');
-
 
 function strip_images($content){
    return preg_replace('/<img[^>]+./','',$content);
@@ -147,7 +137,6 @@ function theme_setup() {
     //Add post format support
     add_theme_support('post-formats', array('aside', 'gallery')); 
 }
-
 add_action('after_setup_theme', 'theme_setup');
 
 //Add our widget location
@@ -167,7 +156,6 @@ function OurWidgetsInit() {
 		  'after_widget'  => '</section>',
   )); 
 }
-  
 add_action('widgets_init', 'OurWidgetsInit');
 
 function remove_gallery($content) {
@@ -176,17 +164,13 @@ function remove_gallery($content) {
 add_filter( 'the_content', 'remove_gallery', 6);
 
 
-
 /*Zrušení stylování pro galerie, abych je mohl ostylovat sám*/
 add_filter( 'use_default_gallery_style', '__return_false' );
-
 
 function remove_br_gallery($output) {
     return preg_replace('/<br style=(.*)>/mi','',$output);
 }
 add_filter( 'get_post_galleries', 'remove_br_gallery', 11, 2);
-
-
 
 /*Přejmenování post_formátů z "aside" na "upozornění"*/
 function rename_post_formats($translation, $text, $context, $domain) {
@@ -207,10 +191,8 @@ add_filter('gettext_with_context', 'rename_post_formats', 10, 4);
 /*update_option('siteurl','//www.skolahradecns.cz/');
 update_option('home','//www.skolahradecns.cz/');           */
 
-
 update_option('siteurl','https://localhost/hradecns.cz_git');
 update_option('home','https://localhost/hradecns.cz_git');
-
 
 /*zjištění IP adresy pro odlišení */
 function get_client_ip() {
@@ -232,16 +214,14 @@ function get_client_ip() {
     return $ipaddress;
 }
 
-
 //Funkce pro zobrazení počtu shlédnutí. Pokud je počet shlédnutí 5 a větší, tak se zobrazí v headeru u příspěvku
 function views_count($page_uri) {
-$count = wp_statistics_pages(total,$page_uri,wp_statistics_uri_to_id(wp_statistics_get_uri()));
+    $count = wp_statistics_pages(total,$page_uri,wp_statistics_uri_to_id(wp_statistics_get_uri()));
 
-if($count>4){
-  echo " | přečteno " . $count . " krát";
+    if($count>4){
+        echo " | přečteno " . $count . " krát";
+    }
 }
-}
-
 
 function projekty_logolink() {
     if(strpos(zjisti_kategorii_2(), 'Visegrad Fund') !== false) {
@@ -254,6 +234,4 @@ function projekty_logolink() {
         echo '<section class="logolink-big"></section>';
     }
 }
-
-
 ?>
