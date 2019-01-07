@@ -203,13 +203,13 @@ function rename_post_formats($translation, $text, $context, $domain) {
 }
 add_filter('gettext_with_context', 'rename_post_formats', 10, 4);
 
-/*Localhost*/
-/*update_option('siteurl','//www.skolahradecns.cz/');
-update_option('home','//www.skolahradecns.cz/');           */
+/* ONLINE */
+update_option('siteurl','//www.skolahradecns.cz/');
+update_option('home','//www.skolahradecns.cz/');          
 
-
-update_option('siteurl','https://localhost/hradecns.cz_git');
-update_option('home','https://localhost/hradecns.cz_git');
+// LOCALHOST
+// update_option('siteurl','https://localhost/hradecns.cz_git');
+// update_option('home','https://localhost/hradecns.cz_git');
 
 
 /*zjištění IP adresy pro odlišení */
