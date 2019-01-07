@@ -2,7 +2,7 @@
 Theme Name: Škola Hradec nad Svitavou
 Author: Tomáš Hartman
 Description: Téma, které je použito na stránce ZŠ a MŠ Hradec nad Svitavou
-Version: 1.0
+Version: 1.0.1
 Text Domain: zsmshradecns
 */
 /* CSS Document */
@@ -16,10 +16,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	padding: 0;
 	border: 0;
 }
-/** {
-  margin: 0;
-	padding: 0;
-  }*/
 
 html, body {
 	height: 100%;
@@ -32,9 +28,6 @@ body {
 	font-weight: 400;
 	font-size: small;
 	background: url(../img/background_cover.png) repeat;
-	/*off-season-pozadí*/
-	/*vánoční pozadí:*/
-	/*background: url(../img/xmas_pattern_grey.png) repeat; */
 	background-position: 0px 300px;
 }
 p {
@@ -43,8 +36,6 @@ p {
 /* nav */
 .baner {
 	background: url(../t_skola_4_small_1.jpg) center no-repeat;
-	/*background: url(../img/pf2018_banner_small.jpg) center no-repeat;*/
-	/*pf2018*/
 	background-size: 100%;
 	height: 270px;
 	background-size: cover;
@@ -232,7 +223,6 @@ nav.menu-docs a:hover, nav.menu-docs a:focus {
 }
 /*Barvy*/
 #wpba_attachment_list {
-	/*box-shadow: 0px 4px rgb(0, 107, 164) inset;*/
 	box-shadow: 0px 4px rgba(0, 0, 0, 0.3) inset;
 	background-color: rgb(52, 152, 219);
 }
@@ -660,10 +650,8 @@ article #nenalezeno {
 	animation-duration: 1s;
 }
 #nav-line h1 {
-	/* font-size: 25px; */
 	font-size: large;
 	line-height: 25px;
-	/* font-family: 'Slabo 27px', serif; */
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	-webkit-animation-name: animation;
@@ -834,7 +822,6 @@ article #nenalezeno {
 	height: 35px;
 	float: left;
 	width: 255px;
-	/*Used to be 245px*/
 	padding-left: 10px;
 	font-size: 15px;
 }
@@ -1016,7 +1003,6 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 	}
 	/* -- end -- Tři podmínky aby to fungovalo*/
 	nav.main-menu ul.top-menu li.tap {
-		/*background: #555;*/
 		background: rgb(85, 85, 85) url("../img/scroll_down_180.png") no-repeat scroll 95% 14px / 10px auto;
 		color: inherit;
 		-webkit-animation-name: menu-tap-width;
