@@ -43,7 +43,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size:  small;
-  background: url(img/background_cover.png) repeat; off-season-pozadí        
+  background: url(img/background_cover.png) repeat; /* off-season-pozadí */        
  /*vánoční pozadí:*/
  /*background: url(img/xmas_pattern_grey.png) repeat;            
  background-position: 0px 300px; */
@@ -113,7 +113,7 @@ nav.main-menu ul.top-menu > li {
 	-ms-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
-	float: left;
+	/* float: left; */
 }
 nav.main-menu ul.top-menu a {
 	display: inline-block;
@@ -131,7 +131,7 @@ nav.main-menu ul.top-menu ul {
 	-moz-transition: opacity 0.2s;
 	-ms-transition: opacity 0.2s;
 	-o-transition: opacity 0.2s;
-	-transition: opacity 0.2s;
+	transition: opacity 0.2s;
 }
 @media only screen and (min-width: 960px) {
 nav.main-menu ul.top-menu li:hover ul {
@@ -205,7 +205,7 @@ nav.menu-docs li {
 	height: 35px;
 	min-width: 12%;
 	text-align: center;
-	float: left;
+	/* float: left; */
 	font-size: medium;
 }
 nav.menu-docs a {
@@ -557,7 +557,7 @@ main article.full-gallery .content-gallery .gallery img {
 main section.logolink-big {
   min-width: 650px;
   height: 120px;
-  background: white url(img/logolink.jpg) center center no-repeat;
+  background: white url(img/logolink.png) center center no-repeat;
   background-size: auto 120px;
 }
 main section.logolink-Visegrad {
@@ -577,8 +577,7 @@ main article.full-clanek {
 	height: auto;
 	max-height: 100%;
 }
-main article.full-clanek .text-clanek {
-}
+
 main article .galerie-clanek {
 	float: left;
 	width: 170px;
@@ -675,10 +674,10 @@ article #nenalezeno {
 	        animation-duration: 1s;
 }
 #nav-line h1 {
-	//font-size: 25px;
+	/* //font-size: 25px; */
   font-size: large;
 	line-height: 25px;
-	//font-family: 'Slabo 27px', serif;
+	/* //font-family: 'Slabo 27px', serif; */
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 	-webkit-animation-name: animation;
@@ -1093,8 +1092,7 @@ footer .levy, footer .pravy {
 .sidebar .searching {
 	margin-bottom: 10px;
 }
-.sidebar .searching span {
-}
+
 .sidebar .searching label {
 	overflow: hidden;
 	width: 100%;

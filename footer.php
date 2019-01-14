@@ -40,7 +40,9 @@
       </div>
       <div class="pravy">
           <a href="http://www.hradecnadsvitavou.cz/" title="Hradec nad Svitavou"><img src="<?php bloginfo('template_directory'); ?>/img/head_hns.png" alt="head_hns.png, 13kB" title="Hradec nad Svitavou" border="0" height="87" width="425"></a>
-          <iframe src="https://api.mapy.cz/frame?params=%7B%22x%22%3A16.48346124161884%2C%22y%22%3A49.71051054710277%2C%22base%22%3A%221%22%2C%22layers%22%3A%5B%5D%2C%22zoom%22%3A14%2C%22url%22%3A%22https%3A%2F%2Fmapy.cz%2Fs%2Fk92g%22%2C%22mark%22%3A%7B%22x%22%3A%2216.481733899013243%22%2C%22y%22%3A%2249.71105099848858%22%2C%22title%22%3A%22Z%C5%A0%20a%20M%C5%A0%20Hradec%20nad%20Svitavou%22%7D%2C%22overview%22%3Afalse%7D&amp;width=200&amp;height=200" width="200" height="200" style="border:none" frameBorder="0"></iframe>
+          <div id = "maps-iframe"></div>
+          
+          <!-- <iframe src="https://api.mapy.cz/frame?params=%7B%22x%22%3A16.48346124161884%2C%22y%22%3A49.71051054710277%2C%22base%22%3A%221%22%2C%22layers%22%3A%5B%5D%2C%22zoom%22%3A14%2C%22url%22%3A%22https%3A%2F%2Fmapy.cz%2Fs%2Fk92g%22%2C%22mark%22%3A%7B%22x%22%3A%2216.481733899013243%22%2C%22y%22%3A%2249.71105099848858%22%2C%22title%22%3A%22Z%C5%A0%20a%20M%C5%A0%20Hradec%20nad%20Svitavou%22%7D%2C%22overview%22%3Afalse%7D&amp;width=200&amp;height=200" width="200" height="200" style="border:none" frameBorder="0"></iframe> -->
       </div>
       
 <div id="footer-spodni">

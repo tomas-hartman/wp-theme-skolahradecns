@@ -21,7 +21,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-120x120-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-76x76-precomposed.png">
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>     -->
+    <script src="<?php bloginfo('template_directory');?>/js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--[if lt IE9]>
         <script>
           document.createElement("article");
@@ -33,38 +34,6 @@
           document.createElement("section");
         </script>
     <![endif]-->
-    <script>
-        /* WordPress neumožňuje vložit do svýho menu javascript, tak ho tam injectuju do prvního "a" v daným listu až následně javascriptem, class jsem musel definovat ručně.*/
-
-        document.addEventListener("DOMContentLoaded", function () {
-            var a, i, mainClass;
-
-            a = document.getElementsByClassName("main-mainmenu");
-            mainClass = ['main-zs', 'main-ms', 'main-sd', 'main-skola'];
-
-            for (i = 0; i < a.length; i++) {
-                a[i].getElementsByTagName("a")[0].href = "javascript:openMenu('" + mainClass[i] + "')";
-            }
-        });
-
-        /*Funkce, která se stará o to, abych po kliknutí otevřel, nebo zavřel otevřený menu.*/
-        function openMenu(x) {
-            var x, y, z, i;
-
-            z = document.getElementsByClassName("main-mainmenu");
-            y = document.getElementsByClassName(x)[0];
-
-            if (y.classList.contains("tap")) {
-                y.classList.remove("tap");
-            }
-            else {
-                for (i = 0; i < z.length; i++) {
-                    z[i].classList.remove("tap");
-                }
-                y.classList.add("tap");
-            }
-        }
-    </script>
     <?php wp_head(); ?>
 </head>
 
