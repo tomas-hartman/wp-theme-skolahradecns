@@ -58,7 +58,6 @@ p {
 .telo {
 	width: 100%;
 	max-width: 960px;
-	min-width: 320px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #ecf0f1;
@@ -1100,7 +1099,7 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 		vertical-align: middle;
 	}
 	.baner {
-		height: 178px;
+		height: auto;
 	}
 }
 /*Při 720px zmizí malá fotogalerie dole a nadbytečné obrázky*/
@@ -1169,7 +1168,6 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 	nav.main-menu ul.top-menu>li {
 		float: none;
 		width: 100%;
-		min-width: 320px;
 	}
 	nav.main-menu {
 		background-color: #2c3e50;
@@ -1184,9 +1182,10 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 	}
 	/*Logo školy*/
 	.logo-skola {
-		width: 95%;
-		min-width: 320px;
+		width: 93%;
 		height: auto;
+		display: block;
+		margin: auto;
 	}
 }
 blockquote {
