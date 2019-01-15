@@ -27,11 +27,11 @@
           <li class="second-child"><a href="https://skolahradecns.bakalari.cz/bakaweb/next/login.aspx ">Bakaláři</a></li>
         </ul>
       </section>
-      <section class="logolink"><img src="<?php bloginfo('template_directory'); ?>/img/logolink.png"></section>
-      <section class="logolink etwinning"><a href="http://www.etwinning.cz/"><img src="<?php bloginfo('template_directory'); ?>/img/etwinning.svg"></a></section>
-      <section class="logolink visegrad"><a href="http://visegradfund.org/"><img src="<?php bloginfo('template_directory'); ?>/img/visegrad_fund_logo_blue_290px.png"></a></section>
-      <section class="logolink visegrad"><a href="http://www.skutecnezdravaskola.cz/"><img src="<?php bloginfo('template_directory'); ?>/img/skutecnezdravaskola.jpg"></a></section>
-      <section class="logolink msmt"><a href="http://www.msmt.cz/"><img src="<?php bloginfo('template_directory'); ?>/img/msmtlogo.png"></a><p class="popisek_sidebar">Škola je příjemcem neinvestičních dotací "Podpora výuky plavání v základních školách v roce 2017 a Podpora zabezpečení mateřských škol a základních škol tvořených třídami 1. stupně s počtem tříd do pěti.</p></section>     
+      <section class="logolink"><img src="" data-src="<?php bloginfo('template_directory'); ?>/img/logolink.png"></section>
+      <section class="logolink etwinning"><a href="http://www.etwinning.cz/"><img src="" data-src="<?php bloginfo('template_directory'); ?>/img/etwinning.svg"></a></section>
+      <section class="logolink visegrad"><a href="http://visegradfund.org/"><img src="" data-src="<?php bloginfo('template_directory'); ?>/img/visegrad_fund_logo_blue_290px.png"></a></section>
+      <section class="logolink visegrad"><a href="http://www.skutecnezdravaskola.cz/"><img src="" data-src="<?php bloginfo('template_directory'); ?>/img/skutecnezdravaskola.jpg"></a></section>
+      <section class="logolink msmt"><a href="http://www.msmt.cz/"><img src="" data-src="<?php bloginfo('template_directory'); ?>/img/msmtlogo.png"></a><p class="popisek_sidebar">Škola je příjemcem neinvestičních dotací "Podpora výuky plavání v základních školách v roce 2017 a Podpora zabezpečení mateřských škol a základních škol tvořených třídami 1. stupně s počtem tříd do pěti.</p></section>     
 </div>
 
 

@@ -4,7 +4,9 @@
     listu až následně javascriptem, class jsem musel definovat ručně. */
 
 var addClassToMenu = function addClassToMenu() {
-    var a, i, mainClass;
+    var a = void 0,
+        i = void 0,
+        mainClass = void 0;
 
     a = document.getElementsByClassName("main-mainmenu");
     mainClass = ['main-zs', 'main-ms', 'main-sd', 'main-skola'];
@@ -15,8 +17,10 @@ var addClassToMenu = function addClassToMenu() {
 };
 
 /*Funkce, která se stará o to, abych po kliknutí otevřel, nebo zavřel otevřený menu.*/
-function openMenu(x) {
-    var x, y, z, i;
+var openMenu = function openMenu(x) {
+    var y = void 0,
+        z = void 0,
+        i = void 0;
 
     z = document.getElementsByClassName("main-mainmenu");
     y = document.getElementsByClassName(x)[0];
@@ -29,10 +33,10 @@ function openMenu(x) {
         }
         y.classList.add("tap");
     }
-}
+};
 
 /* 
-Cíl: Zrychlit web, vyvarovat se loadování iframu mapy.cz při loadu stránky.
+Cíl: Zrychlit web, vyvarovat se loadování iframu mapy.cz & některých obrázků při loadu stránky.
 */
 
 var preload = function preload() {
@@ -42,13 +46,39 @@ var preload = function preload() {
         var footer = document.querySelector("footer");
         var fromTop = footer.getBoundingClientRect().top;
         if (fromTop < scrollHeight + 200) {
-            mapyIframe();
+            loadMapyIframe();
             e.target.removeEventListener(e.type, eventOnScroll);
         }
     });
 };
 
-var mapyIframe = function mapyIframe() {
+// RETHINK THIS
+var preloadSingleImg = function preloadSingleImg(elem) {
+    var scrollHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+    var fromTop = elem.getBoundingClientRect().top;
+
+    if (fromTop < scrollHeight + 200) {
+        elem.setAttribute("src", elem.dataset.src);
+    } else {
+        document.addEventListener("scroll", function display(e) {
+            fromTop = elem.getBoundingClientRect().top;
+
+            if (fromTop < scrollHeight + 200) {
+                elem.setAttribute("src", elem.dataset.src);
+                e.target.removeEventListener(e.type, display);
+            }
+        });
+    }
+};
+
+var loadLogolinkImgs = function loadLogolinkImgs() {
+    var imgs = document.querySelectorAll("section.logolink img");
+    imgs.forEach(function (img) {
+        preloadSingleImg(img);
+    });
+};
+
+var loadMapyIframe = function loadMapyIframe() {
     var container = document.getElementById("maps-iframe");
     var element = document.createElement("IFRAME");
 
@@ -65,4 +95,5 @@ var mapyIframe = function mapyIframe() {
 document.addEventListener("DOMContentLoaded", function () {
     addClassToMenu();
     preload();
+    loadLogolinkImgs();
 });

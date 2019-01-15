@@ -14,7 +14,7 @@ const addClassToMenu = () => {
 
 /*Funkce, která se stará o to, abych po kliknutí otevřel, nebo zavřel otevřený menu.*/
 const openMenu = (x) => {
-    let x, y, z, i;
+    let y, z, i;
 
     z = document.getElementsByClassName("main-mainmenu");
     y = document.getElementsByClassName(x)[0];
@@ -31,7 +31,7 @@ const openMenu = (x) => {
 }
 
 /* 
-Cíl: Zrychlit web, vyvarovat se loadování iframu mapy.cz při loadu stránky.
+Cíl: Zrychlit web, vyvarovat se loadování iframu mapy.cz & některých obrázků při loadu stránky.
 */
 
 const preload = () => {
@@ -43,13 +43,41 @@ const preload = () => {
         const footer = document.querySelector("footer");
         let fromTop = footer.getBoundingClientRect().top;
         if (fromTop < scrollHeight + 200) {
-            mapyIframe();
+            loadMapyIframe();
             e.target.removeEventListener(e.type, eventOnScroll);
         }
     });    
 }
 
-const mapyIframe = () => {
+// RETHINK THIS
+const preloadSingleImg = (elem) => {
+    const scrollHeight = Math.max(
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+    let fromTop = elem.getBoundingClientRect().top;
+
+    if (fromTop < scrollHeight + 200) {
+        elem.setAttribute("src", elem.dataset.src);
+    } else {
+        document.addEventListener("scroll", function display(e){
+            fromTop = elem.getBoundingClientRect().top;
+
+            if(fromTop < scrollHeight + 200){
+                elem.setAttribute("src", elem.dataset.src);
+                e.target.removeEventListener(e.type, display);
+            }
+        });
+    }
+}
+
+const loadLogolinkImgs = () => {
+    const imgs = document.querySelectorAll("section.logolink img");
+    imgs.forEach((img) => {
+        preloadSingleImg(img);
+    });
+}
+
+const loadMapyIframe = () => {
     const container = document.getElementById("maps-iframe");
     const element = document.createElement("IFRAME");
 
@@ -66,4 +94,5 @@ const mapyIframe = () => {
 document.addEventListener("DOMContentLoaded", function () {
     addClassToMenu();
     preload();
+    loadLogolinkImgs();
 });
