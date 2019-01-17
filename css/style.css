@@ -2,7 +2,7 @@
 Theme Name: Škola Hradec nad Svitavou
 Author: Tomáš Hartman
 Description: Téma, které je použito na stránce ZŠ a MŠ Hradec nad Svitavou
-Version: 1.0.2
+Version: 1.0.2.1
 Text Domain: zsmshradecns
 */
 /* CSS Document */
@@ -691,6 +691,8 @@ article #nenalezeno {
 .sidebar section.logolink {
 	padding: 0;
 	height: 100%;
+	background-color: white;
+	text-align: center;
 }
 .sidebar section.logolink.etwinning {
 	background-color: white;
@@ -701,6 +703,10 @@ article #nenalezeno {
 .sidebar section.logolink.etwinning img {
 	width: 90%;
 	padding: 3px 5%;
+}
+.sidebar section.logolink-cez img {
+	height: 145px;
+	width: auto;
 }
 .sidebar section .event-list-cal-date {
 	border: medium none;
