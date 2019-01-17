@@ -234,5 +234,8 @@ function projekty_logolink() {
     else if(strpos(zjisti_kategorii_2(), 'OPVK') !== false) {
         echo '<section class="logolink-big"></section>';
     }
+    else if(strpos(zjisti_kategorii_2(), 'Nadace ČEZ') !== false) {
+        echo '<section class="logolink-cez"></section>';
+    }
 }
 ?>
