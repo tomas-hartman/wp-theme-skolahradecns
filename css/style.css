@@ -531,6 +531,7 @@ main article.full-gallery .content-gallery .gallery img {
 	margin: auto 5px 10px;
 }
 /*Projekty - logolink*/
+/* TODO: sjednotit */
 main section.logolink-big {
 	min-width: 650px;
 	height: 120px;
@@ -547,6 +548,12 @@ main section.logolink-etwinning {
 	min-width: 650px;
 	height: 120px;
 	background: white url(../img/etwinning.svg) center center no-repeat;
+	background-size: auto 105px;
+}
+main section.logolink-etwinning {
+	min-width: 650px;
+	height: 120px;
+	background: white url(../img/logo_cez.png) center center no-repeat;
 	background-size: auto 105px;
 }
 /*Full-článek*/
@@ -950,6 +957,10 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 	width: 75px;
 	clear: none;
 }
+.pdf-js {
+    margin: -10px -15px;
+    width: 615px;
+}
 /* -- MOBILNÍ DISPLEJE -- */
 /*Menu bude fungovat už od 960px! je to logičtější!*/
 @media only screen and (min-width:481px) {
@@ -1054,6 +1065,11 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 	}
 	.sidebar .searching label {
 		top: 10px;
+	}
+	/* PDF viewer */
+	.pdf-js {
+		margin: -10px 15px -10px -15px;
+		width: 105%;
 	}
 }
 
