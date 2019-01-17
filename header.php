@@ -69,10 +69,8 @@
 </head>
 
 <body>
-    <div id="fb-root"></div>
-    <script>
-            <?php include "js/fb_page_plugin.js"; ?>
-    </script>
+    <!-- <div id="fb-root"></div> -->
+    <!-- <script><?php //include "js/fb_page_plugin.js"; ?></script> -->
     <header class="baner overlay">
         <a href="<?php echo home_url(); ?>">
             <img src="<?php bloginfo('template_directory'); ?>/img/logo_zsHnS.png" alt="logo_zsHnS.png, 10kB" title="ZŠ a MŠ Hradec nad Svitavou - logo"

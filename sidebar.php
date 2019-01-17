@@ -18,9 +18,9 @@
 
       <?php if ( is_active_sidebar( 'sidebar1' ) ) : dynamic_sidebar( 'sidebar1' ); endif; ?>
 
-      <section class="logolink">
+      <!-- <section class="logolink">
         <div class="fb-page" data-href="https://www.facebook.com/skolahradecns/" data-width="290" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>
-      </section>
+      </section> -->
       <section class="menu-postranni-lista-menu-container">
         <ul>
           <li class="first-child"><a href="<?php echo get_site_url();?>/wp-admin">administrace</a></li>
@@ -32,6 +32,7 @@
       <section class="logolink visegrad"><a href="http://visegradfund.org/"><img src="<?php bloginfo('template_directory'); ?>/img/visegrad_fund_logo_blue_290px.png"></a></section>
       <section class="logolink visegrad"><a href="http://www.skutecnezdravaskola.cz/"><img src="<?php bloginfo('template_directory'); ?>/img/skutecnezdravaskola.jpg"></a></section>
       <section class="logolink msmt"><a href="http://www.msmt.cz/"><img src="<?php bloginfo('template_directory'); ?>/img/msmtlogo.jpg"></a><p class="popisek_sidebar">Škola je příjemcem neinvestičních dotací "Podpora výuky plavání v základních školách v roce 2017 a Podpora zabezpečení mateřských škol a základních škol tvořených třídami 1. stupně s počtem tříd do pěti.</p></section>     
+      <section class="logolink logolink-cez"><a href="http://www.nadacecez.cz/"><img src="<?php bloginfo('template_directory'); ?>/img/logo_cez.png"></a></section>     
 </div>
 
 

@@ -6,7 +6,7 @@
 <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
   $query_args = array (
-                      'posts_per_page' => 12,
+                      'posts_per_page' => 13,
                       'paged' => $paged 
                       );
   $pagination_link_format = 'index.php/page/%#%';
