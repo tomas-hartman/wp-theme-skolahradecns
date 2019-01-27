@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang='cs'>
 <head>
     <title>ZŠ a MŠ Hradec nad Svitavou</title>
     <meta charset='utf-8'>
