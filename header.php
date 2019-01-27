@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang='cs'>
 <head>
     <title>ZŠ a MŠ Hradec nad Svitavou</title>
     <meta charset='utf-8'>
-    <meta name='description' content=''>
-    <meta name='keywords' content=''>
-    <meta name='author' content=''>
+    <meta name='description' content='Webové stránky Základní a mateřské školy v Hradci nad Svitavou'>
+    <meta name='keywords' content='škola,školní web,school,Hradec nad Svitavou,základní škola,mateřská škola'>
+    <meta name='author' content='Tomáš Hartman'>
     <meta name='robots' content='all'>
+    <meta name="language" content="cs">
+    <meta name="url" content="https://www.skolahradecns.cz">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
     <link href='/favicon.png' rel='shortcut icon'>
+    <meta name="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/img/web-img.jpg"/>
 
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri(); ?>/img/touch-icon-192x192.png">
+    <link rel="fluid-icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/touch-icon-192x192.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-180x180-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-152x152-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-120x120-precomposed.png">
