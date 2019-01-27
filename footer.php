@@ -1,3 +1,38 @@
+<footer id="ft-new">
+    <div class="horni">
+        <span class="ft-headline"><h3>Projekty a sponzoři</h3></span>
+    </div>
+    <div class="stredni">
+        <div class="kategorie">
+            <span class="ft-headline"><h3>Kategorie článků</h3></span>
+            <div class="list">
+                <?php 
+                    $args = array(
+                                'style' => 'none',
+                                'title_li' => ''
+                            );
+                    wp_list_categories( $args ); ?>
+            </div>  
+        </div>
+        <div class="archiv">
+            <span class="ft-headline"><h3>Archiv článků</h3></span>
+            <ul>
+                <?php 
+                    $args = array(
+                                'type' => 'monthly',
+                                'limit' => '12',
+                                'format' => 'html',
+                                'order' => 'DESC'
+                            );
+                    wp_get_archives( $args );
+                ?>
+            </ul>
+        </div>
+    </div>
+    <div class="spodni">
+
+    </div>
+</footer>
 <footer>
       <div class="levy">
           <div class="ft-levy-container1">

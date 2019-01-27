@@ -955,6 +955,33 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 	width: 75px;
 	clear: none;
 }
+
+/* NEW FOOTER */
+footer#ft-new .stredni {
+	text-align: left;
+	margin: 20px 30px;
+}
+footer#ft-new .stredni > div {
+    margin: 10px auto;
+}
+footer#ft-new ul.children{
+	display: inherit;
+	margin: 0;
+	padding: 0;
+}
+footer#ft-new ul.children li{
+	margin: -10px;
+}
+footer#ft-new li, footer#ft-new .list a {
+	display: inline;
+	margin-right: 10px;
+}
+footer#ft-new .kategorie .list br {
+
+    display: none;
+
+}
+
 /* -- MOBILNÍ DISPLEJE -- */
 /*Menu bude fungovat už od 960px! je to logičtější!*/
 @media only screen and (min-width:481px) {
