@@ -955,6 +955,63 @@ footer .prostredni .wGallery a.ft-gal-prostredni img {
 	width: 75px;
 	clear: none;
 }
+/* NEW FLEX FOOTER */
+/*container*/
+footer#ft-flex {
+	clear: both;
+	padding: 0;
+	text-align: unset;
+
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	
+	display: flex;
+	flex-direction: column;
+
+}
+
+footer#ft-flex li {
+	list-style: none url();
+	margin: 0;
+}
+
+/*children*/
+footer#ft-flex > div {
+	margin: 20px 30px;
+	text-align: left;
+}
+
+footer#ft-flex .horni section {
+	display: flex;
+	max-width: 290px;
+	background-color: white;
+	height: auto;
+	margin: 10px;
+	max-height: 150px;
+}
+
+footer#ft-flex .horni .ft-flex-horni-cont {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+footer#ft-flex .stredni .flex-cont .flex-item {
+	display: flex;
+	padding: 0 5px 10px 0;
+	flex-wrap: wrap;
+}
+
+footer#ft-flex .stredni .flex-cont .flex-item > li, 
+footer#ft-flex .stredni .flex-cont .flex-item > a {
+	margin-right: 10px;
+}
+
+footer#ft-flex .spodni {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
 
 /* NEW FOOTER */
 footer#ft-new .stredni {
