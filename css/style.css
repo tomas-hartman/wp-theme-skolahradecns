@@ -44,10 +44,6 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 }
-#header-backhome {
-	width: 100%;
-	height: 100%;
-}
 .logo-skola {
 	position: relative;
 	margin-left: 25%;
@@ -91,12 +87,7 @@ nav.main-menu ul.top-menu>li {
 	line-height: 35px;
 	position: relative;
 	vertical-align: middle;
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
 	transition: all 0.2s;
-	/* float: left; */
 }
 nav.main-menu ul.top-menu a {
 	display: inline-block;
@@ -110,10 +101,6 @@ nav.main-menu ul.top-menu ul {
 	position: absolute;
 	left: 0;
 	z-index: 5;
-	-webkit-transiton: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-ms-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
 @media only screen and (min-width: 960px) {
@@ -180,7 +167,6 @@ nav.menu-docs {
 	height: auto;
 	overflow: hidden;
 	z-index: -3;
-	-webkit-box-shadow: 0px 4px rgb(149, 165, 166), 0px 4px #2980B9 inset;
 	box-shadow: 0px 4px rgb(149, 165, 166), 0px 4px #2980B9 inset;
 }
 nav.menu-docs li {
@@ -306,7 +292,6 @@ main article .text-clanek {
 	padding: 10px 15px 10px;
 	background-color: #bdc3c7;
 	overflow: hidden;
-	-webkit-box-shadow: 0px 4px rgb(127, 140, 141) inset;
 	box-shadow: 0px 4px rgb(127, 140, 141) inset;
 	margin-left: 10px;
 	margin-right: 5px;
@@ -422,7 +407,6 @@ main article.galerie header {
 	margin-bottom: 10px;
 	height: 61px;
 	box-shadow: 4px 12px 0px -8px #7F8C8D;
-	-webkit-box-shadow: 4px 12px 0px -8px #7F8C8D;
 }
 main article.galerie .text-clanek {
 	display: none;
@@ -444,7 +428,6 @@ main article.full-gallery header {
 	height: 75px;
 	padding-top: 15px;
 	padding-bottom: 5px;
-	-webkit-box-shadow: 4px 12px 0px -8px #7F8C8D;
 	box-shadow: 4px 12px 0px -8px #7F8C8D;
 }
 main article.full-gallery.page-full-gallery header {
@@ -452,23 +435,19 @@ main article.full-gallery.page-full-gallery header {
 	clear: both;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 main article.full-gallery img {
 	height: 95px;
 	width: 95px;
-	-webkit-box-shadow: 1px 8px 0 -4px #7F8C8D;
 	box-shadow: 1px 8px 0 -4px #7F8C8D;
 }
 main article.full-gallery .text-clanek {
 	display: block;
 	margin: -10px 5px 10px 10px;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 main article.page-full-gallery .text-clanek {
-	-webkit-box-shadow: 0 4px #95A5A6 inset;
 	box-shadow: 0 4px #95A5A6 inset;
 }
 /*1a. ZOBRAZENÍ GALERIE*/
@@ -515,7 +494,6 @@ main article.full-gallery .content-gallery .gallery img:hover, main article.full
 	animation-duration: .2s;
 	opacity: 0.5;
 	filter: alpha(opacity=50);
-	-webkit-box-shadow: 4px 4px #7F8C8D;
 	box-shadow: 4px 4px #7F8C8D;
 }
 .gallery dl {
@@ -560,7 +538,6 @@ main article .galerie-clanek {
 }
 main article .galerie-clanek img {
 	margin-bottom: 10px;
-	-webkit-box-shadow: 1px 8px 0px -4px #7F8C8D;
 	box-shadow: 1px 8px 0px -4px #7F8C8D;
 }
 main article .mini {
@@ -672,7 +649,6 @@ article #nenalezeno {
 	background-color: #95a5a6;
 	margin-bottom: 10px;
 	padding: 10px;
-	-webkit-box-shadow: 4px 12px 0px -8px #7F8C8D;
 	box-shadow: 4px 12px 0px -8px #7F8C8D;
 }
 
@@ -739,7 +715,6 @@ article #nenalezeno {
 	line-height: 30px;
 	margin-left: -5px;
 	margin-right: 5px;
-	-webkit-box-shadow: 4px 0px grey;
 	box-shadow: 4px 0px grey;
 }
 .sidebar section .event-list-cal-year {
@@ -750,7 +725,6 @@ article #nenalezeno {
 	height: 20px;
 	margin-left: 5px;
 	line-height: 20px;
-	-webkit-box-shadow: 0px 4px rgb(127, 140, 141) inset;
 	box-shadow: 0px 4px rgb(127, 140, 141) inset;
 	padding-top: 5px;
 	margin-right: 1px;
@@ -780,13 +754,11 @@ article #nenalezeno {
 	line-height: normal;
 	background-color: #BDC3C7;
 	margin-left: 58px;
-	-webkit-box-shadow: 4px 0px #808080, 2px 2px 0px 2px #7F8C8D;
 	box-shadow: 4px 0px #808080, 2px 2px 0px 2px #7F8C8D;
 	transition: 0.05s;
 }
 .sidebar section .event-list-cal-title a:hover {
 	margin-left: 62px;
-	-webkit-box-shadow: 4px 0px rgb(189, 195, 199);
 	box-shadow: 4px 0px rgb(189, 195, 199);
 	background-color: rgb(189, 195, 199);
 	margin-top: -5px;
@@ -800,20 +772,17 @@ article #nenalezeno {
 	text-decoration: underline;
 	color: inherit;
 }
-/*Sidebar - hledání*/
+/*Sidebar - hledání - pokus o opravu*/
 .sidebar .searching {
 	height: 15px;
+	width: 100%;
+	margin: -10px 0 10px -10px;
+	padding: 0;
 }
 .sidebar .searching span {
 	display: none;
 }
-.sidebar .searching label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin-left: 10px;
-	height: 20px;
-}
+
 .sidebar .searching #submit-button {
 	background-image: url(../img/lupa1.png);
 	background-size: 20px;
@@ -823,11 +792,9 @@ article #nenalezeno {
 	color: rgba(0, 0, 0, 0);
 	width: 35px;
 	height: 35px;
-	text-decoration: none;
-	border: none;
 	position: absolute;
-	float: right;
 	cursor: pointer;
+	right: 10px;
 }
 .sidebar .searching #submit-button:hover {
 	background-color: #2c3e50;
@@ -837,10 +804,8 @@ article #nenalezeno {
 	background-color: #ecf0f1;
 	border: none;
 	height: 35px;
-	float: left;
-	width: 255px;
-	padding-left: 10px;
-	font-size: 15px;
+	width: 100%;
+	padding: 10px 45px 10px 10px;
 }
 .sidebar .menu-postranni-lista-menu-container a {
 	color: inherit;
@@ -854,8 +819,7 @@ article #nenalezeno {
 	text-decoration: none;
 	text-align: center;
 }
-/*.sidebar .menu-postranni-lista-menu-container li:first-child a:hover,*/
-.sidebar .menu-postranni-lista-menu-container li.first-child a:hover {
+.sidebar .menu-postranni-lista-menu-container li:first-child a:hover {
 	background-color: #BDC3C7;
 	margin-top: 4px;
 	box-shadow: 4px 0px 0 0px #BDC3C7;
@@ -880,7 +844,6 @@ footer {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 11px;
 	box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
-	-webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
 }
 footer h3 {
 	font-size: 11px;
@@ -1027,7 +990,7 @@ footer .spodni {
 		width: 100%;
 	}
 	/* - Konec menu -*/
-	/*Searching*/
+	/*Searching - pokus o opravu*/
 	.sidebar {
 		clear: both;
 		float: none;
@@ -1041,27 +1004,10 @@ footer .spodni {
 	.sidebar section {
 		width: 95%;
 	}
-	.sidebar .searching {
-		margin-bottom: 10px;
-	}
 	.sidebar .searching label {
 		top: 10px;
-		overflow: hidden;
 		width: 100%;
-		position: relative;
-		padding: 0px;
 		background-color: rgb(149, 165, 166);
-		top: 0px;
-	}
-	.sidebar .searching #submit-button {
-		right: 10px;
-	}
-	.sidebar .searching #searchform {
-		width: 100%;
-	}
-	.sidebar .searching .search-form {
-		margin-left: -10px;
-		margin-top: -10px;
 	}
 }
 

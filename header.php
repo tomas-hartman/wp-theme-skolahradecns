@@ -75,9 +75,6 @@
         <a href="<?php echo home_url(); ?>">
             <img src="<?php bloginfo('template_directory'); ?>/img/logo_zsHnS.png" alt="logo_zsHnS.png, 10kB" title="ZŠ a MŠ Hradec nad Svitavou - logo"
                 border="0" height="158" width="467" class="logo-skola"></a>
-
-        <!--Mód bez banneru header-backhome klikací ploška po celém headeru-->
-        <!--<a href="<?php //echo home_url(); ?>"><div id="header-backhome"></div></a> -->
     </header>
     <nav class="main-menu">
         <?php wp_nav_menu( array ('theme_location' => 'main-menu',
