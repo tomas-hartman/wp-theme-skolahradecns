@@ -148,6 +148,12 @@ function OurWidgetsInit() {
       'before_widget' => '<section>',
 		  'after_widget'  => '</section>',
   ));
+  register_sidebar( array(
+    'name' => 'Sidebar - údaje o škole',
+    'id' => 'sidebar2',
+    'before_widget' => '<section>',
+        'after_widget'  => '</section>',
+)); 
   //Pro galerii dole
   register_sidebar( array(
       'name' => 'Footer - galerie',
