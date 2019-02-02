@@ -2,7 +2,7 @@
 Theme Name: Škola Hradec nad Svitavou
 Author: Tomáš Hartman
 Description: Téma, které je použito na stránce ZŠ a MŠ Hradec nad Svitavou. Kompatibilita s moderními prohlížeči a IE11. Starší prohlížeče mohou být kompatibilní.
-Version: 1.1
+Version: 1.1-exp.1
 Text Domain: zsmshradecns
 */
 /* CSS Document */
@@ -30,19 +30,24 @@ body {
 	font-size: small;
 	background: url(../img/background_cover.png) repeat;
 	background-position: 0px 300px;
+
+
+	display: grid;
+	grid-template-columns: 1fr 650px 310px 1fr;
+	grid-template-rows: 270px 35px auto auto;
 }
 p {
 	text-align: justify;
 }
 /* nav */
-.baner {
+header.baner {
 	background: url(../t_skola_4_small_1.jpg) center no-repeat;
 	background-size: 100%;
 	height: 270px;
 	background-size: cover;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+
+	grid-column: 1 / 5;
+	grid-row: 1 / 2;
 }
 .logo-skola {
 	position: relative;
@@ -69,8 +74,9 @@ nav.main-menu {
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	position: relative;
-	z-index: 1;
+
+	grid-column: 1 / 5;
+	grid-row: 2 / 3;
 }
 nav.main-menu a {
 	text-decoration: none;
@@ -133,7 +139,8 @@ nav.main-menu ul.top-menu li.main-skola ul li:hover, .text-clanek.page-docs.main
 
 /*Spodní navigační proužek (stránkovací)*/
 nav.next-previous-posts {
-	margin: 10px 0 0 10px;
+	margin: 10px 10px 0;
+	
 	height: 35px;
 	line-height: 35px;
 	font-size: medium;
@@ -168,6 +175,9 @@ nav.menu-docs {
 	overflow: hidden;
 	z-index: -3;
 	box-shadow: 0px 4px rgb(149, 165, 166), 0px 4px #2980B9 inset;
+
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
 }
 nav.menu-docs li {
 	display: inline-block;
@@ -239,15 +249,27 @@ ul.wpba-attachment-list li img, .attachment ul.wpba-attachment-list li img {
 }
 /* příspěvky */
 main {
-	width: 100%;
-	max-width: 640px;
-	margin-bottom: 10px;
-	float: left;
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
+
+	background-color: #ecf0f1;
+	padding-bottom: 10px;
 }
 main #nenalezeno {
 	text-align: center;
 	font-size: large;
 	padding: 10px;
+}
+
+.main-shadow-right {
+	grid-column: 4 / 5;
+	grid-row: 3 / 6;
+	box-shadow: inset 28px 0px 27px -10px rgba(127, 140, 141, 0.7);
+}
+.main-shadow-left {
+	grid-column: 1 / 2;
+	grid-row: 3 / 6;
+	box-shadow: inset -28px 0px 27px -10px rgba(127, 140, 141, 0.7);
 }
 /*BARVY*/
 nav .main-zs:hover, nav .main-zs:focus, ul.top-menu li.main-zs ul li, header.main-zs {
@@ -268,9 +290,14 @@ nav .main-skola:hover, nav .main-skola:focus, ul.top-menu li.main-skola ul li, h
 /*VÝPIS ČLÁNKŮ - zobrazení typů jednotlivých článků*/
 /*1. Standardní článek - default settings*/
 main article {
-	margin: 10px 0 0 10px;
+	margin: 10px 10px 0;
+
 	max-height: 160px;
 	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: 64px auto;
 }
 main article.format-height-160 {
 	max-height: 160px;
@@ -295,6 +322,13 @@ main article .text-clanek {
 	box-shadow: 0px 4px rgb(127, 140, 141) inset;
 	margin-left: 10px;
 	margin-right: 5px;
+
+	grid-row: 2/3;
+}
+
+main article a {
+	grid-row: 1/3;
+	grid-column: 1;
 }
 main article .text-clanek-height-160 {
 	height: 85px;
@@ -379,8 +413,10 @@ main article.upozorneni {
 main article.upozorneni img {
 	width: 65px;
 	height: 65px;
-	margin-right: 0;
+
+	margin: -10px 10px 0px -10px;
 }
+
 main article.upozorneni img.attachment-thumbnail {
 	margin: 5px;
 }
@@ -640,10 +676,11 @@ article #nenalezeno {
 .sidebar {
 	width: 290px;
 	background-color: #bdc3c7;
-	float: right;
 	padding: 0 10px 0 10px;
 	position: relative;
-	z-index: 0;
+
+	grid-column: 3 / 4;
+	grid-row: 3 / 5;
 }
 .sidebar section {
 	background-color: #95a5a6;
@@ -835,15 +872,16 @@ article #nenalezeno {
 }
 /* footer */
 footer {
-	clear: both;
 	display: flex;
 	flex-direction: column;
-	padding: 0;
 	background-color: #2c3e50;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 11px;
 	box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
+
+	grid-row: 5 / 6;
+	grid-column: 2 / 4;
 }
 footer h3 {
 	font-size: 11px;

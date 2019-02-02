@@ -87,5 +87,3 @@
                                    ));          
           ?>
     </nav>
-    <div class="telo">
-        <!--container pro rozložení stránky, ukončen je ve footeru-->

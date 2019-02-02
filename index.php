@@ -29,6 +29,8 @@
        echo '<div id="nenalezeno">Obsah nenalezen</div>';
    endif; ?>
 </main>
+<div class="main-shadow-right"></div>
+<div class="main-shadow-left"></div>
 <?php 
     get_sidebar();
     get_footer();
