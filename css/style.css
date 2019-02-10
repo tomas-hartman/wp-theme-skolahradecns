@@ -295,9 +295,6 @@ main article {
 	max-height: 160px;
 	overflow: hidden;
 
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: 64px auto;
 }
 main article.format-height-160 {
 	max-height: 160px;
@@ -322,14 +319,8 @@ main article .text-clanek {
 	box-shadow: 0px 4px rgb(127, 140, 141) inset;
 	margin-left: 10px;
 	margin-right: 5px;
-
-	grid-row: 2/3;
 }
 
-main article a {
-	grid-row: 1/3;
-	grid-column: 1;
-}
 main article .text-clanek-height-160 {
 	height: 85px;
 }
@@ -978,8 +969,19 @@ footer .spodni {
 	}
 }
 @media only screen and (max-width: 959px) {
+	body {
+		grid-template-columns: auto;
+		grid-template-rows: 270px auto 50px repeat(3, auto);
+	}
+	header.baner{
+		grid-column: 1;
+		grid-row: 1/2;
+	}
+
 	main {
 		max-width: 100%;
+		grid-row: 3/5;
+		grid-column: 1;
 	}
 	main article {
 		margin-right: 10px;
@@ -988,8 +990,11 @@ footer .spodni {
 	/*Tři podmínky aby to fungovalo*/
 	nav.main-menu {
 		background-color: #2c3e50;
-		height: auto;
+		min-height: 70px;
 		overflow: hidden;
+
+		grid-row: 2/3;
+		grid-column: 1;
 	}
 	nav.main-menu ul.top-menu {
 		display: block;
@@ -1017,6 +1022,11 @@ footer .spodni {
 		-webkit-animation-duration: 0.3s;
 		animation-duration: 0.3s;
 		width: 100%;
+
+		z-index: 10;
+		position: absolute;
+		left: 0;
+		box-shadow: 0px 15px 9px -6px rgb(127, 140, 141);
 	}
 	nav.main-menu ul.top-menu li.tap ul {
 		display: block;
@@ -1038,6 +1048,9 @@ footer .spodni {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		grid-row: 5/6;
+		grid-column: 1;
 	}
 	.sidebar section {
 		width: 95%;
@@ -1046,6 +1059,15 @@ footer .spodni {
 		top: 10px;
 		width: 100%;
 		background-color: rgb(149, 165, 166);
+	}
+
+	footer{
+		grid-column: 1;
+		grid-row: 6/7;
+	}
+
+	.main-shadow-left, .main-shadow-right {
+		display: none;
 	}
 }
 

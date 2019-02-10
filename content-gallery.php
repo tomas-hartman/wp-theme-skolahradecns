@@ -7,5 +7,5 @@
         <div class="text-clanek">
             <p><?php echo get_excerpt(); ?>
             </p>
-        </div>      
+        </div>   
 </article>
