@@ -508,24 +508,26 @@ main article.full-gallery .content-gallery .gallery img {
 	float: left;
 	margin: auto 5px 10px;
 }
-/*Projekty - logolink*/
-main section.logolink-big {
+/*Projekty - logolink na stránkách*/
+main section.logolink-gen {
 	min-width: 650px;
 	height: 120px;
+}
+main section.logolink-big {
 	background: white url(../img/logolink.jpg) center center no-repeat;
 	background-size: auto 120px;
 }
 main section.logolink-Visegrad {
-	min-width: 650px;
-	height: 120px;
 	background: white url(../img/visegrad_fund_logo_blue_290px.png) center center no-repeat;
 	background-size: auto 120px;
 }
 main section.logolink-etwinning {
-	min-width: 650px;
-	height: 120px;
 	background: white url(../img/etwinning.svg) center center no-repeat;
 	background-size: auto 105px;
+}
+main section.logolink-cez {
+	background: white url(../img/logo_cez.png) center center no-repeat;
+	background-size: auto 120px;
 }
 /*Full-článek*/
 main article.full-clanek {
@@ -1062,7 +1064,7 @@ footer .spodni {
 		white-space: nowrap;
 		overflow: hidden;
 	}
-	main section.logolink-big {
+	main section.logolink-gen {
 		min-width: auto;
 	}
 }

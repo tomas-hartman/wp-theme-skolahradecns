@@ -232,16 +232,16 @@ function views_count($page_uri) {
 
 function projekty_logolink() {
     if(strpos(zjisti_kategorii_2(), 'Visegrad Fund') !== false) {
-        echo '<section class="logolink-Visegrad"></section>';
+        echo '<section class="logolink-gen logolink-Visegrad"></section>';
     }
     else if(strpos(zjisti_kategorii_2(), 'eTwinning') !== false) {
-        echo '<section class="logolink-etwinning"></section>';
+        echo '<section class="logolink-gen logolink-etwinning"></section>';
     }
     else if(strpos(zjisti_kategorii_2(), 'OPVK') !== false) {
-        echo '<section class="logolink-big"></section>';
+        echo '<section class="logolink-gen logolink-big"></section>';
     }
     else if(strpos(zjisti_kategorii_2(), 'Nadace ČEZ') !== false) {
-        echo '<section class="logolink-cez"></section>';
+        echo '<section class="logolink-gen logolink-cez"></section>';
     }
 }
 ?>
