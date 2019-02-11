@@ -281,6 +281,7 @@ main article img {
 	width: 160px;
 	height: 160px;
 	margin-right: 10px;
+	background: no-repeat center center url(../img/article_placeholder_4.png);
 }
 main article header {
 	overflow: hidden;
@@ -463,6 +464,23 @@ main article.full-gallery.content-gallery .gallery {
 main article.full-gallery.content-gallery .gallery img {
 	margin: 0;
 }
+
+/* 2. Zobrazení relevantních článků */
+.relevant-title {
+	background-color: #bdc3c7;
+    margin: 20px 0px 12px 10px;
+    padding: 30px 10px 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    box-shadow: 5px 15px 0 -10px #7F8C8D;
+}
+.relevant-title > h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
 @-webkit-keyframes galerie-hover {
 	from {
 		opacity: 1;
@@ -1029,7 +1047,7 @@ footer .spodni {
 	main article.galerie img.wp-post-image, main article.prispevek img.wp-post-image {
 		display: none;
 	}
-	main article, main article.format-height-160 {
+	main article, main article.format-height-160, .relevant-title {
 		max-height: 100%;
 		margin-right: 10px;
 	}
