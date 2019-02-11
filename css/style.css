@@ -795,8 +795,7 @@ article #nenalezeno {
 /*Sidebar - hledání - pokus o opravu*/
 .sidebar .searching {
 	height: 15px;
-	width: 100%;
-	margin: -10px 0 10px -10px;
+	margin: -10px -10px 10px -10px;
 	padding: 0;
 }
 .sidebar .searching span {
@@ -810,11 +809,10 @@ article #nenalezeno {
 	background-position: center center;
 	background-color: #95A5A6;
 	color: rgba(0, 0, 0, 0);
-	width: 35px;
-	height: 35px;
-	position: absolute;
+	/* width: 35px;
+	height: 35px; */
 	cursor: pointer;
-	right: 10px;
+	grid-column: 2/3;
 }
 .sidebar .searching #submit-button:hover {
 	background-color: #2c3e50;
@@ -823,9 +821,13 @@ article #nenalezeno {
 .sidebar .searching #searchform {
 	background-color: #ecf0f1;
 	border: none;
-	height: 35px;
-	width: 100%;
 	padding: 10px 45px 10px 10px;
+	grid-column: 1/2;
+}
+.sidebar .searching label{
+	display: grid;
+	grid-template-columns: auto 35px;
+	grid-template-rows: 35px;
 }
 .sidebar .menu-postranni-lista-menu-container a {
 	color: inherit;
@@ -1025,8 +1027,6 @@ footer .spodni {
 		width: 95%;
 	}
 	.sidebar .searching label {
-		top: 10px;
-		width: 100%;
 		background-color: rgb(149, 165, 166);
 	}
 }
