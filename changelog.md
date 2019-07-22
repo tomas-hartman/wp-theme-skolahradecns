@@ -29,3 +29,7 @@
 - `new` changelog introduced
 - `new` main feed picture placeholder
 - `fix` searchbar css
+
+## v1.1.3
+
+- `new` css cleanup, migration to scss
