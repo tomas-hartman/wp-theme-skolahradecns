@@ -14,7 +14,19 @@
     <link href='/favicon.png' rel='shortcut icon'>
     <meta name="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/img/web-img.jpg"/>
 
+    <!-- <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css"> -->
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css">
+
+    <?php
+    $today = date("Y-m-d H:i:s");
+    $xmas_period_start = date("Y-12-03 00:00:00");
+    $xmas_period_end = date("Y-01-06 00:00:00");
+
+    if($today >= $xmas_period_start || $today <= $xmas_period_end){
+        echo '<link rel="stylesheet" href="'. get_stylesheet_directory_uri() .'/css/winter_mode.css" type="text/css">';
+    }
+    ?>
+
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" />
@@ -25,7 +37,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-120x120-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon-76x76-precomposed.png">
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>     -->
     <!--[if lt IE9]>
         <script>
           document.createElement("article");

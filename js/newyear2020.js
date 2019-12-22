@@ -7,11 +7,7 @@ class HappyNewYear {
     }
     htmlToShow() {
         let elmInnerHTML = `
-            <div id="ny-pflogo"></div>
-            <div id="ny-text">
-                <span id="msg">Šťastné vykročení do nového roku 2019,\n hodně zdraví, štěstí a každý den úsměv na tváři</span>
-                <span id="ny-from">přejí zaměstnanci ZŠ a MŠ v Hradci nad Svitavou</span>
-            </div>`;
+            <div id="ny-pflogo"></div>`;
 
         let elmClose = document.createElement("DIV");
         elmClose.setAttribute("id", "ny-close");

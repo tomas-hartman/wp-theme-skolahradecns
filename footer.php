@@ -44,5 +44,27 @@
 </footer>
 <?php wp_footer(); ?>
     </div>
+    <script>
+        function checkXmasTheme () {
+            var today = new Date();
+            var xmasPeriodStart = new Date(today.getFullYear(), 11, 3);
+            var xmasPeriodEnd = new Date(today.getFullYear(), 0, 6);
+
+            if(today >= xmasPeriodStart || today <= xmasPeriodEnd){
+
+                console.log(xmasPeriodStart);
+                console.log(xmasPeriodEnd);
+                console.log(today);
+                document.getElementsByTagName("body")[0].style.background = "url(img/xmas_pattern_grey.png) repeat";
+            }
+
+            console.log("ahoj");
+        }
+        // checkXmasTheme();
+    </script>
+
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/pf2020.css" type="text/css">
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/newyear2020.js"></script>
+  
   </body>
 </html>
