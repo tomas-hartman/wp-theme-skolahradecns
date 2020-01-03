@@ -36,7 +36,7 @@ p {
 }
 /* nav */
 .baner {
-	background: url(../t_skola_4_small_1.jpg) center no-repeat;
+	background: url(../img/t_skola_4_small_1.jpg) center no-repeat;
 	background-size: 100%;
 	height: 270px;
 	background-size: cover;
@@ -514,19 +514,19 @@ main section.logolink-gen {
 	height: 120px;
 }
 main section.logolink-big {
-	background: white url(../img/logolink.jpg) center center no-repeat;
+	background: white url(../img/proj/logolink.jpg) center center no-repeat;
 	background-size: auto 120px;
 }
 main section.logolink-Visegrad {
-	background: white url(../img/visegrad_fund_logo_blue_290px.png) center center no-repeat;
+	background: white url(../img/proj/visegrad_fund_logo_blue_290px.png) center center no-repeat;
 	background-size: auto 120px;
 }
 main section.logolink-etwinning {
-	background: white url(../img/etwinning.svg) center center no-repeat;
+	background: white url(../img/proj/etwinning.svg) center center no-repeat;
 	background-size: auto 105px;
 }
 main section.logolink-cez {
-	background: white url(../img/logo_cez.png) center center no-repeat;
+	background: white url(../img/proj/logo_cez.png) center center no-repeat;
 	background-size: auto 120px;
 }
 /*Full-článek*/
