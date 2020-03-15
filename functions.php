@@ -127,6 +127,7 @@ function theme_setup() {
        'menu_jidelna' => __( 'Navline - školní jídelna' ),
        'menu_spp' => __( 'Navline - školní poradenské pracoviště' ),
        'menu_zamestnanci' => __( 'Navline - zaměstnanci' ),
+       'menu_online_edu' => __( 'Navline - výuka online' ),
        'main-menu' => __( 'Main Menu' )
     ));
 

@@ -66,6 +66,7 @@
 
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/pf2020.css" type="text/css">
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/newyear2020.js"></script>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
   
   </body>
 </html>
