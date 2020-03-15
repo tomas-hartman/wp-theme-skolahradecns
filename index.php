@@ -5,16 +5,18 @@
 
 <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  //tag_not_in řeší online výuku, aby se nemíchala na homepage! třeba udělat lépe!
   $query_args = array (
+                      'category__not_in' => array(52),
                       'posts_per_page' => 13,
-                      'paged' => $paged 
+                      'paged' => $paged
                       );
   $pagination_link_format = 'index.php/page/%#%';
    
    $limit_posts = new WP_Query($query_args);
    if($limit_posts->have_posts()) :
       while ($limit_posts->have_posts()) : $limit_posts->the_post();   
-          
+
    get_template_part('content', get_post_format());
    wp_link_pages(); 
    
