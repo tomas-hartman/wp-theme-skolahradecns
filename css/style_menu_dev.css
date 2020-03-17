@@ -1,0 +1,261 @@
+nav.main-menu {
+    background-color: #2c3e50;
+
+    color: white;
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container div */
+nav.main-menu>div {
+    width: 960px;
+    background-color: blueviolet;
+}
+
+nav.main-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav.main-menu ul.top-menu {
+    list-style: none url();
+    /*! display: inline-block; */
+    display: flex;
+    /*! width: 100%; */
+    /* flex-wrap: wrap; */
+    overflow: hidden;
+}
+
+nav.main-menu ul.top-menu>li {
+    position: relative;
+    transition: all 0.2s;
+    display: flex;
+}
+
+/* OK! */
+nav.main-menu .top-menu a {
+    /* display: inline-block; */
+    width: 240px;
+    min-height: 35px;
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav.main-menu ul.top-menu ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    transition: opacity 0.2s;
+    top: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+    nav.main-menu ul.top-menu li:hover ul {
+        /*tohle je potřeba nastavit tak, aby se to zobrazovalo až když je displej větší než ten malý, takže tam hodit podmínku media screen nejméně 801px např.*/
+        display: block;
+    }
+}
+
+/* Mobilní devicy */
+@media only screen and (max-width: 959px) {
+
+    nav.main-menu>div {
+        width: 100%;
+    }
+
+    /* -- Menu -- */
+    /*Tři podmínky aby to fungovalo*/
+    nav.main-menu {
+        background-color: #2c3e50;
+        height: auto;
+    }
+
+    nav.main-menu ul.top-menu {
+        /* display: block; */
+    }
+
+    nav.main-menu ul.top-menu>li {
+        width: 25%;
+        /*
+        min-width: 240px; */
+        height: auto;
+        cursor: pointer;
+        /*! background-image: url("../img/scroll_down.png"); */
+        background-repeat: no-repeat;
+        background-position: 95% center;
+        background-size: 10px auto;
+        background-color: #2C3E50;
+        /*! display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* WTF? */
+    nav.main-menu ul.top-menu ul {
+        /*! position: static; */
+    }
+
+    nav.main-menu .top-menu a {
+        width: 100%;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    /* -- end -- Tři podmínky aby to fungovalo*/
+    nav.main-menu ul.top-menu>li {
+        width: 25%;
+        /*
+        min-width: 240px; */
+        height: auto;
+        cursor: pointer;
+        /*! background-image: url("../img/scroll_down.png"); */
+        /*! background-repeat: no-repeat; */
+        /*! background-position: 95% center; */
+        /*! background-size: 10px auto; */
+        /*! background-color: #2C3E50; */
+        /*! display: flex; */
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    nav.main-menu ul.top-menu li.tap ul {
+        display: flex;
+        /*! background: blue; */
+        position: fixed;
+        top: 35px;
+        /*! height: 100%; */
+        flex-direction: column;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        /*! right: 0; */
+        /*! bottom: 0; */
+    }
+
+    nav.main-menu ul.top-menu li ul li {
+        list-style: none;
+        float: right;
+        width: 100%;
+    }
+
+    /* - Konec menu -*/
+}
+
+nav.main-menu ul.sub-menu>li {
+    list-style: none;
+    display: flex;
+}
+
+/*Barvy - světlejší odstíny, nastavení pozadí.*/
+nav.main-menu ul.top-menu li ul li:hover {
+    color: black;
+    text-shadow: none;
+}
+
+nav.main-menu ul.top-menu li.main-zs ul li:hover,
+.text-clanek.page-docs.main-zs #wpba_attachment_list {
+    background-color: #53d78b;
+}
+
+nav.main-menu ul.top-menu li.main-ms ul li:hover,
+.text-clanek.page-docs.main-ms #wpba_attachment_list {
+    background-color: #e74b3c;
+}
+
+nav.main-menu ul.top-menu li.main-sd ul li:hover,
+.text-clanek.page-docs.main-sd #wpba_attachment_list {
+    background-color: #f1c50e;
+}
+
+nav.main-menu ul.top-menu li.main-skola ul li:hover,
+.text-clanek.page-docs.main-skola #wpba_attachment_list {
+    background-color: #3498db;
+}
+
+/*Spodní navigační proužek (stránkovací)*/
+nav.next-previous-posts {
+    margin: 10px 0 0 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: medium;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    clear: left;
+}
+
+nav.next-previous-posts a,
+nav.next-previous-posts span.current {
+    color: #ECF0F1;
+    text-decoration: none;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+}
+
+nav.next-previous-posts a:hover {
+    color: #ECF0F1;
+    background-color: #34495E;
+    text-decoration: underline;
+}
+
+nav.next-previous-posts span.current {
+    color: #34495E;
+    background-color: #ECF0F1;
+}
+
+
+/*BARVY*/
+.green,
+.green>a,
+ul.top-menu li.main-zs ul li,
+header.main-zs,
+nav.main-menu .green:hover,
+nav.main-menu .green:focus {
+    background-color: #27ae60;
+}
+
+.red,
+.red>a,
+ul.top-menu li.main-ms ul li,
+header.main-ms,
+nav.main-menu .red:hover,
+nav.main-menu .red:focus {
+    background-color: #c0392b;
+}
+
+.orange,
+.orange>a,
+ul.top-menu li.main-sd ul li,
+header.main-sd,
+nav.main-menu .orange:hover,
+nav.main-menu .orange:focus {
+    background-color: #f39c12;
+    color: black;
+    text-shadow: none;
+}
+
+.blue,
+.blue>a,
+ul.top-menu li.main-skola ul li,
+header.main-skola,
+nav.main-menu .blue:hover,
+nav.main-menu .blue:focus {
+    background-color: #2980b9;
+}
+
+/*KONEC BAREV*/
