@@ -461,8 +461,9 @@ nav.main-menu .sub-menu li a:hover {
 	background-color: #95a5a6;
 }
 
-/* MENU BARVY - TUNED */
+/* MENU BARVY - TUNED + BARVA ČLÁNKY */
 
+header.main-zs,
 nav.main-menu ul.top-menu>li.green:hover,
 nav.main-menu .top-menu .green a:hover,
 nav.main-menu .green .sub-menu li {
@@ -473,6 +474,7 @@ nav.main-menu .green .sub-menu li a:hover {
 	background-color: #53d78b;
 }
 
+header.main-ms,
 nav.main-menu ul.top-menu>li.red:hover,
 nav.main-menu .top-menu .red a:hover,
 nav.main-menu .red .sub-menu li {
@@ -483,6 +485,7 @@ nav.main-menu .red .sub-menu li a:hover {
 	background-color: #e74b3c;
 }
 
+header.main-sd,
 nav.main-menu ul.top-menu>li.orange:hover,
 nav.main-menu .top-menu .orange a:hover,
 nav.main-menu .orange .sub-menu li {
@@ -495,6 +498,7 @@ nav.main-menu .orange .sub-menu li a:hover {
 	background-color: #f1c50e;
 }
 
+header.main-skola,
 nav.main-menu ul.top-menu>li.blue:hover,
 nav.main-menu .top-menu .blue a:hover,
 nav.main-menu .blue .sub-menu li {
