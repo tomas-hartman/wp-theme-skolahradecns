@@ -2,7 +2,7 @@
 Theme Name: Škola Hradec nad Svitavou
 Author: Tomáš Hartman
 Description: Téma, které je použito na stránce ZŠ a MŠ Hradec nad Svitavou. Kompatibilita s moderními prohlížeči a IE11. Starší prohlížeče mohou být kompatibilní.
-Version: 1.1
+Version: 1.2
 Text Domain: zsmshradecns
 */
 /* CSS Document */
@@ -154,16 +154,24 @@ p {
 }
 
 /* menu */
+/* MAIN MENU LAYOUT */
 nav.main-menu {
 	background-color: #2c3e50;
-	font-size: medium;
-	height: 35px;
-	text-align: center;
+
 	color: white;
-	font-family: 'Open Sans', sans-serif;
+	font-size: medium;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
+
 	position: relative;
-	z-index: 1;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+}
+
+/* Container div */
+nav.main-menu>div {
+	width: 960px;
 }
 
 nav.main-menu a {
@@ -173,25 +181,25 @@ nav.main-menu a {
 
 nav.main-menu ul.top-menu {
 	list-style: none url();
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 nav.main-menu ul.top-menu>li {
-	display: inline-block;
-	width: 240px;
-	height: 35px;
-	line-height: 35px;
 	position: relative;
-	vertical-align: middle;
 	transition: all 0.2s;
+	display: flex;
 }
 
-nav.main-menu ul.top-menu a {
-	display: inline-block;
+nav.main-menu .top-menu a {
 	width: 240px;
-	height: 35px;
+	min-height: 35px;
 	z-index: 3;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 nav.main-menu ul.top-menu ul {
@@ -200,6 +208,13 @@ nav.main-menu ul.top-menu ul {
 	left: 0;
 	z-index: 5;
 	transition: opacity 0.2s;
+	top: 100%;
+	cursor: default;
+}
+
+nav.main-menu ul.sub-menu>li {
+	list-style: none;
+	display: flex;
 }
 
 @media only screen and (min-width: 960px) {
@@ -207,38 +222,12 @@ nav.main-menu ul.top-menu ul {
 		/*tohle je potřeba nastavit tak, aby se to zobrazovalo až když je displej větší než ten malý, takže tam hodit podmínku media screen nejméně 801px např.*/
 		display: block;
 	}
+
+	nav.main-menu ul.top-menu>li.tap {
+		background-color: inherit;
+	}
 }
 
-nav.main-menu ul.top-menu li ul li {
-	list-style: none;
-	float: right;
-}
-
-/*Barvy - světlejší odstíny, nastavení pozadí.*/
-nav.main-menu ul.top-menu li ul li:hover {
-	color: black;
-	text-shadow: none;
-}
-
-nav.main-menu ul.top-menu li.main-zs ul li:hover,
-.text-clanek.page-docs.main-zs #wpba_attachment_list {
-	background-color: #53d78b;
-}
-
-nav.main-menu ul.top-menu li.main-ms ul li:hover,
-.text-clanek.page-docs.main-ms #wpba_attachment_list {
-	background-color: #e74b3c;
-}
-
-nav.main-menu ul.top-menu li.main-sd ul li:hover,
-.text-clanek.page-docs.main-sd #wpba_attachment_list {
-	background-color: #f1c50e;
-}
-
-nav.main-menu ul.top-menu li.main-skola ul li:hover,
-.text-clanek.page-docs.main-skola #wpba_attachment_list {
-	background-color: #3498db;
-}
 
 /*Spodní navigační proužek (stránkovací)*/
 nav.next-previous-posts {
@@ -438,34 +427,82 @@ main #nenalezeno {
 }
 
 /*BARVY*/
-nav .main-zs:hover,
-nav .main-zs:focus,
-ul.top-menu li.main-zs ul li,
-header.main-zs {
+/*MAIN MENU: Barvy - světlejší odstíny, nastavení pozadí.*/
+nav.main-menu ul.top-menu li ul li:hover {
+	color: black;
+	text-shadow: none;
+}
+
+.text-clanek.page-docs.main-zs #wpba_attachment_list {
+	background-color: #53d78b;
+}
+
+.text-clanek.page-docs.main-ms #wpba_attachment_list {
+	background-color: #e74b3c;
+}
+
+.text-clanek.page-docs.main-sd #wpba_attachment_list {
+	background-color: #f1c50e;
+}
+
+.text-clanek.page-docs.main-skola #wpba_attachment_list {
+	background-color: #3498db;
+}
+
+
+/* MENU BARVY - BASIC */
+nav.main-menu ul.top-menu>li:hover,
+nav.main-menu .top-menu a:hover,
+nav.main-menu .sub-menu li {
+	background-color: #7f8c8d;
+}
+
+nav.main-menu .sub-menu li a:hover {
+	background-color: #95a5a6;
+}
+
+/* MENU BARVY - TUNED */
+
+nav.main-menu ul.top-menu>li.green:hover,
+nav.main-menu .top-menu .green a:hover,
+nav.main-menu .green .sub-menu li {
 	background-color: #27ae60;
 }
 
-nav .main-ms:hover,
-nav .main-ms:focus,
-ul.top-menu li.main-ms ul li,
-header.main-ms {
+nav.main-menu .green .sub-menu li a:hover {
+	background-color: #53d78b;
+}
+
+nav.main-menu ul.top-menu>li.red:hover,
+nav.main-menu .top-menu .red a:hover,
+nav.main-menu .red .sub-menu li {
 	background-color: #c0392b;
 }
 
-nav .main-sd:hover,
-nav .main-sd:focus,
-ul.top-menu li.main-sd ul li,
-header.main-sd {
+nav.main-menu .red .sub-menu li a:hover {
+	background-color: #e74b3c;
+}
+
+nav.main-menu ul.top-menu>li.orange:hover,
+nav.main-menu .top-menu .orange a:hover,
+nav.main-menu .orange .sub-menu li {
 	background-color: #f39c12;
 	color: black;
 	text-shadow: none;
 }
 
-nav .main-skola:hover,
-nav .main-skola:focus,
-ul.top-menu li.main-skola ul li,
-header.main-skola {
+nav.main-menu .orange .sub-menu li a:hover {
+	background-color: #f1c50e;
+}
+
+nav.main-menu ul.top-menu>li.blue:hover,
+nav.main-menu .top-menu .blue a:hover,
+nav.main-menu .blue .sub-menu li {
 	background-color: #2980b9;
+}
+
+nav.main-menu .blue .sub-menu li a:hover {
+	background-color: #3498db;
 }
 
 /*KONEC BAREV*/
@@ -1262,47 +1299,52 @@ footer .spodni {
 	}
 
 	/* -- Menu -- */
+	nav.main-menu>div {
+		width: 100%;
+	}
+
 	/*Tři podmínky aby to fungovalo*/
 	nav.main-menu {
 		background-color: #2c3e50;
 		height: auto;
+	}
+
+	nav.main-menu .top-menu a {
+		width: 100%;
 		overflow: hidden;
-	}
-
-	nav.main-menu ul.top-menu {
-		display: block;
-	}
-
-	nav.main-menu ul.top-menu>li {
-		width: 50%;
-		min-width: 240px;
-		height: auto;
-		cursor: pointer;
-		background-image: url("../img/scroll_down.png");
-		background-repeat: no-repeat;
-		background-position: 95% center;
-		background-size: 10px auto;
-		background-color: #2C3E50;
-	}
-
-	nav.main-menu ul.top-menu ul {
-		position: static;
+		z-index: 10;
 	}
 
 	/* -- end -- Tři podmínky aby to fungovalo*/
-	nav.main-menu ul.top-menu li.tap {
-		background: rgb(85, 85, 85) url("../img/scroll_down_180.png") no-repeat scroll 95% 14px / 10px auto;
-		color: inherit;
-		-webkit-animation-name: menu-tap-width;
-		animation-name: menu-tap-width;
-		-webkit-animation-duration: 0.3s;
-		animation-duration: 0.3s;
-		width: 100%;
+	nav.main-menu ul.top-menu>li {
+		width: 25%;
+		height: auto;
+		cursor: pointer;
+		background-color: #2c3e50;
+		justify-content: center;
+		align-items: center;
+		position: unset;
 	}
 
 	nav.main-menu ul.top-menu li.tap ul {
+		display: flex;
+		position: absolute;
+		flex-direction: column;
+		z-index: -1;
+		width: 100%;
+		background-color: #7f8c8d96;
+	}
+
+	nav.main-menu ul.top-menu li.tap ul::after {
+		content: "";
+		height: 100%;
 		display: block;
-		background: blue;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		z-index: -1;
+		background-color: #000000ad;
+		height: 100%;
 	}
 
 	nav.main-menu ul.top-menu li ul li {
@@ -1311,7 +1353,29 @@ footer .spodni {
 		width: 100%;
 	}
 
+	/* BARVY - MOBILNÍ - TAPPED ITEMS */
+	nav.main-menu ul.top-menu>li.tap {
+		background-color: #7f8c8d;
+	}
+
+	nav.main-menu ul.top-menu>li.green.tap {
+		background-color: #27ae60;
+	}
+
+	nav.main-menu ul.top-menu>li.red.tap {
+		background-color: #c0392b;
+	}
+
+	nav.main-menu ul.top-menu>li.orange.tap {
+		background-color: #f39c12;
+	}
+
+	nav.main-menu ul.top-menu>li.blue.tap {
+		background-color: #2980b9;
+	}
+
 	/* - Konec menu -*/
+
 	/*Searching - pokus o opravu*/
 	.sidebar {
 		clear: both;
@@ -1408,43 +1472,6 @@ footer .spodni {
 
 /*nastavení zobrazování menu při nejmenší konfiguraci*/
 @media only screen and (max-width: 480px) {
-	@-webkit-keyframes menu-tap-height {
-		from {
-			left: -250px;
-		}
-
-		to {
-			left: 0;
-		}
-	}
-
-	@keyframes menu-tap-height {
-		from {
-			left: -250px;
-		}
-
-		to {
-			left: 0;
-		}
-	}
-
-	nav.main-menu ul.top-menu>li {
-		float: none;
-		width: 100%;
-	}
-
-	nav.main-menu {
-		background-color: #2c3e50;
-		height: auto;
-	}
-
-	nav.main-menu ul.top-menu li.tap ul.menu {
-		position: relative;
-		-webkit-animation-name: menu-tap-height;
-		animation-name: menu-tap-height;
-		-webkit-animation-duration: .5s;
-		animation-duration: .5s;
-	}
 
 	/*Logo školy*/
 	.logo-skola {
