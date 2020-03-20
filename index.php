@@ -20,7 +20,7 @@
    
    endwhile;
    
-   if (function_exists(custom_pagination)) {
+   if (function_exists('custom_pagination')) {
         custom_pagination($limit_posts->max_num_pages,"",$paged,$pagination_link_format);
    }
     

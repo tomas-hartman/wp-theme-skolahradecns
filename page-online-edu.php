@@ -59,10 +59,12 @@ function render_page() {
 // setcookie('online_edu_class', 'online_edu_class', time()+365*24*60*60, '/');
 if(isset($_COOKIE["online_edu_class"])){
     $tag = $_COOKIE["online_edu_class"];
-
+           
     $args = array (
-        'tag' => $tag
-    );
+        'tag' => $tag,
+        'posts_per_page' => 50
+        );
+    
     $query = new WP_Query($args);
 
     if($query->have_posts()){
@@ -72,6 +74,8 @@ if(isset($_COOKIE["online_edu_class"])){
             get_template_part('content', get_post_format());
             wp_link_pages(); 
         }
+
+       wp_reset_postdata();
     } else render_page();
 
 } else {
