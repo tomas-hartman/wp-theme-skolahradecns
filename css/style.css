@@ -131,16 +131,17 @@ p {
 	height: 270px;
 	background-size: cover;
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .logo-skola {
-	position: relative;
-	margin-left: 25%;
+	/*! position: relative; */
+	margin-left: -25%;
 	margin-top: 25px;
-	top: 25px;
-	padding: 10px;
+	/*! top: 25px; */
+	/*! padding: 10px; */
 }
 
 /* hlavní část */
@@ -189,6 +190,7 @@ nav.main-menu ul.top-menu>li {
 	position: relative;
 	transition: all 0.2s;
 	display: flex;
+	/* z-index: 3; */
 }
 
 nav.main-menu .top-menu a {
@@ -427,6 +429,18 @@ main #nenalezeno {
 	font-size: large;
 	padding: 10px;
 }
+
+/* MENU SPECIAL ELM - EXPERIMENTAL*/
+/* nav.main-menu ul.top-menu li:hover ul:after {
+	content: " ";
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background-color: #0000006b;
+	top: 0;
+	left: 0;
+	z-index: -3;
+} */
 
 /*BARVY*/
 /*MAIN MENU: Barvy - světlejší odstíny, nastavení pozadí.*/
@@ -1111,10 +1125,22 @@ article #nenalezeno {
 
 /*Sidebar - hledání - pokus o opravu*/
 .sidebar .searching {
-	height: 15px;
-	width: 100%;
-	margin: -10px 0 10px -10px;
+	width: 290px;
+	margin: -10px 0 -10px -10px;
 	padding: 0;
+	box-sizing: border-box;
+	/* height: 100%; */
+	height: 35px;
+}
+
+.sidebar .searching .search-form {
+	box-sizing: border-box;
+}
+
+.sidebar .searching .search-form label {
+	/*! width: 100%; */
+	display: flex;
+	justify-content: space-between;
 }
 
 .sidebar .searching span {
@@ -1130,9 +1156,9 @@ article #nenalezeno {
 	color: rgba(0, 0, 0, 0);
 	width: 35px;
 	height: 35px;
-	position: absolute;
+	/*! position: absolute; */
 	cursor: pointer;
-	right: 10px;
+	/*! right: 10px; */
 }
 
 .sidebar .searching #submit-button:hover {
@@ -1144,8 +1170,9 @@ article #nenalezeno {
 	background-color: #ecf0f1;
 	border: none;
 	height: 35px;
-	width: 100%;
-	padding: 10px 45px 10px 10px;
+	/*! width: 100%; */
+	padding: 10px 10px 10px 10px;
+	flex-grow: 1;
 }
 
 .sidebar .menu-postranni-lista-menu-container a {
@@ -1396,24 +1423,52 @@ footer .spodni {
 		width: 95%;
 	}
 
-	.sidebar .searching label {
-		top: 10px;
+	.sidebar .searching {
 		width: 100%;
+		/*! position: relative; */
+		margin: 0;
+	}
+
+	.sidebar .searching .search-form label {
+		/*! top: 10px; */
+		/*! width: 100%; */
 		background-color: rgb(149, 165, 166);
+		margin: -10px -10px 0 -10px;
+		height: 45px;
+	}
+
+	.sidebar .searching #submit-button {
+		width: 45px;
+		height: 45px;
+
+	}
+
+	.sidebar .searching #searchform {
+		height: auto;
+
 	}
 }
 
 /*při 800px dochází k drobným změnám v logu školy*/
 @media only screen and (max-width: 800px) {
-	.logo-skola {
-		top: 0;
-		margin: 0 0;
-		vertical-align: middle;
-	}
-
 	.baner {
 		height: auto;
+		display: flex;
 	}
+
+	.baner>a {
+		flex-shrink: 2;
+		display: flex;
+	}
+
+	.logo-skola {
+		margin: 0 0;
+		padding: 20px 10px;
+		width: 100%;
+		height: auto;
+		box-sizing: border-box;
+	}
+
 }
 
 /*Při 720px zmizí malá fotogalerie dole a nadbytečné obrázky*/
@@ -1471,18 +1526,6 @@ footer .spodni {
 
 	main section.logolink-gen {
 		min-width: auto;
-	}
-}
-
-/*nastavení zobrazování menu při nejmenší konfiguraci*/
-@media only screen and (max-width: 480px) {
-
-	/*Logo školy*/
-	.logo-skola {
-		width: 93%;
-		height: auto;
-		display: block;
-		margin: auto;
 	}
 }
 
