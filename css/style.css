@@ -218,7 +218,9 @@ nav.main-menu ul.sub-menu>li {
 }
 
 @media only screen and (min-width: 960px) {
-	nav.main-menu ul.top-menu li:hover ul {
+
+	nav.main-menu ul.top-menu li:hover ul,
+	nav.main-menu ul.top-menu li:focus ul {
 		/*tohle je potřeba nastavit tak, aby se to zobrazovalo až když je displej větší než ten malý, takže tam hodit podmínku media screen nejméně 801px např.*/
 		display: block;
 	}
@@ -453,6 +455,7 @@ nav.main-menu ul.top-menu li ul li:hover {
 /* MENU BARVY - BASIC */
 nav.main-menu ul.top-menu>li:hover,
 nav.main-menu .top-menu a:hover,
+nav.main-menu .top-menu a:focus,
 nav.main-menu .sub-menu li {
 	background-color: #7f8c8d;
 }
@@ -466,6 +469,7 @@ nav.main-menu .sub-menu li a:hover {
 header.main-zs,
 nav.main-menu ul.top-menu>li.green:hover,
 nav.main-menu .top-menu .green a:hover,
+nav.main-menu .top-menu .green a:focus,
 nav.main-menu .green .sub-menu li {
 	background-color: #27ae60;
 }
@@ -477,6 +481,7 @@ nav.main-menu .green .sub-menu li a:hover {
 header.main-ms,
 nav.main-menu ul.top-menu>li.red:hover,
 nav.main-menu .top-menu .red a:hover,
+nav.main-menu .top-menu .red a:focus,
 nav.main-menu .red .sub-menu li {
 	background-color: #c0392b;
 }
@@ -488,6 +493,7 @@ nav.main-menu .red .sub-menu li a:hover {
 header.main-sd,
 nav.main-menu ul.top-menu>li.orange:hover,
 nav.main-menu .top-menu .orange a:hover,
+nav.main-menu .top-menu .orange a:focus,
 nav.main-menu .orange .sub-menu li {
 	background-color: #f39c12;
 	color: black;
@@ -501,6 +507,7 @@ nav.main-menu .orange .sub-menu li a:hover {
 header.main-skola,
 nav.main-menu ul.top-menu>li.blue:hover,
 nav.main-menu .top-menu .blue a:hover,
+nav.main-menu .top-menu .blue a:focus,
 nav.main-menu .blue .sub-menu li {
 	background-color: #2980b9;
 }
@@ -560,10 +567,7 @@ main article .text-clanek li {
 	margin-left: 20px;
 }
 
-main article .text-clanek ul {
-	margin-bottom: 10px;
-}
-
+main article .text-clanek ul,
 main article.full-clanek .text-clanek p {
 	margin-bottom: 10px;
 }
@@ -615,11 +619,7 @@ main article header h2 a:hover {
 	text-decoration: none;
 }
 
-main article header ul {
-	list-style: none url();
-	display: inline-block;
-}
-
+main article header ul,
 main article header li {
 	list-style: none url();
 	display: inline-block;

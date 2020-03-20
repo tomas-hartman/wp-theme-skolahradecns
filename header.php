@@ -61,7 +61,7 @@
             <img src="<?php bloginfo('template_directory'); ?>/img/logo_zsHnS.png" alt="logo_zsHnS.png, 10kB" title="ZŠ a MŠ Hradec nad Svitavou - logo"
                 border="0" height="158" width="467" class="logo-skola"></a>
     </header>
-    <nav class="main-menu">
+    <nav class="main-menu" role="navigation">
         <?php wp_nav_menu( array ('theme_location' => 'main-menu',
                                     'menu_class' => 'top-menu',
                                     'item_spacing' => 'discard'
