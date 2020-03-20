@@ -77,7 +77,7 @@ if(isset($_COOKIE["online_edu_class"])){
             if($date !== get_the_date()){
                 echo '<div class="task-published">';
                     echo "<p>";
-                        echo "Zadání z ";
+                        echo "Zadání ze dne ";
                         echo get_the_date();
                     echo "</p>";
                 echo '</div>';
