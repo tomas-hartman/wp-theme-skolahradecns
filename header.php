@@ -10,11 +10,12 @@
     <meta name="language" content="cs">
     <meta name="url" content="https://www.skolahradecns.cz">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2c3e50">
     <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
     <link href='/favicon.png' rel='shortcut icon'>
     <meta name="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/img/web-img.jpg"/>
 
-    <!-- <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="<?php //bloginfo('template_directory');?>/css/style.css" type="text/css"> -->
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/style.css" type="text/css">
 
     <?php
@@ -48,38 +49,7 @@
           document.createElement("section");
         </script>
     <![endif]-->
-    <script>
-        /* WordPress neumožňuje vložit do svýho menu javascript, tak ho tam injectuju do prvního "a" v daným listu až následně javascriptem, class jsem musel definovat ručně.*/
-
-        document.addEventListener("DOMContentLoaded", function () {
-            var a, i, mainClass;
-
-            a = document.getElementsByClassName("main-mainmenu");
-            mainClass = ['main-zs', 'main-ms', 'main-sd', 'main-skola'];
-
-            for (i = 0; i < a.length; i++) {
-                a[i].getElementsByTagName("a")[0].href = "javascript:openMenu('" + mainClass[i] + "')";
-            }
-        });
-
-        /*Funkce, která se stará o to, abych po kliknutí otevřel, nebo zavřel otevřený menu.*/
-        function openMenu(x) {
-            var x, y, z, i;
-
-            z = document.getElementsByClassName("main-mainmenu");
-            y = document.getElementsByClassName(x)[0];
-
-            if (y.classList.contains("tap")) {
-                y.classList.remove("tap");
-            }
-            else {
-                for (i = 0; i < z.length; i++) {
-                    z[i].classList.remove("tap");
-                }
-                y.classList.add("tap");
-            }
-        }
-    </script>
+    <script src="<?php bloginfo('template_directory');?>/js/mainMenu.js"></script>
     <?php wp_head(); ?>
 </head>
 
@@ -91,7 +61,7 @@
             <img src="<?php bloginfo('template_directory'); ?>/img/logo_zsHnS.png" alt="logo_zsHnS.png, 10kB" title="ZŠ a MŠ Hradec nad Svitavou - logo"
                 border="0" height="158" width="467" class="logo-skola"></a>
     </header>
-    <nav class="main-menu">
+    <nav class="main-menu" role="navigation">
         <?php wp_nav_menu( array ('theme_location' => 'main-menu',
                                     'menu_class' => 'top-menu',
                                     'item_spacing' => 'discard'
