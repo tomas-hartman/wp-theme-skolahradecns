@@ -1464,6 +1464,7 @@ footer .spodni {
 }
 
 /*Při 720px zmizí malá fotogalerie dole a nadbytečné obrázky*/
+/* TABLET LAYOUT */
 @media only screen and (max-width: 720px) {
 
 	main article.galerie img.wp-post-image,
@@ -1542,4 +1543,13 @@ blockquote {
 	text-align: center;
 	font-size: medium;
 	font-weight: 300;
+}
+
+/* LAZY LOADING */
+.lazy-load {
+	background-color: #bdc3c7;
+}
+
+.lazy-load::before {
+	display: none;
 }
