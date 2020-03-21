@@ -137,11 +137,8 @@ p {
 }
 
 .logo-skola {
-	/*! position: relative; */
 	margin-left: -25%;
 	margin-top: 25px;
-	/*! top: 25px; */
-	/*! padding: 10px; */
 }
 
 /* hlavní část */
@@ -190,7 +187,6 @@ nav.main-menu ul.top-menu>li {
 	position: relative;
 	transition: all 0.2s;
 	display: flex;
-	/* z-index: 3; */
 }
 
 nav.main-menu .top-menu a {
@@ -282,7 +278,6 @@ nav.menu-docs li {
 	height: 35px;
 	min-width: 12%;
 	text-align: center;
-	/* float: left; */
 	font-size: medium;
 }
 
@@ -1129,7 +1124,6 @@ article #nenalezeno {
 	margin: -10px 0 -10px -10px;
 	padding: 0;
 	box-sizing: border-box;
-	/* height: 100%; */
 	height: 35px;
 }
 
@@ -1138,7 +1132,6 @@ article #nenalezeno {
 }
 
 .sidebar .searching .search-form label {
-	/*! width: 100%; */
 	display: flex;
 	justify-content: space-between;
 }
@@ -1156,9 +1149,7 @@ article #nenalezeno {
 	color: rgba(0, 0, 0, 0);
 	width: 35px;
 	height: 35px;
-	/*! position: absolute; */
 	cursor: pointer;
-	/*! right: 10px; */
 }
 
 .sidebar .searching #submit-button:hover {
@@ -1170,7 +1161,6 @@ article #nenalezeno {
 	background-color: #ecf0f1;
 	border: none;
 	height: 35px;
-	/*! width: 100%; */
 	padding: 10px 10px 10px 10px;
 	flex-grow: 1;
 }
@@ -1425,13 +1415,10 @@ footer .spodni {
 
 	.sidebar .searching {
 		width: 100%;
-		/*! position: relative; */
 		margin: 0;
 	}
 
 	.sidebar .searching .search-form label {
-		/*! top: 10px; */
-		/*! width: 100%; */
 		background-color: rgb(149, 165, 166);
 		margin: -10px -10px 0 -10px;
 		height: 45px;
