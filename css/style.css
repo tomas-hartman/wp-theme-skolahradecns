@@ -1163,6 +1163,7 @@ article #nenalezeno {
 	height: 35px;
 	padding: 10px 10px 10px 10px;
 	flex-grow: 1;
+	border-radius: 0;
 }
 
 .sidebar .menu-postranni-lista-menu-container a {
@@ -1456,7 +1457,7 @@ footer .spodni {
 		margin: 0 0;
 		padding: 20px 10px;
 		width: 100%;
-		height: auto;
+		height: 100%;
 		box-sizing: border-box;
 	}
 

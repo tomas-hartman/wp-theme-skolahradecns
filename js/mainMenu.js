@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   for (var i = 0; i < menuItems.length; i++) {
     var item = menuItems[i];
-    item.parentNode.setAttribute("tabindex", "0");
+    // item.parentNode.setAttribute("tabindex", "0");
 
     item.addEventListener("click", function (e) {
       if (window.innerWidth > 960) return;
