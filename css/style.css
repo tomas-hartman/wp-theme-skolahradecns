@@ -126,7 +126,7 @@ p {
 
 /* nav */
 .baner {
-	background: url(../img/t_skola_4_small_1.jpg) center no-repeat;
+	background: url(../img/t_skola_4_small_optimized.jpg) center no-repeat;
 	background-size: 100%;
 	height: 270px;
 	background-size: cover;
@@ -825,7 +825,7 @@ main section.logolink-gen {
 }
 
 main section.logolink-big {
-	background: white url(../img/proj/logolink.jpg) center center no-repeat;
+	background: white url(../img/proj/logolink_o.jpg) center center no-repeat;
 	background-size: auto 120px;
 }
 
