@@ -14,3 +14,13 @@ git ftp push --branch "master-release"
 1. https://github.com/git-ftp/git-ftp/blob/master/man/git-ftp.1.md
 2. https://www.kutac.cz/blog/weby-a-vse-okolo/git-ftp/
 3. https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+
+# How to develop css
+
+```bash
+sass --watch css/src/style.scss:css/style.css
+
+or:
+
+sass --watch css/src/style.scss:css/style.css --style compressed
+```
