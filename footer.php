@@ -2,13 +2,13 @@
     <div class="horni">
         <span class="ft-headline"><h3>Projekty a sponzoři</h3></span>
         <div class="ft-flex-horni-cont">
-            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/projekty-opvk/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/logolink_o.jpg" alt=""></div></a></section>
-            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/etwinning/"><div class="image" style="/*width: 100%;*/"><img src="<?php bloginfo('template_directory'); ?>/img/proj/etwinning.svg" alt=""></div></a></section>
-            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/visegrad-fund/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/visegrad_fund_logo_blue_290px.png" alt=""></div></a></section>
-            <section class="sponsors"><a href="http://www.skutecnezdravaskola.cz/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/skutecnezdravaskola.jpg" alt=""></div></a></section>
-            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/msmt/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/msmtlogo_o.jpg" alt=""></div></a></section>
-            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/nadace-cez/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/logo_cez.png" alt=""></div></a></section>
-            <section class="sponsors"><a href="https://www.sportujveskole.cz/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/sportuj-ve-skole.jpg" alt=""></div></a></section>
+            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/projekty-opvk/"><div class="image"><img data-src="<?php bloginfo('template_directory'); ?>/img/proj/logolink_o.jpg" alt="Logolink Projekty OPVK" class="lazy-load"></div></a></section>
+            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/etwinning/"><div class="image" style="/*width: 100%;*/"><img data-src="<?php bloginfo('template_directory'); ?>/img/proj/etwinning.svg" alt="Logo etwinning" class="lazy-load"></div></a></section>
+            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/visegrad-fund/"><div class="image"><img data-src="<?php bloginfo('template_directory'); ?>/img/proj/visegrad_fund_logo_blue_290px.png" alt="Logo Visegrad Funds" class="lazy-load"></div></a></section>
+            <section class="sponsors"><a href="http://www.skutecnezdravaskola.cz/"><div class="image"><img data-src="<?php bloginfo('template_directory'); ?>/img/proj/skutecnezdravaskola.jpg" alt="Logo skutečně zdravá škola" class="lazy-load"></div></a></section>
+            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/msmt/"><div class="image"><img data-src="<?php bloginfo('template_directory'); ?>/img/proj/msmtlogo_o.jpg" alt="Logo MŠMT" class="lazy-load"></div></a></section>
+            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/nadace-cez/"><div class="image"><img data-src="<?php bloginfo('template_directory'); ?>/img/proj/logo_cez.png" alt="Logo ČEZ" class="lazy-load"></div></a></section>
+            <section class="sponsors"><a href="https://www.sportujveskole.cz/"><div class="image"><img data-src="<?php bloginfo('template_directory'); ?>/img/proj/sportuj-ve-skole.jpg" alt="Logo projektu Sportuj ve škole" class="lazy-load"></div></a></section>
         </div>
     </div>
     <div class="stredni">
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="spodni">
-        <div class="left"><p>Copyright &copy; <?php echo date('Y'); ?> t3</p><p>Powered by WordPress</p></div>
+        <div class="left"><p>Copyright &copy; <?php echo date('Y'); ?> <a href="https://github.com/tomas-hartman" class="underline">t3</a></p><p>Powered by WordPress</p></div>
         <p class="right"><a href="<?php echo admin_url();?>">administrace</a></p>
     </div>
 </footer>
@@ -67,6 +67,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/pf2020.css" type="text/css">
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/newyear2020.js"></script>
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/onlineEdu.js"></script>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/lazyLoading.js"></script>
   
   </body>
 </html>
