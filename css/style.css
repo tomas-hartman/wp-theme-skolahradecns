@@ -2,10 +2,32 @@
 Theme Name: Škola Hradec nad Svitavou
 Author: Tomáš Hartman
 Description: Téma, které je použito na stránce ZŠ a MŠ Hradec nad Svitavou. Kompatibilita s moderními prohlížeči a IE11. Starší prohlížeče mohou být kompatibilní.
-Version: 1.2
+Version: 1.2.1
 Text Domain: zsmshradecns
 */
 /* CSS Document */
+
+@font-face {
+	font-family: "Slabo 27px";
+	font-weight: 400;
+	font-style: normal;
+	src: url(../assets/Slabo27px-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 300;
+	src: url(../assets/OpenSans-Light.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url(../assets/OpenSans-Regular.ttf);
+}
+
 /* -- CSS reset -- */
 article,
 footer,

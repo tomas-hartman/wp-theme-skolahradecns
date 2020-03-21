@@ -28,8 +28,6 @@
     }
     ?>
 
-    <link href='https://fonts.googleapis.com/css?family=Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri(); ?>/img/touch-icon-192x192.png">
     <link rel="fluid-icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/touch-icon-192x192.png">
