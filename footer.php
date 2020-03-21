@@ -2,11 +2,11 @@
     <div class="horni">
         <span class="ft-headline"><h3>Projekty a sponzoři</h3></span>
         <div class="ft-flex-horni-cont">
-            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/projekty-opvk/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/logolink.jpg" alt=""></div></a></section>
+            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/projekty-opvk/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/logolink_o.jpg" alt=""></div></a></section>
             <section class="sponsors"><a href="<?php echo get_site_url(); ?>/etwinning/"><div class="image" style="/*width: 100%;*/"><img src="<?php bloginfo('template_directory'); ?>/img/proj/etwinning.svg" alt=""></div></a></section>
             <section class="sponsors"><a href="<?php echo get_site_url(); ?>/visegrad-fund/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/visegrad_fund_logo_blue_290px.png" alt=""></div></a></section>
             <section class="sponsors"><a href="http://www.skutecnezdravaskola.cz/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/skutecnezdravaskola.jpg" alt=""></div></a></section>
-            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/msmt/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/msmtlogo.jpg" alt=""></div></a></section>
+            <section class="sponsors"><a href="<?php echo get_site_url(); ?>/msmt/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/msmtlogo_o.jpg" alt=""></div></a></section>
             <section class="sponsors"><a href="<?php echo get_site_url(); ?>/nadace-cez/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/logo_cez.png" alt=""></div></a></section>
             <section class="sponsors"><a href="https://www.sportujveskole.cz/"><div class="image"><img src="<?php bloginfo('template_directory'); ?>/img/proj/sportuj-ve-skole.jpg" alt=""></div></a></section>
         </div>
