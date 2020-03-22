@@ -1,32 +1,10 @@
 /* CSS Document */
 
-@use './header.scss';
-@use './fonts.scss';
-@use './reset.scss';
-
-// COLOR PALETTE
-
-$navy-light: #34495e;
-$navy-dark: #2c3e50;
-
-$clouds-white: #ecf0f1;
-$silver: #bdc3c7;
-$concrete: #95a5a6;
-$asbestos: #7f8c8d;
-
-$red: #c0392b;
-// $red-light: #e74c3c; // lehce se liší
-$red-light: #e74b3c;
-$green: #27ae60;
-$green-light: #2ecc71; // liší se!
-$orange: #f39c12;
-$sunflower-light: #f1c40f;
-$blue: #2980b9;
-$blue-light: #3498db;
-$purple: #8e44ad; // liší se!
-$purple-light: #9b59b6;
-
-// END COLOR PALETTE
+@use 'header';
+@use 'fonts';
+@use 'reset';
+@import 'colors';
+@import './main-menu.scss';
 
 // DIMENSIONS
 $desktop-width: 960px;
@@ -71,211 +49,52 @@ p {
     margin-left: auto;
     margin-right: auto;
     background-color: $clouds-white;
-    box-shadow: 0px 0px 10px 14px rgba(127, 140, 141, 0.5);
+    box-shadow: 0px 0px 10px 14px rgba(127, 140, 141, 0.5); // průhledný asbestos
 }
 
-/* menu */
-/* MAIN MENU LAYOUT */
-nav.main-menu {
-    background-color: $navy-dark;
-
-    color: white;
-    font-size: medium;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-
-    position: relative;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-
-    /* Container div */
-    &>div {
-        width: 960px;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    ul.top-menu {
-        list-style: none url();
-        display: flex;
-        flex-wrap: wrap;
-
-        &>li {
-            position: relative;
-            transition: all 0.2s;
-            display: flex;
-        }
-
-        a {
-            width: 240px;
-            min-height: 35px;
-            z-index: 3;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        ul.sub-menu {
-            display: none;
-            position: absolute;
-            left: 0;
-            z-index: 5;
-            transition: opacity 0.2s;
-            top: 100%;
-            cursor: default;
-
-            &>li {
-                list-style: none;
-                display: flex;
-            }
-        }
-    }
-}
-
-/* Tohle je potřeba nastavit tak, aby se to zobrazovalo až když je displej větší než ten malý. */
-@media only screen and (min-width: 960px) {
-    nav.main-menu ul.top-menu {
-
-        li:hover ul,
-        li:focus ul {
-            display: block;
-        }
-
-        &>li.tap {
-            background-color: inherit;
-        }
-    }
-}
-
-/* -- Menu mobilní -- */
-@media only screen and (max-width: 959px) {
-    nav.main-menu {
-        background-color: #2c3e50;
-        height: auto;
-
-        &>div {
-            width: 100%;
-        }
-
-        ul.top-menu {
-            a {
-                width: 100%;
-                overflow: hidden;
-                z-index: 10;
-            }
-
-            &>li {
-                width: 25%;
-                height: auto;
-                cursor: pointer;
-                background-color: #2c3e50;
-                justify-content: center;
-                align-items: center;
-                position: unset;
-
-                ul li {
-                    list-style: none;
-                    float: right;
-                    width: 100%;
-                }
-            }
-
-            // Tapped
-            li.tap {
-                // BARVY
-                background-color: #7f8c8d;
-
-                &.green {
-                    background-color: #27ae60;
-                }
-
-                &.red {
-                    background-color: #c0392b;
-                }
-
-                &.orange {
-                    background-color: #f39c12;
-                }
-
-                &.blue {
-                    background-color: #2980b9;
-                }
-
-                ul {
-                    display: flex;
-                    position: absolute;
-                    flex-direction: column;
-                    z-index: -1;
-                    width: 100%;
-                    background-color: #7f8c8d96;
-
-                    &::after {
-                        content: "";
-                        height: 100%;
-                        display: block;
-                        top: 0;
-                        position: fixed;
-                        width: 100%;
-                        z-index: -1;
-                        background-color: #000000ad;
-                        height: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* - Konec menu -*/
-
-/*Spodní navigační proužek (stránkovací)*/
+/* Spodní navigační proužek (stránkovací) */
 nav.next-previous-posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px 0 0 10px;
-    height: 35px;
-    line-height: 35px;
-    font-size: medium;
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
+
     background-color: #2c3e50;
-    color: #ecf0f1;
-    clear: left;
-}
 
-nav.next-previous-posts a,
-nav.next-previous-posts span.current {
-    color: #ecf0f1;
-    text-decoration: none;
-    display: inline-block;
-    height: 35px;
-    width: 35px;
-}
+    &>* {
+        font-size: medium;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
 
-nav.next-previous-posts a:hover {
-    color: #ecf0f1;
-    background-color: #34495e;
-    text-decoration: underline;
-}
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ecf0f1;
+        text-decoration: none;
+    }
 
-nav.next-previous-posts span.current {
-    color: #34495e;
-    background-color: #ecf0f1;
+    a:hover {
+        color: $clouds-white;
+        background-color: $navy-light;
+        text-decoration: underline;
+    }
+
+    span.current {
+        color: $navy-light;
+        background-color: $clouds-white;
+    }
 }
 
 /*TEMPLATE - Stránka s dokumenty - menu*/
 nav.menu-docs {
-    background-color: #3498db;
+    background-color: $blue-light;
     line-height: 35px;
     height: auto;
     overflow: hidden;
     z-index: -3;
-    box-shadow: 0px 4px rgb(149, 165, 166), 0px 4px #2980b9 inset;
+    box-shadow: 0px 4px $concrete, 0px 4px $blue inset;
 }
 
 nav.menu-docs li {
@@ -290,7 +109,7 @@ nav.menu-docs a {
     padding: 0 10px 0 10px;
     display: block;
     text-decoration: none;
-    color: black;
+    color: $black;
     font-family: "Open Sans", sans-serif;
     font-size: medium;
     font-weight: 300;
@@ -298,12 +117,12 @@ nav.menu-docs a {
 
 nav.menu-docs a:hover,
 nav.menu-docs a:focus {
-    background-color: #f1c40f;
+    background-color: $orange-light;
 }
 
 .page-docs a.wpba-link {
     text-decoration: none;
-    color: black;
+    color: $black;
 }
 
 .page-docs a.wpba-link:hover {
@@ -334,8 +153,8 @@ nav.menu-docs a:focus {
     justify-content: left;
     align-content: stretch;
     flex-wrap: wrap;
-    background-color: #3498db;
-    box-shadow: 0px 4px rgb(149, 165, 166), 0px 4px #2980b9 inset;
+    background-color: $blue-light;
+    box-shadow: 0px 4px $concrete, 0px 4px $blue inset;
 }
 
 .navbar_menu ul>li {
@@ -353,7 +172,7 @@ nav.menu-docs a:focus {
     justify-content: center;
     align-items: center;
 
-    color: black;
+    color: $black;
     font-family: "Open Sans", sans-serif;
     font-size: medium;
     font-weight: 300;
@@ -361,12 +180,12 @@ nav.menu-docs a:focus {
 
 .navbar_menu ul>li>a:hover,
 .navbar_menu ul>li>a:focus {
-    background-color: #f1c40f;
+    background-color: $orange-light;
 }
 
 #menu-vyuka-online {
-    box-shadow: 0px 4px rgb(149, 165, 166), 0px 4px hsl(145, 63%, 32%) inset;
-    background-color: #27ae60;
+    box-shadow: 0px 4px $concrete, 0px 4px hsl(145, 63%, 32%) inset;
+    background-color: $green;
 }
 
 #menu-vyuka-online li {
@@ -381,14 +200,14 @@ nav.menu-docs a:focus {
 /*Barvy*/
 #wpba_attachment_list {
     box-shadow: 0px 4px rgba(0, 0, 0, 0.3) inset;
-    background-color: rgb(52, 152, 219);
+    background-color: $blue-light;
 }
 
-.event-list-cal-info {
-    background-color: #34495e;
-    box-shadow: 0px 4px #2c3e50 inset;
-    color: #ecf0f1;
-}
+// .event-list-cal-info {
+//     background-color: $navy-light;
+//     box-shadow: 0px 4px $navy-dark inset;
+//     color: $clouds-white;
+// }
 
 /* -- END Barvy -- */
 main article .text-clanek ul.wpba-attachment-list {
@@ -411,7 +230,7 @@ ul.wpba-attachment-list li img,
 
 /*SPECIÁL: upozornění*/
 .text-clanek.page-docs .attachment #wpba_attachment_list {
-    background-color: #95a5a6;
+    background-color: $concrete;
     margin: 15px 0px -5px -15px;
     box-shadow: unset;
 }
@@ -445,89 +264,46 @@ main #nenalezeno {
 /*BARVY*/
 /*MAIN MENU: Barvy - světlejší odstíny, nastavení pozadí.*/
 nav.main-menu ul.top-menu li ul li:hover {
-    color: black;
+    color: $black;
     text-shadow: none;
 }
 
 .text-clanek.page-docs.main-zs #wpba_attachment_list {
-    background-color: #53d78b;
+    background-color: $green-light;
 }
 
 .text-clanek.page-docs.main-ms #wpba_attachment_list {
-    background-color: #e74b3c;
+    background-color: $red-light;
 }
 
 .text-clanek.page-docs.main-sd #wpba_attachment_list {
-    background-color: #f1c50e;
+    background-color: $orange-light;
 }
 
 .text-clanek.page-docs.main-skola #wpba_attachment_list {
-    background-color: #3498db;
+    background-color: $blue-light;
 }
 
-/* MENU BARVY - BASIC */
-nav.main-menu ul.top-menu>li:hover,
-nav.main-menu .top-menu a:hover,
-nav.main-menu .top-menu a:focus,
-nav.main-menu .sub-menu li {
-    background-color: #7f8c8d;
+// BARVY HEADER
+header.main-zs {
+    background-color: $green;
 }
 
-nav.main-menu .sub-menu li a:hover {
-    background-color: #95a5a6;
+
+header.main-ms {
+    background-color: $red;
 }
 
-/* MENU BARVY - TUNED + BARVA ČLÁNKY */
-
-header.main-zs,
-nav.main-menu ul.top-menu>li.green:hover,
-nav.main-menu .top-menu .green a:hover,
-nav.main-menu .top-menu .green a:focus,
-nav.main-menu .green .sub-menu li {
-    background-color: #27ae60;
-}
-
-nav.main-menu .green .sub-menu li a:hover {
-    background-color: #53d78b;
-}
-
-header.main-ms,
-nav.main-menu ul.top-menu>li.red:hover,
-nav.main-menu .top-menu .red a:hover,
-nav.main-menu .top-menu .red a:focus,
-nav.main-menu .red .sub-menu li {
-    background-color: #c0392b;
-}
-
-nav.main-menu .red .sub-menu li a:hover {
-    background-color: #e74b3c;
-}
-
-header.main-sd,
-nav.main-menu ul.top-menu>li.orange:hover,
-nav.main-menu .top-menu .orange a:hover,
-nav.main-menu .top-menu .orange a:focus,
-nav.main-menu .orange .sub-menu li {
-    background-color: #f39c12;
-    color: black;
+header.main-sd {
+    background-color: $orange;
+    color: $black;
     text-shadow: none;
 }
 
-nav.main-menu .orange .sub-menu li a:hover {
-    background-color: #f1c50e;
+header.main-skola {
+    background-color: $blue;
 }
 
-header.main-skola,
-nav.main-menu ul.top-menu>li.blue:hover,
-nav.main-menu .top-menu .blue a:hover,
-nav.main-menu .top-menu .blue a:focus,
-nav.main-menu .blue .sub-menu li {
-    background-color: #2980b9;
-}
-
-nav.main-menu .blue .sub-menu li a:hover {
-    background-color: #3498db;
-}
 
 /*KONEC BAREV*/
 /*VÝPIS ČLÁNKŮ - zobrazení typů jednotlivých článků*/
@@ -553,15 +329,15 @@ main article img {
 main article header {
     overflow: hidden;
     padding: 10px;
-    background-color: rgb(149, 165, 166);
+    background-color: $concrete;
 }
 
 /*Formátování textu článků*/
 main article .text-clanek {
     padding: 10px 15px 10px;
-    background-color: #bdc3c7;
+    background-color: $silver;
     overflow: hidden;
-    box-shadow: 0px 4px rgb(127, 140, 141) inset;
+    box-shadow: 0px 4px $asbestos inset;
     margin-left: 10px;
     margin-right: 5px;
 }
@@ -591,7 +367,7 @@ main article.full-clanek .text-clanek p:last-child {
 
 main article .text-clanek a.read-more {
     display: inline-block;
-    background: #95a5a6;
+    background: $concrete;
     font-size: 90%;
     vertical-align: middle;
     text-align: center;
@@ -603,7 +379,7 @@ main article .text-clanek a.read-more {
 }
 
 main article .text-clanek a:not(.read-more) {
-    background-color: #95a5a6;
+    background-color: $concrete;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -612,13 +388,13 @@ main article .text-clanek a:not(.read-more) {
     border-radius: 5px;
     box-sizing: border-box;
     max-width: 100%;
-    color: black;
+    color: $black;
 }
 
 main article .text-clanek a:hover,
 main article .text-clanek a.read-more:hover {
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: $navy-dark;
+    color: $clouds-white;
 }
 
 main article .text-clanek h2,
@@ -685,7 +461,7 @@ main article.upozorneni img.attachment-thumbnail {
 
 main article.upozorneni header {
     height: 45px;
-    background-color: #e67e22;
+    background-color: $warning-light;
 }
 
 main article.upozorneni .text-clanek {
@@ -710,7 +486,7 @@ main article.galerie img {
 main article.galerie header {
     margin-bottom: 10px;
     height: 61px;
-    box-shadow: 4px 12px 0px -8px #7f8c8d;
+    box-shadow: 4px 12px 0px -8px $asbestos;
 }
 
 main article.galerie .text-clanek {
@@ -737,7 +513,7 @@ main article.full-gallery header {
     height: 75px;
     padding-top: 15px;
     padding-bottom: 5px;
-    box-shadow: 4px 12px 0px -8px #7f8c8d;
+    box-shadow: 4px 12px 0px -8px $asbestos;
 }
 
 main article.full-gallery.page-full-gallery header {
@@ -751,7 +527,7 @@ main article.full-gallery.page-full-gallery header {
 main article.full-gallery img {
     height: 95px;
     width: 95px;
-    box-shadow: 1px 8px 0 -4px #7f8c8d;
+    box-shadow: 1px 8px 0 -4px $asbestos;
 }
 
 main article.full-gallery .text-clanek {
@@ -761,7 +537,7 @@ main article.full-gallery .text-clanek {
 }
 
 main article.page-full-gallery .text-clanek {
-    box-shadow: 0 4px #95a5a6 inset;
+    box-shadow: 0 4px $concrete inset;
 }
 
 /*1a. ZOBRAZENÍ GALERIE*/
@@ -784,13 +560,13 @@ main article.full-gallery.content-gallery .gallery img {
     from {
         opacity: 1;
         filter: alpha(opacity=100);
-        box-shadow: 0px 4px #bdc3c7;
+        box-shadow: 0px 4px $silver;
     }
 
     to {
         opacity: 0.5;
         filter: alpha(opacity=50);
-        box-shadow: 4px 4px grey;
+        box-shadow: 4px 4px $grey;
     }
 }
 
@@ -798,13 +574,13 @@ main article.full-gallery.content-gallery .gallery img {
     from {
         opacity: 1;
         filter: alpha(opacity=100);
-        box-shadow: 0px 4px #bdc3c7;
+        box-shadow: 0px 4px $silver;
     }
 
     to {
         opacity: 0.5;
         filter: alpha(opacity=50);
-        box-shadow: 4px 4px grey;
+        box-shadow: 4px 4px $grey;
     }
 }
 
@@ -818,7 +594,7 @@ main article.upozorneni img.attachment-thumbnail:hover {
     animation-duration: 0.2s;
     opacity: 0.5;
     filter: alpha(opacity=50);
-    box-shadow: 4px 4px #7f8c8d;
+    box-shadow: 4px 4px $asbestos;
 }
 
 .gallery dl {
@@ -843,22 +619,22 @@ main section.logolink-gen {
 }
 
 main section.logolink-big {
-    background: white url(../img/proj/logolink_o.jpg) center center no-repeat;
+    background: $white url(../img/proj/logolink_o.jpg) center center no-repeat;
     background-size: auto 120px;
 }
 
 main section.logolink-Visegrad {
-    background: white url(../img/proj/visegrad_fund_logo_blue_290px.png) center center no-repeat;
+    background: $white url(../img/proj/visegrad_fund_logo_blue_290px.png) center center no-repeat;
     background-size: auto 120px;
 }
 
 main section.logolink-etwinning {
-    background: white url(../img/proj/etwinning.svg) center center no-repeat;
+    background: $white url(../img/proj/etwinning.svg) center center no-repeat;
     background-size: auto 105px;
 }
 
 main section.logolink-cez {
-    background: white url(../img/proj/logo_cez.png) center center no-repeat;
+    background: $white url(../img/proj/logo_cez.png) center center no-repeat;
     background-size: auto 120px;
 }
 
@@ -875,7 +651,7 @@ main article .galerie-clanek {
 
 main article .galerie-clanek img {
     margin-bottom: 10px;
-    box-shadow: 1px 8px 0px -4px #7f8c8d;
+    box-shadow: 1px 8px 0px -4px $asbestos;
 }
 
 main article .mini {
@@ -918,7 +694,7 @@ main article.search .text-clanek {
 }
 
 main article.search .search-count {
-    background-color: rgb(44, 62, 80);
+    background-color: $navy-dark;
     display: block;
     float: left;
     min-width: 45px;
@@ -927,12 +703,12 @@ main article.search .search-count {
     text-align: center;
     font-family: "Open Sans", Serif;
     font-weight: 300;
-    color: white;
+    color: $white;
 }
 
 /* -- Nenalezeno -- */
 article #nenalezeno {
-    background-color: #2c3e50;
+    background-color: $navy-dark;
     display: block;
     line-height: 45px;
     padding: 10px;
@@ -970,7 +746,7 @@ article #nenalezeno {
 
 #nav-line {
     position: relative;
-    background-color: #9b59b6;
+    background-color: $purple-light;
     padding: 5px 10px;
     -webkit-animation-name: animation;
     animation-name: animation;
@@ -992,7 +768,7 @@ article #nenalezeno {
 /* sidebar */
 .sidebar {
     width: 290px;
-    background-color: #bdc3c7;
+    background-color: $silver;
     float: right;
     padding: 0 10px 0 10px;
     position: relative;
@@ -1000,10 +776,10 @@ article #nenalezeno {
 }
 
 .sidebar section {
-    background-color: #95a5a6;
+    background-color: $concrete;
     margin-bottom: 10px;
     padding: 10px;
-    box-shadow: 4px 12px 0px -8px #7f8c8d;
+    box-shadow: 4px 12px 0px -8px $asbestos;
 }
 
 .sidebar section.menu-postranni-lista-mapa-container {
@@ -1036,7 +812,7 @@ article #nenalezeno {
     order: 2;
     margin-top: -20px;
     z-index: 0;
-    box-shadow: 4px 12px 0px -8px #7f8c8d;
+    box-shadow: 4px 12px 0px -8px $asbestos;
 }
 
 /* Je mi k něčemu? */
@@ -1048,93 +824,93 @@ article #nenalezeno {
 /* .sidebar section.logolink {
 	padding: 0;
 	height: 100%;
-	background-color: white;
+	background-color: $white;
 	text-align: center;
 } */
 
-.sidebar section .event-list-cal-date {
-    border: medium none;
-    display: block;
-    float: left;
-    margin-top: 0px;
-    position: absolute;
-    height: 55px;
-    width: 55px;
-    text-align: center;
-}
+// .sidebar section .event-list-cal-date {
+//     border: medium none;
+//     display: block;
+//     float: left;
+//     margin-top: 0px;
+//     position: absolute;
+//     height: 55px;
+//     width: 55px;
+//     text-align: center;
+// }
 
-.sidebar section .event-list-cal-day-month {
-    display: block;
-    text-align: center;
-    background-color: rgb(236, 240, 241);
-    font-size: 15px;
-    height: 30px;
-    line-height: 30px;
-    margin-left: -5px;
-    margin-right: 5px;
-    box-shadow: 4px 0px grey;
-}
+// .sidebar section .event-list-cal-day-month {
+//     display: block;
+//     text-align: center;
+//     background-color: rgb(236, 240, 241);
+//     font-size: 15px;
+//     height: 30px;
+//     line-height: 30px;
+//     margin-left: -5px;
+//     margin-right: 5px;
+//     box-shadow: 4px 0px grey;
+// }
 
-.sidebar section .event-list-cal-year {
-    width: auto;
-    text-align: center;
-    display: block;
-    background-color: rgb(155, 89, 182);
-    height: 20px;
-    margin-left: 5px;
-    line-height: 20px;
-    box-shadow: 0px 4px rgb(127, 140, 141) inset;
-    padding-top: 5px;
-    margin-right: 1px;
-}
+// .sidebar section .event-list-cal-year {
+//     width: auto;
+//     text-align: center;
+//     display: block;
+//     background-color: rgb(155, 89, 182);
+//     height: 20px;
+//     margin-left: 5px;
+//     line-height: 20px;
+//     box-shadow: 0px 4px $asbestos inset;
+//     padding-top: 5px;
+//     margin-right: 1px;
+// }
 
-.sidebar section ul.event-list-cal-list li {
-    display: block;
-    height: 55px;
-    margin-bottom: 5px;
-    position: relative;
-}
+// .sidebar section ul.event-list-cal-list li {
+//     display: block;
+//     height: 55px;
+//     margin-bottom: 5px;
+//     position: relative;
+// }
 
-/*POKUS úprava*/
-.sidebar section .event-list-cal-title {
-    text-overflow: ellipsis;
-    display: block;
-    padding: 9px 0 0 0;
-}
+// /*POKUS úprava*/
+// .sidebar section .event-list-cal-title {
+//     text-overflow: ellipsis;
+//     display: block;
+//     padding: 9px 0 0 0;
+// }
 
-.sidebar section .event-list-cal-title a {
-    height: 100%;
-    display: block;
-    height: 45px;
-    padding: 9px 5px 1px 10px;
-    margin-top: -9px;
-    margin-left: -10px;
-    text-decoration: none;
-    color: inherit;
-    line-height: normal;
-    background-color: #bdc3c7;
-    margin-left: 58px;
-    box-shadow: 4px 0px #808080, 2px 2px 0px 2px #7f8c8d;
-    transition: 0.05s;
-}
+// .sidebar section .event-list-cal-title a {
+//     height: 100%;
+//     display: block;
+//     height: 45px;
+//     padding: 9px 5px 1px 10px;
+//     margin-top: -9px;
+//     margin-left: -10px;
+//     text-decoration: none;
+//     color: inherit;
+//     line-height: normal;
+//     background-color: $silver;
+//     margin-left: 58px;
+//     box-shadow: 4px 0px $grey, 2px 2px 0px 2px $asbestos;
+//     transition: 0.05s;
+// }
 
-.sidebar section .event-list-cal-title a:hover {
-    margin-left: 62px;
-    box-shadow: 4px 0px rgb(189, 195, 199);
-    background-color: rgb(189, 195, 199);
-    margin-top: -5px;
-}
+// .sidebar section .event-list-cal-title a:hover {
+//     margin-left: 62px;
+//     box-shadow: 4px 0px $silver;
+//     background-color: $silver;
+//     margin-top: -5px;
+// }
 
-/* -- END pokus - úprava -- */
-.sidebar section .event-list-mini-cal-event-single-link a {
-    text-decoration: none;
-    color: inherit;
-}
+// /* -- END pokus - úprava -- */
+// .sidebar section .event-list-mini-cal-event-single-link a {
+//     text-decoration: none;
+//     color: inherit;
+// }
 
-.sidebar section .event-list-mini-cal-event-single-link a:hover {
-    text-decoration: underline;
-    color: inherit;
-}
+// .sidebar section .event-list-mini-cal-event-single-link a:hover {
+//     text-decoration: underline;
+//     color: inherit;
+// }
 
 /*Sidebar - hledání - pokus o opravu*/
 .sidebar .searching {
@@ -1163,7 +939,7 @@ article #nenalezeno {
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #95a5a6;
+    background-color: $concrete;
     color: rgba(0, 0, 0, 0);
     width: 35px;
     height: 35px;
@@ -1171,12 +947,12 @@ article #nenalezeno {
 }
 
 .sidebar .searching #submit-button:hover {
-    background-color: #2c3e50;
+    background-color: $navy-dark;
     background-image: url(../img/lupa_hover.png);
 }
 
 .sidebar .searching #searchform {
-    background-color: #ecf0f1;
+    background-color: $clouds-white;
     border: none;
     height: 35px;
     padding: 10px 10px 10px 10px;
@@ -1191,25 +967,25 @@ article #nenalezeno {
     line-height: 20px;
     margin-bottom: 5px;
     padding: 5px 10px 5px 15px;
-    background-color: rgb(189, 195, 199);
-    box-shadow: 0px 4px 0px rgb(127, 140, 141), 2px 2px 0px 2px rgb(128, 128, 128);
+    background-color: $silver;
+    box-shadow: 0px 4px 0px $asbestos, 2px 2px 0px 2px $grey;
     text-decoration: none;
     text-align: center;
 }
 
 .sidebar .menu-postranni-lista-menu-container li:first-child a:hover {
-    background-color: #bdc3c7;
+    background-color: $silver;
     margin-top: 4px;
-    box-shadow: 4px 0px 0 0px #bdc3c7;
+    box-shadow: 4px 0px 0 0px $silver;
     margin-bottom: 1px;
     margin-left: 4px;
 }
 
 .sidebar .menu-postranni-lista-menu-container li a:hover,
 .sidebar .menu-postranni-lista-menu-container li.second-child a:hover {
-    background-color: #bdc3c7;
+    background-color: $silver;
     margin-top: 9px;
-    box-shadow: 4px 0px 0 0px #bdc3c7;
+    box-shadow: 4px 0px 0 0px $silver;
     margin-bottom: 1px;
     margin-left: 4px;
 }
@@ -1220,8 +996,8 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 0;
-    background-color: #2c3e50;
-    color: white;
+    background-color: $navy-dark;
+    color: $white;
     font-family: "Open Sans", sans-serif;
     font-size: 11px;
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
@@ -1251,7 +1027,7 @@ footer>div {
 }
 
 footer .horni section {
-    background-color: white;
+    background-color: $white;
     margin: 10px;
     height: 125px;
     width: 260px;
@@ -1260,7 +1036,7 @@ footer .horni section {
 }
 
 footer .horni section p {
-    color: black;
+    color: $black;
     font-size: small;
     margin: 5px;
 }
@@ -1307,27 +1083,27 @@ footer .spodni {
 
 /* -- MOBILNÍ DISPLEJE -- */
 /*Menu bude fungovat už od 960px! je to logičtější!*/
-@media only screen and (min-width: 481px) {
-    @-webkit-keyframes menu-tap-width {
-        from {
-            width: 0%;
-        }
+// @media only screen and (min-width: 481px) {
+//     @-webkit-keyframes menu-tap-width {
+//         from {
+//             width: 0%;
+//         }
 
-        to {
-            width: 100%;
-        }
-    }
+//         to {
+//             width: 100%;
+//         }
+//     }
 
-    @keyframes menu-tap-width {
-        from {
-            width: 0%;
-        }
+//     @keyframes menu-tap-width {
+//         from {
+//             width: 0%;
+//         }
 
-        to {
-            width: 100%;
-        }
-    }
-}
+//         to {
+//             width: 100%;
+//         }
+//     }
+// }
 
 @media only screen and (max-width: 959px) {
     main {
@@ -1361,7 +1137,7 @@ footer .spodni {
     }
 
     .sidebar .searching .search-form label {
-        background-color: rgb(149, 165, 166);
+        background-color: $concrete;
         margin: -10px -10px 0 -10px;
         height: 45px;
     }
@@ -1439,7 +1215,7 @@ footer .spodni {
     }
 
     nav.menu-docs {
-        background-color: #3498db;
+        background-color: $blue-light;
         z-index: -3;
         clear: both;
     }
@@ -1468,13 +1244,13 @@ blockquote {
 }
 
 .task-published {
-    background-color: #2c3e50;
+    background-color: $navy-dark;
     padding: 10px;
     margin-left: 10px;
     margin-top: 10px;
     text-align: center;
-    color: #ecf0f1;
-    box-shadow: 0px 4px 0px #95a5a6;
+    color: $clouds-white;
+    box-shadow: 0px 4px 0px $concrete;
 }
 
 .task-published>p {
@@ -1485,7 +1261,7 @@ blockquote {
 
 /* LAZY LOADING */
 .lazy-load {
-    background-color: #bdc3c7;
+    background-color: $silver;
 }
 
 .lazy-load::before {

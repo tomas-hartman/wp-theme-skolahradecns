@@ -1,0 +1,195 @@
+@forward 'colors';
+/* menu */
+/* MAIN MENU LAYOUT */
+
+/* MENU BARVY - TUNED */
+@mixin menu-main-color($color-class, $color) {
+
+    ul.top-menu>li#{$color-class}:hover,
+    .top-menu #{$color-class} a:hover,
+    .top-menu #{$color-class} a:focus,
+    #{$color-class} .sub-menu li {
+        background-color: $color;
+
+        @if $color-class=="orange" {
+            color: $black;
+            text-shadow: none;
+        }
+    }
+}
+
+@mixin menu-light-color($color-class, $light-color) {
+    #{$color-class} .sub-menu li a:hover {
+        background-color: $light-color;
+    }
+}
+
+@mixin menu-color($color-class: "", $color: $asbestos, $light-color: $concrete) {
+    @include menu-main-color($color-class, $color);
+    @include menu-light-color($color-class, $light-color);
+}
+
+nav.main-menu {
+    background-color: $navy-dark;
+
+    color: $white;
+    font-size: medium;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+
+    // BARVY
+    @include menu-color();
+    @include menu-color(".green", $green, $green-light);
+    @include menu-color(".red", $red, $red-light);
+    @include menu-color(".orange", $orange, $orange-light);
+    @include menu-color(".blue", $blue, $blue-light);
+
+    /* Container div */
+    &>div {
+        width: 960px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul.top-menu {
+        list-style: none url();
+        display: flex;
+        flex-wrap: wrap;
+
+        &>li {
+            position: relative;
+            transition: all 0.2s;
+            display: flex;
+        }
+
+        a {
+            width: 240px;
+            min-height: 35px;
+            z-index: 3;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        ul.sub-menu {
+            display: none;
+            position: absolute;
+            left: 0;
+            z-index: 5;
+            transition: opacity 0.2s;
+            top: 100%;
+            cursor: default;
+
+            &>li {
+                list-style: none;
+                display: flex;
+            }
+        }
+    }
+}
+
+/* Tohle je potřeba nastavit tak, aby se to zobrazovalo až když je displej větší než ten malý. */
+@media only screen and (min-width: 960px) {
+    nav.main-menu ul.top-menu {
+
+        li:hover ul,
+        li:focus ul {
+            display: block;
+        }
+
+        &>li.tap {
+            background-color: inherit;
+        }
+    }
+}
+
+/* -- Menu mobilní -- */
+@media only screen and (max-width: 959px) {
+    nav.main-menu {
+        background-color: #2c3e50;
+        height: auto;
+
+        &>div {
+            width: 100%;
+        }
+
+        ul.top-menu {
+            a {
+                width: 100%;
+                overflow: hidden;
+                z-index: 10;
+            }
+
+            &>li {
+                width: 25%;
+                height: auto;
+                cursor: pointer;
+                background-color: #2c3e50;
+                justify-content: center;
+                align-items: center;
+                position: unset;
+
+                ul li {
+                    list-style: none;
+                    float: right;
+                    width: 100%;
+                }
+            }
+
+            // Tapped
+            li.tap {
+                // BARVY
+                background-color: #7f8c8d;
+
+                &.green {
+                    background-color: #27ae60;
+                }
+
+                &.red {
+                    background-color: #c0392b;
+                }
+
+                &.orange {
+                    background-color: #f39c12;
+                }
+
+                &.blue {
+                    background-color: #2980b9;
+                }
+
+                ul {
+                    display: flex;
+                    position: absolute;
+                    flex-direction: column;
+                    z-index: -1;
+                    width: 100%;
+                    background-color: #7f8c8d96;
+
+                    &::after {
+                        content: "";
+                        height: 100%;
+                        display: block;
+                        top: 0;
+                        position: fixed;
+                        width: 100%;
+                        z-index: -1;
+                        background-color: #000000ad;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* - Konec menu -*/
