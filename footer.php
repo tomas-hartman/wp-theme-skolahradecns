@@ -53,13 +53,13 @@
 
             if(today >= xmasPeriodStart || today <= xmasPeriodEnd){
 
-                console.log(xmasPeriodStart);
-                console.log(xmasPeriodEnd);
-                console.log(today);
+                // console.log(xmasPeriodStart);
+                // console.log(xmasPeriodEnd);
+                // console.log(today);
                 document.getElementsByTagName("body")[0].style.background = "url(img/xmas_pattern_grey.png) repeat";
             }
 
-            console.log("ahoj");
+            // console.log("ahoj");
         }
         // checkXmasTheme();
     </script>

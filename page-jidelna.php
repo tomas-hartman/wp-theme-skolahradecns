@@ -6,10 +6,8 @@
    
     get_header();
 ?>
-<nav class="menu-docs jidelna"> <!-- Tohle menu se pak předělá na klasický WP menu! -->
-    
+<nav class="navbar-menu blue jidelna">    
     <?php wp_nav_menu( array ('theme_location' => 'menu_jidelna'));?>
-    
 </nav>
       
 <main>  

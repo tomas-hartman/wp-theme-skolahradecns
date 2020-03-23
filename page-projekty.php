@@ -7,10 +7,8 @@
     get_header();
 ?>
 
-<nav class="menu-docs projekty"> <!-- Tohle menu se pak předělá na klasický WP menu! -->
-    
+<nav class="navbar-menu blue projekty">
     <?php wp_nav_menu( array ('theme_location' => 'menu_projekty'));?>
-
 </nav>
       
 <main>  

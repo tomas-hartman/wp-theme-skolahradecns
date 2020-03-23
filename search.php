@@ -44,7 +44,7 @@
        echo '<article><div id="nenalezeno">Hledaný výraz nenalezen</div></article>';
    endif; ?>
 </main>
+<?php get_sidebar();?>
 <?php 
-    include 'sidebar.php';
     get_footer();
 ?>

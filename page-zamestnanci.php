@@ -6,10 +6,8 @@
    
     get_header();
 ?>
-<nav class="menu-docs zamestnanci"> <!-- Tohle menu se pak předělá na klasický WP menu! -->
-    
+<nav class="navbar-menu blue zamestnanci">
     <?php wp_nav_menu( array ('theme_location' => 'menu_zamestnanci'));?>
-    
 </nav>
       
 <main>  

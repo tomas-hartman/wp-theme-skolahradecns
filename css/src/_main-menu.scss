@@ -93,6 +93,11 @@ nav.main-menu {
             &>li {
                 list-style: none;
                 display: flex;
+
+                &:hover {
+                    color: $black;
+                    text-shadow: none;
+                }
             }
         }
     }

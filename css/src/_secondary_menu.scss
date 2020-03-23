@@ -1,0 +1,65 @@
+// SEKUNDÁRNÍ MENU
+nav.navbar-menu {
+    background-color: $silver;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: medium;
+    font-weight: 300;
+
+    box-shadow: 0px 4px $concrete, 0px 4px $concrete inset;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        &>li {
+            list-style: none;
+            display: flex;
+        }
+    }
+
+    a {
+        height: 35px;
+        min-width: 12%;
+        padding: 0px 20px;
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: $black;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background-color: $orange-light;
+        }
+    }
+
+    &.online-edu li {
+        width: calc(100% / 9);
+        min-width: 60px;
+
+        a {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    // BARVY
+    &.blue {
+        background-color: $blue-light;
+        box-shadow: 0px 4px $concrete, 0px 4px $blue inset;
+    }
+
+    &.green {
+        background-color: $green;
+        box-shadow: 0px 4px $concrete, 0px 4px $green-dark inset;
+    }
+
+    &.red {
+        background-color: $red-light;
+        box-shadow: 0px 4px $concrete, 0px 4px $red inset;
+    }
+}

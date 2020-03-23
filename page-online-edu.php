@@ -6,10 +6,8 @@
    
     get_header();
 ?>
-<nav class="navbar_menu"> <!-- Tohle menu se pak předělá na klasický WP menu! -->
-    
+<nav class="navbar-menu green online-edu">
     <?php wp_nav_menu( array ('theme_location' => 'menu_online_edu', 'menu_class' => 'menu_online_edu'));?>
-
 </nav>
       
 <main>  

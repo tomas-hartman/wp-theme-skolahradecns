@@ -230,6 +230,10 @@ nav.main-menu ul.top-menu ul.sub-menu > li {
   list-style: none;
   display: flex;
 }
+nav.main-menu ul.top-menu ul.sub-menu > li:hover {
+  color: black;
+  text-shadow: none;
+}
 
 /* Tohle je potřeba nastavit tak, aby se to zobrazovalo až když je displej větší než ten malý. */
 @media only screen and (min-width: 960px) {
@@ -305,6 +309,302 @@ nav.main-menu ul.top-menu li:focus ul {
   }
 }
 /* - Konec menu -*/
+nav.navbar-menu {
+  background-color: #bdc3c7;
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  font-weight: 300;
+  box-shadow: 0px 4px #95a5a6, 0px 4px #95a5a6 inset;
+}
+nav.navbar-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav.navbar-menu ul > li {
+  list-style: none;
+  display: flex;
+}
+nav.navbar-menu a {
+  height: 35px;
+  min-width: 12%;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+nav.navbar-menu a:hover, nav.navbar-menu a:focus {
+  background-color: #f1c40f;
+}
+nav.navbar-menu.online-edu li {
+  width: calc(100% / 9);
+  min-width: 60px;
+}
+nav.navbar-menu.online-edu li a {
+  width: 100%;
+  padding: 0;
+}
+nav.navbar-menu.blue {
+  background-color: #3498db;
+  box-shadow: 0px 4px #95a5a6, 0px 4px #2980b9 inset;
+}
+nav.navbar-menu.green {
+  background-color: #27ae60;
+  box-shadow: 0px 4px #95a5a6, 0px 4px #1e8549 inset;
+}
+nav.navbar-menu.red {
+  background-color: #e74c3c;
+  box-shadow: 0px 4px #95a5a6, 0px 4px #c0392b inset;
+}
+
+/* footer */
+footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: #2c3e50;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
+}
+footer h3 {
+  font-size: 11px;
+}
+footer li {
+  list-style: none url();
+  margin: 0;
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer > div {
+  margin: 20px 30px;
+  text-align: left;
+}
+footer .horni section {
+  background-color: white;
+  margin: 10px;
+  height: 125px;
+  width: 260px;
+  padding: 10px;
+  box-shadow: 4px 12px 0px -8px rgba(0, 0, 0, 0.2);
+}
+footer .horni section p {
+  color: black;
+  font-size: small;
+  margin: 5px;
+}
+footer .horni section a {
+  height: 100%;
+}
+footer .horni section .image {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+footer .horni section img {
+  max-width: 100%;
+  max-height: 100%;
+}
+footer .horni .ft-flex-horni-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+footer .stredni .flex-cont .flex-item {
+  display: flex;
+  padding: 0 5px 10px 0;
+  flex-wrap: wrap;
+}
+footer .stredni .flex-cont .flex-item > li,
+footer .stredni .flex-cont .flex-item > a {
+  margin-right: 10px;
+}
+footer .spodni {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/*Sidebar - hledání - pokus o opravu*/
+.sidebar .searching {
+  width: 290px;
+  margin: -10px 0 -10px -10px;
+  padding: 0;
+  box-sizing: border-box;
+  height: 35px;
+}
+.sidebar .searching .search-form {
+  box-sizing: border-box;
+}
+.sidebar .searching .search-form label {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar .searching span {
+  display: none;
+}
+.sidebar .searching #submit-button {
+  background-image: url(../img/lupa1.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #95a5a6;
+  color: rgba(0, 0, 0, 0);
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.sidebar .searching #submit-button:hover {
+  background-color: #2c3e50;
+  background-image: url(../img/lupa_hover.png);
+}
+.sidebar .searching #searchform {
+  background-color: #ecf0f1;
+  border: none;
+  height: 35px;
+  padding: 10px 10px 10px 10px;
+  flex-grow: 1;
+  border-radius: 0;
+}
+
+@media only screen and (max-width: 959px) {
+  .sidebar .searching {
+    width: 100%;
+    margin: 0;
+  }
+  .sidebar .searching .search-form label {
+    background-color: #95a5a6;
+    margin: -10px -10px 0 -10px;
+    height: 45px;
+  }
+  .sidebar .searching #submit-button {
+    width: 45px;
+    height: 45px;
+  }
+  .sidebar .searching #searchform {
+    height: auto;
+  }
+}
+/* sidebar */
+.sidebar {
+  width: 290px;
+  background-color: #bdc3c7;
+  float: right;
+  padding: 0 10px 0 10px;
+  position: relative;
+  z-index: 0;
+}
+
+.sidebar section {
+  background-color: #95a5a6;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 4px 12px 0px -8px #7f8c8d;
+}
+
+.sidebar section.menu-postranni-lista-mapa-container {
+  background: none;
+  padding: 0px 0;
+  box-shadow: none;
+  width: 290px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: start;
+  justify-content: center;
+  align-content: center;
+}
+
+.sidebar section.menu-postranni-lista-mapa-container img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: 290px;
+}
+
+.sidebar section.menu-postranni-lista-mapa-container a {
+  order: 1;
+  z-index: 2;
+}
+
+.sidebar section.menu-postranni-lista-mapa-container iframe {
+  order: 2;
+  margin-top: -20px;
+  z-index: 0;
+  box-shadow: 4px 12px 0px -8px #7f8c8d;
+}
+
+/* Je mi k něčemu? */
+.sidebar section ul {
+  list-style: none url();
+}
+
+/* Možná se bude hodit na stylování FB sidebaru, zatím nechat */
+/* .sidebar section.logolink {
+	padding: 0;
+	height: 100%;
+	background-color: $white;
+	text-align: center;
+} */
+.sidebar .menu-postranni-lista-menu-container a {
+  color: inherit;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  padding: 5px 10px 5px 15px;
+  background-color: #bdc3c7;
+  box-shadow: 0px 4px 0px #7f8c8d, 2px 2px 0px 2px grey;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sidebar .menu-postranni-lista-menu-container li:first-child a:hover {
+  background-color: #bdc3c7;
+  margin-top: 4px;
+  box-shadow: 4px 0px 0 0px #bdc3c7;
+  margin-bottom: 1px;
+  margin-left: 4px;
+}
+
+.sidebar .menu-postranni-lista-menu-container li a:hover,
+.sidebar .menu-postranni-lista-menu-container li.second-child a:hover {
+  background-color: #bdc3c7;
+  margin-top: 9px;
+  box-shadow: 4px 0px 0 0px #bdc3c7;
+  margin-bottom: 1px;
+  margin-left: 4px;
+}
+
+/* -- MOBILNÍ DISPLEJE -- */
+@media only screen and (max-width: 959px) {
+  /*Searching - pokus o opravu*/
+  .sidebar {
+    clear: both;
+    float: none;
+    padding-top: 10px;
+    margin: 0 10px 10px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar section {
+    width: 95%;
+  }
+}
 body {
   background-color: #95a5a6;
   font-family: "Open Sans", sans-serif;
@@ -375,39 +675,8 @@ nav.next-previous-posts span.current {
   background-color: #ecf0f1;
 }
 
-/*TEMPLATE - Stránka s dokumenty - menu*/
-nav.menu-docs {
-  background-color: #3498db;
-  line-height: 35px;
-  height: auto;
-  overflow: hidden;
-  z-index: -3;
-  box-shadow: 0px 4px #95a5a6, 0px 4px #2980b9 inset;
-}
-
-nav.menu-docs li {
-  display: inline-block;
-  height: 35px;
-  min-width: 12%;
-  text-align: center;
-  font-size: medium;
-}
-
-nav.menu-docs a {
-  padding: 0 10px 0 10px;
-  display: block;
-  text-decoration: none;
-  color: black;
-  font-family: "Open Sans", sans-serif;
-  font-size: medium;
-  font-weight: 300;
-}
-
-nav.menu-docs a:hover,
-nav.menu-docs a:focus {
-  background-color: #f1c40f;
-}
-
+/* START ČLÁNEK - PŘÍLOHY */
+/* @todo rewrite */
 .page-docs a.wpba-link {
   text-decoration: none;
   color: black;
@@ -417,8 +686,7 @@ nav.menu-docs a:focus {
   text-decoration: underline;
 }
 
-#wpba_attachment_list,
-.event-list-cal-info {
+#wpba_attachment_list {
   display: block;
   width: 100%;
   float: none;
@@ -429,74 +697,17 @@ nav.menu-docs a:focus {
   font-weight: 300;
 }
 
-/* Nové sekundární mennu (dokumenty apod.) */
-.navbar_menu {
-  width: 100%;
-}
-
-.navbar_menu ul {
-  list-style: none;
-  display: flex;
-  justify-content: left;
-  align-content: stretch;
-  flex-wrap: wrap;
-  background-color: #3498db;
-  box-shadow: 0px 4px #95a5a6, 0px 4px #2980b9 inset;
-}
-
-.navbar_menu ul > li {
-  height: 35px;
-  align-items: center;
-  display: flex;
-  padding: 0px 20px;
-}
-
-.navbar_menu ul > li > a {
-  text-decoration: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  font-family: "Open Sans", sans-serif;
-  font-size: medium;
-  font-weight: 300;
-}
-
-.navbar_menu ul > li > a:hover,
-.navbar_menu ul > li > a:focus {
-  background-color: #f1c40f;
-}
-
-#menu-vyuka-online {
-  box-shadow: 0px 4px #95a5a6, 0px 4px #1e8549 inset;
-  background-color: #27ae60;
-}
-
-#menu-vyuka-online li {
-  width: calc(100% / 9);
-  min-width: 60px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-/*Barvy*/
 #wpba_attachment_list {
   box-shadow: 0px 4px rgba(0, 0, 0, 0.3) inset;
   background-color: #3498db;
 }
 
-/* -- END Barvy -- */
 main article .text-clanek ul.wpba-attachment-list {
   display: inline-block;
   margin-bottom: 0;
 }
 
-main article ul.wpba-attachment-list li,
-.event-list-cal-singular-date {
+main article ul.wpba-attachment-list li {
   padding: 7px 0px;
   margin-bottom: 0px;
   margin-left: 10px;
@@ -515,6 +726,23 @@ ul.wpba-attachment-list li img,
   box-shadow: unset;
 }
 
+.text-clanek.page-docs.main-zs #wpba_attachment_list {
+  background-color: #2ecc71;
+}
+
+.text-clanek.page-docs.main-ms #wpba_attachment_list {
+  background-color: #e74c3c;
+}
+
+.text-clanek.page-docs.main-sd #wpba_attachment_list {
+  background-color: #f1c40f;
+}
+
+.text-clanek.page-docs.main-skola #wpba_attachment_list {
+  background-color: #3498db;
+}
+
+/* END ČLÁNEK - PŘÍLOHY */
 /* příspěvky */
 main {
   width: 100%;
@@ -540,48 +768,6 @@ main #nenalezeno {
 	left: 0;
 	z-index: -3;
 } */
-/*BARVY*/
-/*MAIN MENU: Barvy - světlejší odstíny, nastavení pozadí.*/
-nav.main-menu ul.top-menu li ul li:hover {
-  color: black;
-  text-shadow: none;
-}
-
-.text-clanek.page-docs.main-zs #wpba_attachment_list {
-  background-color: #2ecc71;
-}
-
-.text-clanek.page-docs.main-ms #wpba_attachment_list {
-  background-color: #e74c3c;
-}
-
-.text-clanek.page-docs.main-sd #wpba_attachment_list {
-  background-color: #f1c40f;
-}
-
-.text-clanek.page-docs.main-skola #wpba_attachment_list {
-  background-color: #3498db;
-}
-
-header.main-zs {
-  background-color: #27ae60;
-}
-
-header.main-ms {
-  background-color: #c0392b;
-}
-
-header.main-sd {
-  background-color: #f39c12;
-  color: black;
-  text-shadow: none;
-}
-
-header.main-skola {
-  background-color: #2980b9;
-}
-
-/*KONEC BAREV*/
 /*VÝPIS ČLÁNKŮ - zobrazení typů jednotlivých článků*/
 /*1. Standardní článek - default settings*/
 main article {
@@ -606,6 +792,20 @@ main article header {
   overflow: hidden;
   padding: 10px;
   background-color: #95a5a6;
+}
+main article header.main-zs {
+  background-color: #27ae60;
+}
+main article header.main-ms {
+  background-color: #c0392b;
+}
+main article header.main-sd {
+  background-color: #f39c12;
+  color: black;
+  text-shadow: none;
+}
+main article header.main-skola {
+  background-color: #2980b9;
 }
 
 /*Formátování textu článků*/
@@ -771,11 +971,6 @@ main article.galerie .text-clanek {
 
 main article.galerie header h1 {
   padding-top: 7px;
-}
-
-/*Kalendář a události*/
-.event-list-cal-singular-repeat {
-  display: none;
 }
 
 /*SINGLE soubory pro jednotlivý tpy příspěvků*/
@@ -1033,238 +1228,6 @@ article #nenalezeno {
   animation-duration: 1s;
 }
 
-/* sidebar */
-.sidebar {
-  width: 290px;
-  background-color: #bdc3c7;
-  float: right;
-  padding: 0 10px 0 10px;
-  position: relative;
-  z-index: 0;
-}
-
-.sidebar section {
-  background-color: #95a5a6;
-  margin-bottom: 10px;
-  padding: 10px;
-  box-shadow: 4px 12px 0px -8px #7f8c8d;
-}
-
-.sidebar section.menu-postranni-lista-mapa-container {
-  background: none;
-  padding: 0px 0;
-  box-shadow: none;
-  width: 290px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-items: center;
-  align-items: start;
-  justify-content: center;
-  align-content: center;
-}
-
-.sidebar section.menu-postranni-lista-mapa-container img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  width: 290px;
-}
-
-.sidebar section.menu-postranni-lista-mapa-container a {
-  order: 1;
-  z-index: 2;
-}
-
-.sidebar section.menu-postranni-lista-mapa-container iframe {
-  order: 2;
-  margin-top: -20px;
-  z-index: 0;
-  box-shadow: 4px 12px 0px -8px #7f8c8d;
-}
-
-/* Je mi k něčemu? */
-.sidebar section ul {
-  list-style: none url();
-}
-
-/* Možná se bude hodit na stylování FB sidebaru, zatím nechat */
-/* .sidebar section.logolink {
-	padding: 0;
-	height: 100%;
-	background-color: $white;
-	text-align: center;
-} */
-/*Sidebar - hledání - pokus o opravu*/
-.sidebar .searching {
-  width: 290px;
-  margin: -10px 0 -10px -10px;
-  padding: 0;
-  box-sizing: border-box;
-  height: 35px;
-}
-
-.sidebar .searching .search-form {
-  box-sizing: border-box;
-}
-
-.sidebar .searching .search-form label {
-  display: flex;
-  justify-content: space-between;
-}
-
-.sidebar .searching span {
-  display: none;
-}
-
-.sidebar .searching #submit-button {
-  background-image: url(../img/lupa1.png);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #95a5a6;
-  color: rgba(0, 0, 0, 0);
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-}
-
-.sidebar .searching #submit-button:hover {
-  background-color: #2c3e50;
-  background-image: url(../img/lupa_hover.png);
-}
-
-.sidebar .searching #searchform {
-  background-color: #ecf0f1;
-  border: none;
-  height: 35px;
-  padding: 10px 10px 10px 10px;
-  flex-grow: 1;
-  border-radius: 0;
-}
-
-.sidebar .menu-postranni-lista-menu-container a {
-  color: inherit;
-  display: block;
-  height: 20px;
-  line-height: 20px;
-  margin-bottom: 5px;
-  padding: 5px 10px 5px 15px;
-  background-color: #bdc3c7;
-  box-shadow: 0px 4px 0px #7f8c8d, 2px 2px 0px 2px grey;
-  text-decoration: none;
-  text-align: center;
-}
-
-.sidebar .menu-postranni-lista-menu-container li:first-child a:hover {
-  background-color: #bdc3c7;
-  margin-top: 4px;
-  box-shadow: 4px 0px 0 0px #bdc3c7;
-  margin-bottom: 1px;
-  margin-left: 4px;
-}
-
-.sidebar .menu-postranni-lista-menu-container li a:hover,
-.sidebar .menu-postranni-lista-menu-container li.second-child a:hover {
-  background-color: #bdc3c7;
-  margin-top: 9px;
-  box-shadow: 4px 0px 0 0px #bdc3c7;
-  margin-bottom: 1px;
-  margin-left: 4px;
-}
-
-/* footer */
-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  background-color: #2c3e50;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 11px;
-  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
-}
-
-footer h3 {
-  font-size: 11px;
-}
-
-footer li {
-  list-style: none url();
-  margin: 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: inherit;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer > div {
-  margin: 20px 30px;
-  text-align: left;
-}
-
-footer .horni section {
-  background-color: white;
-  margin: 10px;
-  height: 125px;
-  width: 260px;
-  padding: 10px;
-  box-shadow: 4px 12px 0px -8px rgba(0, 0, 0, 0.2);
-}
-
-footer .horni section p {
-  color: black;
-  font-size: small;
-  margin: 5px;
-}
-
-footer .horni section a {
-  height: 100%;
-}
-
-footer .horni section .image {
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-footer .horni section img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-footer .horni .ft-flex-horni-cont {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-footer .stredni .flex-cont .flex-item {
-  display: flex;
-  padding: 0 5px 10px 0;
-  flex-wrap: wrap;
-}
-
-footer .stredni .flex-cont .flex-item > li,
-footer .stredni .flex-cont .flex-item > a {
-  margin-right: 10px;
-}
-
-footer .spodni {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-/* -- MOBILNÍ DISPLEJE -- */
-/*Menu bude fungovat už od 960px! je to logičtější!*/
 @media only screen and (max-width: 959px) {
   main {
     max-width: 100%;
@@ -1272,42 +1235,6 @@ footer .spodni {
 
   main article {
     margin-right: 10px;
-  }
-
-  /*Searching - pokus o opravu*/
-  .sidebar {
-    clear: both;
-    float: none;
-    padding-top: 10px;
-    margin: 0 10px 10px;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sidebar section {
-    width: 95%;
-  }
-
-  .sidebar .searching {
-    width: 100%;
-    margin: 0;
-  }
-
-  .sidebar .searching .search-form label {
-    background-color: #95a5a6;
-    margin: -10px -10px 0 -10px;
-    height: 45px;
-  }
-
-  .sidebar .searching #submit-button {
-    width: 45px;
-    height: 45px;
-  }
-
-  .sidebar .searching #searchform {
-    height: auto;
   }
 
   .task-published {

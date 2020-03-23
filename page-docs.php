@@ -6,10 +6,8 @@
    
     get_header();
 ?>
-<nav class="menu-docs dokumenty"> <!-- Tohle menu se pak předělá na klasický WP menu! -->
-    
+<nav class="navbar-menu blue dokumenty">
     <?php wp_nav_menu( array ('theme_location' => 'menu_dokumenty'));?>
-
 </nav>
       
 <main>  

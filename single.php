@@ -1,7 +1,7 @@
 <?php 
     get_header();
     
-    /*Zjištìní URI promìnná pro view_counter*/
+    /*Zjiï¿½tï¿½nï¿½ URI promï¿½nnï¿½ pro view_counter*/
      $page_uri=wp_statistics_get_uri();
 ?>      
 <main>  
@@ -13,7 +13,6 @@
         if ( false === $format ) {
 	      $format = 'standard';
         }
-        
         
         get_template_part('single', $format);
         
