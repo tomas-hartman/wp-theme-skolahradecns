@@ -1,0 +1,35 @@
+/*2. Upozornění*/
+main.content article.upozorneni {
+    height: auto;
+    max-height: 100%;
+
+    img {
+        width: 65px;
+        height: 65px;
+        margin-right: 0;
+
+        &.attachment-thumbnail {
+            margin: 5px;
+        }
+    }
+
+    header {
+        height: 45px;
+        background-color: $warning-light;
+    }
+
+    .text-clanek {
+        padding: 10px 15px 5px;
+        overflow: visible;
+
+        p {
+            margin: 7px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main.content article.upozorneni header {
+        clear: none;
+    }
+}

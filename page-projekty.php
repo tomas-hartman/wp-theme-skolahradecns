@@ -28,7 +28,7 @@
             <h2>přidáno <?php the_time('d.m.Y');?></h2> 
             
         </header>
-        <div class="text-clanek page-docs">
+        <section class="text-clanek page-docs">
         <?php 
         if(wpba_attachments_exist()) {
         echo wpba_attachment_list(); } ?>
@@ -37,7 +37,7 @@
               echo the_content();
             ?>
           
-        </div>      
+        </section>      
         </article>
           
 <?php endwhile;

@@ -309,6 +309,17 @@ nav.main-menu ul.top-menu li:focus ul {
     height: 100%;
   }
 }
+/* MENU SPECIAL ELM - EXPERIMENTAL*/
+/* nav.main-menu ul.top-menu li:hover ul:after {
+	content: " ";
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background-color: #0000006b;
+	top: 0;
+	left: 0;
+	z-index: -3;
+} */
 /* - Konec menu -*/
 nav.navbar-menu {
   background-color: #bdc3c7;
@@ -360,6 +371,49 @@ nav.navbar-menu.red {
   box-shadow: 0px 4px #95a5a6, 0px 4px #c0392b inset;
 }
 
+/* Spodní navigační proužek (stránkovací) */
+nav.next-previous-posts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #2c3e50;
+}
+nav.next-previous-posts > * {
+  font-size: medium;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+nav.next-previous-posts a:hover {
+  color: #ecf0f1;
+  background-color: #34495e;
+  text-decoration: underline;
+}
+nav.next-previous-posts span.current {
+  color: #34495e;
+  background-color: #ecf0f1;
+}
+
+/* příspěvky */
+main.content {
+  width: 100%;
+  max-width: 630px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 959px) {
+  main.content {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
 /* footer */
 footer {
   display: flex;
@@ -367,11 +421,10 @@ footer {
   padding: 0;
   background-color: #2c3e50;
   color: white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 11px;
   box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
   width: 960px;
   max-width: 100%;
+  font-size: 11px;
 }
 footer h3 {
   font-size: 11px;
@@ -652,104 +705,6 @@ p {
   max-width: 100%;
 }
 
-/* Spodní navigační proužek (stránkovací) */
-nav.next-previous-posts {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  background-color: #2c3e50;
-}
-nav.next-previous-posts > * {
-  font-size: medium;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ecf0f1;
-  text-decoration: none;
-}
-nav.next-previous-posts a:hover {
-  color: #ecf0f1;
-  background-color: #34495e;
-  text-decoration: underline;
-}
-nav.next-previous-posts span.current {
-  color: #34495e;
-  background-color: #ecf0f1;
-}
-
-/* START ČLÁNEK - PŘÍLOHY */
-/* @todo rewrite */
-.page-docs a.wpba-link {
-  text-decoration: none;
-  color: black;
-}
-
-.page-docs a.wpba-link:hover {
-  text-decoration: underline;
-}
-
-#wpba_attachment_list {
-  display: block;
-  width: 100%;
-  float: none;
-  margin: -10px 0px 10px -15px;
-  padding: 4px 15px 0px !important;
-  overflow: visible;
-  font-size: medium;
-  font-weight: 300;
-}
-
-#wpba_attachment_list {
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.3) inset;
-  background-color: #3498db;
-}
-
-main.content article .text-clanek ul.wpba-attachment-list {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-main.content article ul.wpba-attachment-list li {
-  padding: 7px 0px;
-  margin-bottom: 0px;
-  margin-left: 10px;
-}
-
-ul.wpba-attachment-list li img,
-.attachment ul.wpba-attachment-list li img {
-  height: 20px;
-  width: auto;
-}
-
-/*SPECIÁL: upozornění*/
-.text-clanek.page-docs .attachment #wpba_attachment_list {
-  background-color: #95a5a6;
-  margin: 15px 0px -5px -15px;
-  box-shadow: unset;
-}
-
-.text-clanek.page-docs.main-zs #wpba_attachment_list {
-  background-color: #2ecc71;
-}
-
-.text-clanek.page-docs.main-ms #wpba_attachment_list {
-  background-color: #e74c3c;
-}
-
-.text-clanek.page-docs.main-sd #wpba_attachment_list {
-  background-color: #f1c40f;
-}
-
-.text-clanek.page-docs.main-skola #wpba_attachment_list {
-  background-color: #3498db;
-}
-
-/* END ČLÁNEK - PŘÍLOHY */
 @-webkit-keyframes animation {
   0% {
     top: -25px;

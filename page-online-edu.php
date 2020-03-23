@@ -35,7 +35,7 @@ function render_page() {
        </h2> 
         
     </header>
-    <div class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
+    <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
     <?php 
     if(wpba_attachments_exist()) {
     echo wpba_attachment_list(); } ?>
@@ -44,7 +44,7 @@ function render_page() {
           echo the_content();
         ?>
         
-    </div>      
+    </section>      
     </article>
       
 <?php endwhile;

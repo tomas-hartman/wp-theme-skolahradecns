@@ -25,7 +25,7 @@
             <h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
             <h2><?php the_time('d.m.Y');?> | <?php the_author_posts_link(); ?> | <?php the_category();?></h2>  
         </header>
-        <div class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs"; }?>">
+        <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs"; }?>">
         <?php 
         if(wpba_attachments_exist()) {
         echo wpba_attachment_list(); } ?>
@@ -36,7 +36,7 @@
               echo apply_filters('the_content', strip_shortcodes($post->post_content));
             ?>
             
-        </div>      
+        </section>      
         </article>
           
 <?php endwhile;

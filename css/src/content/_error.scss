@@ -1,0 +1,19 @@
+//@todo sjednotit vzájemně graficky
+main.content #nenalezeno {
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+}
+
+/* -- Nenalezeno -- */
+article #nenalezeno {
+    background-color: $navy-dark;
+    display: block;
+    line-height: 45px;
+    padding: 10px;
+    font-size: 27px;
+    font-family: "Open Sans", serif;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}

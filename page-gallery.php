@@ -47,7 +47,7 @@
         <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
         
         <?php if(strlen($clanek) > 0) : ?>  
-        <div class="text-clanek">
+        <section class="text-clanek">
             
             <?php 
               //echo strip_shortcodes($post->post_content);
@@ -59,7 +59,7 @@
             </p>
             
             
-        </div>
+        </section>
         <?php endif; ?>      
 
         <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  

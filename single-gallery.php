@@ -8,13 +8,13 @@
         <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
         
         <?php if(strlen($clanek) > 0) : ?>  
-        <div class="text-clanek" style="margin-top: 0px;">
+        <section class="text-clanek" style="margin-top: 0px;">
             <?php 
               //echo strip_shortcodes($post->post_content);
               //the_content();
               echo $clanek;
             ?>
-        </div>
+        </section>
         <?php endif; ?>      
 
         <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  

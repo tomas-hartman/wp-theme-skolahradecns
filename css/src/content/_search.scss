@@ -1,0 +1,46 @@
+/*Výpis článků ve vyhledávání*/
+main.content article.search {
+    img {
+        display: none;
+    }
+
+    header {
+        padding: 5px 10px;
+        line-height: 35px;
+
+        h1 {
+            font-size: 20px;
+            float: left;
+            max-width: 325px;
+            @include ellipsis;
+        }
+
+        h2 {
+            float: right;
+        }
+    }
+
+    .text-clanek {
+        padding: 10px;
+        height: auto;
+    }
+
+    .search-count {
+        background-color: $navy-dark;
+        display: block;
+        float: left;
+        min-width: 45px;
+        line-height: 45px;
+        font-size: 20px;
+        text-align: center;
+        font-family: "Open Sans", Serif;
+        font-weight: 300;
+        color: $white;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main.content article.search header {
+        clear: none;
+    }
+}

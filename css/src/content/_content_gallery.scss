@@ -1,0 +1,134 @@
+/*3. Galerie*/
+main.content article.galerie {
+    height: 85px;
+
+    img {
+        width: 85px;
+        height: 85px;
+    }
+
+    header {
+        margin-bottom: 10px;
+        height: 61px;
+        box-shadow: 4px 12px 0px -8px $asbestos;
+
+        h1 {
+            padding-top: 7px;
+        }
+    }
+
+    .text-clanek {
+        display: none;
+    }
+}
+
+/*SINGLE soubory pro jednotlivý typy příspěvků*/
+/*1. Galerie*/
+main.content article.full-gallery {
+    height: auto;
+    overflow: visible;
+
+    header {
+        height: 75px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        box-shadow: 4px 12px 0px -8px $asbestos;
+    }
+
+    img {
+        height: 95px;
+        width: 95px;
+        box-shadow: 1px 8px 0 -4px $asbestos;
+    }
+
+    .text-clanek {
+        display: block;
+        margin: -10px 5px 10px 10px;
+        box-shadow: none;
+    }
+
+}
+
+main.content article.full-gallery .content-gallery .gallery img {
+    margin-bottom: 10px;
+    clear: none;
+    float: left;
+    margin: auto 5px 10px;
+}
+
+main.content article.page-full-gallery .text-clanek {
+    box-shadow: 0 4px $concrete inset;
+}
+
+main.content article.full-gallery.page-full-gallery header {
+    height: 65px;
+    clear: both;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: none;
+}
+
+/*1a. ZOBRAZENÍ GALERIE*/
+main.content article.full-gallery.content-gallery {
+    display: inline-block;
+    width: 630px;
+    margin-bottom: 10px;
+
+    .gallery {
+        margin: 0 auto;
+        width: 630px;
+
+        img {
+            margin: 0;
+        }
+    }
+}
+
+@-webkit-keyframes galerie-hover {
+    from {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        box-shadow: 0px 4px $silver;
+    }
+
+    to {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        box-shadow: 4px 4px $grey;
+    }
+}
+
+@keyframes galerie-hover {
+    from {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        box-shadow: 0px 4px $silver;
+    }
+
+    to {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        box-shadow: 4px 4px $grey;
+    }
+}
+
+main.content article.full-gallery .content-gallery .gallery img:hover,
+main.content article.full-gallery .content-gallery .gallery img:focus,
+main.content article .mini img:hover,
+main.content article.upozorneni img.attachment-thumbnail:hover {
+    -webkit-animation-name: galerie-hover;
+    animation-name: galerie-hover;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    box-shadow: 4px 4px $asbestos;
+}
+
+.gallery dl {
+    list-style: none url();
+}
+
+.gallery dd {
+    display: none;
+}
