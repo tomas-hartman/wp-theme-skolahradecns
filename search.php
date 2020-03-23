@@ -15,7 +15,7 @@
     endif;?>
     </div>
     
-<main>
+<main class="content">
 <?php
     $i=1;
    if(have_posts()) :
@@ -44,7 +44,4 @@
        echo '<article><div id="nenalezeno">Hledaný výraz nenalezen</div></article>';
    endif; ?>
 </main>
-<?php get_sidebar();?>
-<?php 
-    get_footer();
-?>
+<?php get_footer(); ?>

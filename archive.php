@@ -26,7 +26,7 @@ get_header();
     </div>
     
 
-<main>
+<main class="content">
 <?php
    if(have_posts()) :
       while (have_posts()) : the_post();   
@@ -38,7 +38,4 @@ get_header();
        echo '<div id="nenalezeno">Obsah nenalezen</div>';
    endif; ?>
 </main>
-<?php 
-    include 'sidebar.php';
-    get_footer();
-?>
+<?php get_footer(); ?>

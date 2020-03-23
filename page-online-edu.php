@@ -10,7 +10,7 @@
     <?php wp_nav_menu( array ('theme_location' => 'menu_online_edu', 'menu_class' => 'menu_online_edu'));?>
 </nav>
       
-<main>  
+<main class="content">  
 <?php
 
 function render_page() {
@@ -122,6 +122,4 @@ if(isset($_COOKIE["online_edu_class"])){
 } ?>
 
 </main>
-
-<?php get_sidebar();?>
-<?php get_footer();?>
+<?php get_footer(); ?>

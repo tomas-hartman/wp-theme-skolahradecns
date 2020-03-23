@@ -139,6 +139,7 @@ nav.main-menu {
   font-size: medium;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  width: 100%;
   position: relative;
   z-index: 5;
   display: flex;
@@ -361,7 +362,6 @@ nav.navbar-menu.red {
 
 /* footer */
 footer {
-  clear: both;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -370,6 +370,8 @@ footer {
   font-family: "Open Sans", sans-serif;
   font-size: 11px;
   box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
+  width: 960px;
+  max-width: 100%;
 }
 footer h3 {
   font-size: 11px;
@@ -500,9 +502,7 @@ footer .spodni {
 .sidebar {
   width: 290px;
   background-color: #bdc3c7;
-  float: right;
   padding: 0 10px 0 10px;
-  position: relative;
   z-index: 0;
 }
 
@@ -606,12 +606,15 @@ footer .spodni {
   }
 }
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #95a5a6;
+  background: url(../img/background_cover.png) repeat;
+  background-position: 0px 300px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: small;
-  background: url(../img/background_cover.png) repeat;
-  background-position: 0px 300px;
 }
 
 p {
@@ -636,13 +639,17 @@ p {
 }
 
 /* hlavní část */
-.telo {
-  width: 100%;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+.body-content-container {
+  width: 960px;
+  max-width: 100%;
   background-color: #ecf0f1;
   box-shadow: 0px 0px 10px 14px rgba(127, 140, 141, 0.5);
+  display: flex;
+}
+
+.body-content-with-navbar-container {
+  width: 650px;
+  max-width: 100%;
 }
 
 /* Spodní navigační proužek (stránkovací) */
@@ -650,7 +657,7 @@ nav.next-previous-posts {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0 0 10px;
+  margin-top: 10px;
   background-color: #2c3e50;
 }
 nav.next-previous-posts > * {
@@ -702,12 +709,12 @@ nav.next-previous-posts span.current {
   background-color: #3498db;
 }
 
-main article .text-clanek ul.wpba-attachment-list {
+main.content article .text-clanek ul.wpba-attachment-list {
   display: inline-block;
   margin-bottom: 0;
 }
 
-main article ul.wpba-attachment-list li {
+main.content article ul.wpba-attachment-list li {
   padding: 7px 0px;
   margin-bottom: 0px;
   margin-left: 10px;
@@ -743,450 +750,6 @@ ul.wpba-attachment-list li img,
 }
 
 /* END ČLÁNEK - PŘÍLOHY */
-/* příspěvky */
-main {
-  width: 100%;
-  max-width: 640px;
-  margin-bottom: 10px;
-  float: left;
-}
-
-main #nenalezeno {
-  text-align: center;
-  font-size: large;
-  padding: 10px;
-}
-
-/* MENU SPECIAL ELM - EXPERIMENTAL*/
-/* nav.main-menu ul.top-menu li:hover ul:after {
-	content: " ";
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	background-color: #0000006b;
-	top: 0;
-	left: 0;
-	z-index: -3;
-} */
-/*VÝPIS ČLÁNKŮ - zobrazení typů jednotlivých článků*/
-/*1. Standardní článek - default settings*/
-main article {
-  margin: 10px 0 0 10px;
-  max-height: 160px;
-  overflow: hidden;
-}
-
-main article.format-height-160 {
-  max-height: 160px;
-  overflow: hidden;
-}
-
-main article img {
-  float: left;
-  width: 160px;
-  height: 160px;
-  margin-right: 10px;
-}
-
-main article header {
-  overflow: hidden;
-  padding: 10px;
-  background-color: #95a5a6;
-}
-main article header.main-zs {
-  background-color: #27ae60;
-}
-main article header.main-ms {
-  background-color: #c0392b;
-}
-main article header.main-sd {
-  background-color: #f39c12;
-  color: black;
-  text-shadow: none;
-}
-main article header.main-skola {
-  background-color: #2980b9;
-}
-
-/*Formátování textu článků*/
-main article .text-clanek {
-  padding: 10px 15px 10px;
-  background-color: #bdc3c7;
-  overflow: hidden;
-  box-shadow: 0px 4px #7f8c8d inset;
-  margin-left: 10px;
-  margin-right: 5px;
-}
-
-main article .text-clanek-height-160 {
-  height: 85px;
-}
-
-main article .text-clanek ol {
-  padding-left: 20px;
-  padding-top: 10px;
-}
-
-main article .text-clanek li {
-  padding-left: 10px;
-  margin-left: 20px;
-}
-
-main article .text-clanek ul,
-main article.full-clanek .text-clanek p {
-  margin-bottom: 10px;
-}
-
-main article.full-clanek .text-clanek p:last-child {
-  margin-bottom: 0;
-}
-
-main article .text-clanek a.read-more {
-  display: inline-block;
-  background: #95a5a6;
-  font-size: 90%;
-  vertical-align: middle;
-  text-align: center;
-  width: 70px;
-  height: 20px;
-  line-height: 20px;
-  text-decoration: none;
-  color: inherit;
-}
-
-main article .text-clanek a:not(.read-more) {
-  background-color: #95a5a6;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-  padding: 3px 6px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  max-width: 100%;
-  color: black;
-}
-
-main article .text-clanek a:hover,
-main article .text-clanek a.read-more:hover {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-}
-
-main article .text-clanek h2,
-main article .text-clanek h3,
-main article .text-clanek h4 {
-  padding-top: 10px;
-  padding-bottom: 5px;
-}
-
-main article header h1 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-main article header h1 a:hover {
-  text-decoration: underline;
-}
-
-main article header h2 a {
-  color: inherit;
-}
-
-main article header h2 a:hover {
-  color: inherit;
-  text-decoration: none;
-}
-
-main article header ul,
-main article header li {
-  list-style: none url();
-  display: inline-block;
-}
-
-main article header h1 {
-  font-size: 25px;
-  font-family: "Slabo 27px", serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-main article header h2 {
-  font-size: 12px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-/*2. Upozornění*/
-main article.upozorneni {
-  height: auto;
-  max-height: 100%;
-}
-
-main article.upozorneni img {
-  width: 65px;
-  height: 65px;
-  margin-right: 0;
-}
-
-main article.upozorneni img.attachment-thumbnail {
-  margin: 5px;
-}
-
-main article.upozorneni header {
-  height: 45px;
-  background-color: #e67e22;
-}
-
-main article.upozorneni .text-clanek {
-  padding: 10px 15px 5px;
-  overflow: visible;
-}
-
-main article.upozorneni .text-clanek p {
-  margin: 7px 0;
-}
-
-/*3. Galerie*/
-main article.galerie {
-  height: 85px;
-}
-
-main article.galerie img {
-  width: 85px;
-  height: 85px;
-}
-
-main article.galerie header {
-  margin-bottom: 10px;
-  height: 61px;
-  box-shadow: 4px 12px 0px -8px #7f8c8d;
-}
-
-main article.galerie .text-clanek {
-  display: none;
-}
-
-main article.galerie header h1 {
-  padding-top: 7px;
-}
-
-/*SINGLE soubory pro jednotlivý tpy příspěvků*/
-/*1. Galerie*/
-main article.full-gallery {
-  height: auto;
-  overflow: visible;
-}
-
-main article.full-gallery header {
-  height: 75px;
-  padding-top: 15px;
-  padding-bottom: 5px;
-  box-shadow: 4px 12px 0px -8px #7f8c8d;
-}
-
-main article.full-gallery.page-full-gallery header {
-  height: 65px;
-  clear: both;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  box-shadow: none;
-}
-
-main article.full-gallery img {
-  height: 95px;
-  width: 95px;
-  box-shadow: 1px 8px 0 -4px #7f8c8d;
-}
-
-main article.full-gallery .text-clanek {
-  display: block;
-  margin: -10px 5px 10px 10px;
-  box-shadow: none;
-}
-
-main article.page-full-gallery .text-clanek {
-  box-shadow: 0 4px #95a5a6 inset;
-}
-
-/*1a. ZOBRAZENÍ GALERIE*/
-main article.full-gallery.content-gallery {
-  display: inline-block;
-  width: 630px;
-  margin-bottom: 10px;
-}
-
-main article.full-gallery.content-gallery .gallery {
-  margin: 0 auto;
-  width: 630px;
-}
-
-main article.full-gallery.content-gallery .gallery img {
-  margin: 0;
-}
-
-@-webkit-keyframes galerie-hover {
-  from {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    box-shadow: 0px 4px #bdc3c7;
-  }
-  to {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    box-shadow: 4px 4px grey;
-  }
-}
-@keyframes galerie-hover {
-  from {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    box-shadow: 0px 4px #bdc3c7;
-  }
-  to {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    box-shadow: 4px 4px grey;
-  }
-}
-main article.full-gallery .content-gallery .gallery img:hover,
-main article.full-gallery .content-gallery .gallery img:focus,
-main article .mini img:hover,
-main article.upozorneni img.attachment-thumbnail:hover {
-  -webkit-animation-name: galerie-hover;
-  animation-name: galerie-hover;
-  -webkit-animation-duration: 0.2s;
-  animation-duration: 0.2s;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  box-shadow: 4px 4px #7f8c8d;
-}
-
-.gallery dl {
-  list-style: none url();
-}
-
-.gallery dd {
-  display: none;
-}
-
-main article.full-gallery .content-gallery .gallery img {
-  margin-bottom: 10px;
-  clear: none;
-  float: left;
-  margin: auto 5px 10px;
-}
-
-/*Projekty - logolink na stránkách*/
-main section.logolink-gen {
-  min-width: 650px;
-  height: 120px;
-}
-
-main section.logolink-big {
-  background: white url(../img/proj/logolink_o.jpg) center center no-repeat;
-  background-size: auto 120px;
-}
-
-main section.logolink-Visegrad {
-  background: white url(../img/proj/visegrad_fund_logo_blue_290px.png) center center no-repeat;
-  background-size: auto 120px;
-}
-
-main section.logolink-etwinning {
-  background: white url(../img/proj/etwinning.svg) center center no-repeat;
-  background-size: auto 105px;
-}
-
-main section.logolink-cez {
-  background: white url(../img/proj/logo_cez.png) center center no-repeat;
-  background-size: auto 120px;
-}
-
-/*Full-článek*/
-main article.full-clanek {
-  height: auto;
-  max-height: 100%;
-}
-
-main article .galerie-clanek {
-  float: left;
-  width: 170px;
-}
-
-main article .galerie-clanek img {
-  margin-bottom: 10px;
-  box-shadow: 1px 8px 0px -4px #7f8c8d;
-}
-
-main article .mini {
-  clear: left;
-}
-
-main article .mini img {
-  padding: 0;
-  width: 75px;
-  height: 75px;
-  margin-bottom: 10px;
-}
-
-/*Výpis článků ve vyhledávání*/
-main article.search img {
-  display: none;
-}
-
-main article.search header {
-  padding: 5px 10px;
-  line-height: 35px;
-}
-
-main article.search header h1 {
-  font-size: 20px;
-  float: left;
-  max-width: 325px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-main article.search header h2 {
-  float: right;
-}
-
-main article.search .text-clanek {
-  padding: 10px;
-  height: auto;
-}
-
-main article.search .search-count {
-  background-color: #2c3e50;
-  display: block;
-  float: left;
-  min-width: 45px;
-  line-height: 45px;
-  font-size: 20px;
-  text-align: center;
-  font-family: "Open Sans", Serif;
-  font-weight: 300;
-  color: white;
-}
-
-/* -- Nenalezeno -- */
-article #nenalezeno {
-  background-color: #2c3e50;
-  display: block;
-  line-height: 45px;
-  padding: 10px;
-  font-size: 27px;
-  font-family: "Open Sans", serif;
-  text-align: center;
-  color: #fff;
-  font-weight: 300;
-}
-
-/*KONEC - ČLÁNKY*/
 @-webkit-keyframes animation {
   0% {
     top: -25px;
@@ -1229,16 +792,13 @@ article #nenalezeno {
 }
 
 @media only screen and (max-width: 959px) {
-  main {
-    max-width: 100%;
+  .body-content-container {
+    flex-direction: column;
+    box-sizing: border-box;
   }
 
-  main article {
-    margin-right: 10px;
-  }
-
-  .task-published {
-    margin-right: 10px;
+  .body-content-with-navbar-container {
+    width: auto;
   }
 }
 /*při 800px dochází k drobným změnám v logu školy*/
@@ -1264,35 +824,6 @@ article #nenalezeno {
 /*Při 720px zmizí malá fotogalerie dole a nadbytečné obrázky*/
 /* TABLET LAYOUT */
 @media only screen and (max-width: 720px) {
-  main article.galerie img.wp-post-image,
-main article.prispevek img.wp-post-image {
-    display: none;
-  }
-
-  main article,
-main article.format-height-160 {
-    max-height: 100%;
-    margin-right: 10px;
-  }
-
-  main article .text-clanek-height-160 {
-    height: auto;
-  }
-
-  main article .galerie-clanek {
-    float: none;
-    display: inline;
-  }
-
-  main article header {
-    clear: left;
-  }
-
-  main article.search header,
-main article.upozorneni header {
-    clear: none;
-  }
-
   footer .pravy iframe {
     margin-left: 5px;
   }
@@ -1313,10 +844,6 @@ main article.upozorneni header {
     white-space: nowrap;
     overflow: hidden;
   }
-
-  main section.logolink-gen {
-    min-width: auto;
-  }
 }
 blockquote {
   padding: 0px 0px 10px 15px;
@@ -1328,11 +855,14 @@ blockquote {
 .task-published {
   background-color: #2c3e50;
   padding: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin: 10px 0;
   text-align: center;
   color: #ecf0f1;
   box-shadow: 0px 4px 0px #95a5a6;
+}
+
+.task-published:first-of-type {
+  margin-top: 0;
 }
 
 .task-published > p {

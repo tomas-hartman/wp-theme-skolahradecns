@@ -1,3 +1,6 @@
+    </div> <!-- END OF .body-content-with-container -->
+    <?php get_sidebar();?>
+</div> <!-- END OF .body-content-container -->
 <footer id="ft-flex">
     <div class="horni">
         <span class="ft-headline"><h3>Projekty a sponzoři</h3></span>
@@ -44,7 +47,7 @@
     </div>
 </footer>
 <?php wp_footer(); ?>
-    </div>
+    <!-- </div> -->
     <script>
         function checkXmasTheme () {
             var today = new Date();

@@ -1,6 +1,5 @@
 /* footer */
 footer {
-    clear: both;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -9,6 +8,8 @@ footer {
     font-family: "Open Sans", sans-serif;
     font-size: 11px;
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2) inset;
+    width: $width-desktop;
+    max-width: 100%;
 
     h3 {
         font-size: 11px;

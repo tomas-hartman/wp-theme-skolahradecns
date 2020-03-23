@@ -1,7 +1,7 @@
 <?php
     get_header();
 ?>
-<main>
+<main class="content">
 
 <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -31,7 +31,4 @@
        echo '<div id="nenalezeno">Obsah nenalezen</div>';
    endif; ?>
 </main>
-<?php 
-    get_sidebar();
-    get_footer();
-?>
+<?php get_footer(); ?>

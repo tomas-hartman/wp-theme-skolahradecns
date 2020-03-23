@@ -59,7 +59,7 @@ wp_reset_postdata();
 
 /* -- END loop s rokama -- */ ?>
 </ul></nav>    
-<main>
+<main class="content">
 <?php simpleYearlyArchive('yearly');
   echo '<br>'; ?>
 
@@ -74,7 +74,4 @@ wp_reset_postdata();
        echo '<div id="nenalezeno">Obsah nenalezen</div>';
    endif; ?>
 </main>
-<?php 
-    include 'sidebar.php';
-    get_footer();
-?>
+<?php get_footer(); ?>

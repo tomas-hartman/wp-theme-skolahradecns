@@ -7,7 +7,7 @@
     get_header();
 ?>
       
-<main>
+<main class="content">
 <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
   $kategorie=zjisti_kategorii_2();
@@ -95,7 +95,4 @@
        echo '<div id="nenalezeno">Obsah nenalezen</div>';
    endif; ?>
 </main>
-<?php get_sidebar();?>
-<?php 
-    get_footer(); 
-?>
+<?php get_footer(); ?>

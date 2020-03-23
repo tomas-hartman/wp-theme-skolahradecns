@@ -4,7 +4,7 @@
     /*Zji�t�n� URI prom�nn� pro view_counter*/
      $page_uri=wp_statistics_get_uri();
 ?>      
-<main>  
+<main class="content">  
 <?php
       if(have_posts()) :
             while (have_posts()) : the_post();        
@@ -22,7 +22,4 @@
               endif;
 ?>        
 </main>
-<?php get_sidebar();?>
-<?php 
-    get_footer(); 
-?>
+<?php get_footer(); ?>
