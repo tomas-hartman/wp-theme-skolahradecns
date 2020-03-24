@@ -20,19 +20,20 @@
 
 
         <article class="prispevek full-clanek">
-
-        <?php include 'header-page.php'; ?>
-        
-        <section class="text-clanek page-docs">
-        <?php 
-        if(wpba_attachments_exist()) {
-        echo wpba_attachment_list(); } ?>
-            <p>
-            <?php
-              echo the_content();
-            ?>
-            </p>
-        </section>      
+          <div class="article-content-container">
+            <?php include 'header-page.php'; ?>
+            
+            <section class="text-clanek page-docs">
+            <?php 
+            if(wpba_attachments_exist()) {
+            echo wpba_attachment_list(); } ?>
+                <p>
+                <?php
+                  echo the_content();
+                ?>
+                </p>
+            </section>      
+          </div>
         </article>
           
 <?php endwhile;

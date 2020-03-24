@@ -4,14 +4,15 @@ main.content article {
     margin: 10px 0 0 0;
     max-height: 160px;
     overflow: hidden;
+    display: flex;
 
     &:first-of-type {
         margin: 0;
     }
 
     &.format-height-160 {
-        max-height: 160px;
-        overflow: hidden;
+        // max-height: 160px;
+        // overflow: hidden;
     }
 
     img {
@@ -21,9 +22,15 @@ main.content article {
         margin-right: 10px;
     }
 
+    .article-content-container {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
     // HEADER
     header {
-        overflow: hidden;
         padding: 10px;
         background-color: $concrete;
 
@@ -92,10 +99,16 @@ main.content article {
     .text-clanek {
         padding: 10px 15px 10px;
         background-color: $silver;
-        overflow: hidden;
         box-shadow: 0px 4px $asbestos inset;
         margin-left: 10px;
         margin-right: 5px;
+
+        box-sizing: border-box;
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
 
         &.text-clanek-height-160 {
             height: 85px;
@@ -103,18 +116,15 @@ main.content article {
 
         ol,
         ul {
-            // padding-left: 20px;
-            // padding-top: 10px;
             margin: 5px 0 5px 40px;
-        }
-
-        ul {
-            // margin-bottom: 10px;
         }
 
         li {
             padding-left: 10px;
-            // margin-left: 20px;
+        }
+
+        p {
+            flex: 1;
         }
 
         .text-clanek h2,
@@ -159,9 +169,6 @@ main.content article {
     }
 
     .galerie-clanek {
-        float: left;
-        width: 170px;
-
         img {
             margin-bottom: 10px;
             box-shadow: 1px 8px 0px -4px $asbestos;
@@ -183,11 +190,19 @@ main.content article {
         height: auto;
         max-height: 100%;
 
-        .text-clanek p {
-            margin-bottom: 10px;
+        header>h1 {
+            white-space: normal;
+        }
 
-            &:last-child {
-                margin-bottom: 0;
+        .text-clanek {
+            flex: 0;
+
+            p {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -199,7 +214,7 @@ main.content article {
         article,
         article.format-height-160 {
             max-height: 100%;
-            margin-right: 10px;
+            // margin-right: 10px;
         }
 
         article {

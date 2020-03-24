@@ -407,13 +407,10 @@ main.content article {
   margin: 10px 0 0 0;
   max-height: 160px;
   overflow: hidden;
+  display: flex;
 }
 main.content article:first-of-type {
   margin: 0;
-}
-main.content article.format-height-160 {
-  max-height: 160px;
-  overflow: hidden;
 }
 main.content article img {
   float: left;
@@ -421,8 +418,13 @@ main.content article img {
   height: 160px;
   margin-right: 10px;
 }
+main.content article .article-content-container {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
 main.content article header {
-  overflow: hidden;
   padding: 10px;
   background-color: #95a5a6;
 }
@@ -475,10 +477,15 @@ main.content article header.main-skola {
 main.content article .text-clanek {
   padding: 10px 15px 10px;
   background-color: #bdc3c7;
-  overflow: hidden;
   box-shadow: 0px 4px #7f8c8d inset;
   margin-left: 10px;
   margin-right: 5px;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 main.content article .text-clanek.text-clanek-height-160 {
   height: 85px;
@@ -489,6 +496,9 @@ main.content article .text-clanek ul {
 }
 main.content article .text-clanek li {
   padding-left: 10px;
+}
+main.content article .text-clanek p {
+  flex: 1;
 }
 main.content article .text-clanek .text-clanek h2,
 main.content article .text-clanek .text-clanek h3,
@@ -524,10 +534,6 @@ main.content article .text-clanek a:hover, main.content article .text-clanek a.r
   background-color: #2c3e50;
   color: #ecf0f1;
 }
-main.content article .galerie-clanek {
-  float: left;
-  width: 170px;
-}
 main.content article .galerie-clanek img {
   margin-bottom: 10px;
   box-shadow: 1px 8px 0px -4px #7f8c8d;
@@ -545,6 +551,12 @@ main.content article.full-clanek {
   height: auto;
   max-height: 100%;
 }
+main.content article.full-clanek header > h1 {
+  white-space: normal;
+}
+main.content article.full-clanek .text-clanek {
+  flex: 0;
+}
 main.content article.full-clanek .text-clanek p {
   margin-bottom: 10px;
 }
@@ -556,7 +568,6 @@ main.content article.full-clanek .text-clanek p:last-child {
   main.content article,
 main.content article.format-height-160 {
     max-height: 100%;
-    margin-right: 10px;
   }
   main.content article header {
     clear: left;
@@ -572,11 +583,74 @@ main.content article.format-height-160 {
     display: none;
   }
 }
+/*2. Upozornění*/
+main.content article.upozorneni {
+  height: auto;
+  max-height: 100%;
+}
+main.content article.upozorneni img.attachment-thumbnail {
+  margin: 5px;
+}
+main.content article.upozorneni header {
+  min-height: 45px;
+  background-color: #e67e22;
+  position: relative;
+}
+main.content article.upozorneni header h1 {
+  white-space: normal;
+}
+main.content article.upozorneni header img {
+  width: 65px;
+  height: 65px;
+}
+main.content article.upozorneni header .aside-header-container {
+  margin-left: 65px;
+}
+main.content article.upozorneni header .aside-header-img-container {
+  display: flex;
+  background-color: #c1392d;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65px;
+  align-items: center;
+}
+main.content article.upozorneni .text-clanek {
+  padding: 10px 15px 5px;
+  overflow: visible;
+}
+main.content article.upozorneni .text-clanek p {
+  margin: 7px 0;
+}
+
+@media only screen and (max-width: 720px) {
+  main.content article.upozorneni header {
+    clear: none;
+  }
+}
+.pdf-js {
+  height: 830px;
+}
+
+main.content article .text-clanek a.pdf-js-label {
+  background-color: #3f3f3f;
+  color: white;
+  border-radius: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  margin: 0;
+  left: 0;
+}
+
 /* příspěvky */
 main.content {
   width: 100%;
   max-width: 630px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 959px) {

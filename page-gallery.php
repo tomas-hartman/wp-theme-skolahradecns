@@ -41,26 +41,28 @@
    /*HLAVNÍ Vypisovací část*/?>
    
    <article class="galerie full-gallery page-full-gallery">
-        <!--<?php if(has_post_thumbnail()) {the_post_thumbnail('small-thumbnail');?><style>main article.full-gallery header {width: 495px;}</style><?php } ?>-->
+        <div class="article-thumbnail-container">
+          <!--<?php if(has_post_thumbnail()) {the_post_thumbnail('small-thumbnail');?><style>main article.full-gallery header {width: 495px;}</style><?php } ?>-->
+        </div>
 
-        <?php include 'header-content.php'; ?>
-        
-        <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
-        
-        <?php if(strlen($clanek) > 0) : ?>  
-        <section class="text-clanek">
-            
-            <?php 
-              //echo strip_shortcodes($post->post_content);
-              //the_content();
-              //echo $clanek;
-              ?>
-              <p><?php echo get_the_excerpt(); ?>
-            <a href="<?php the_permalink(); ?>" class="read-more">Číst více &raquo;</a>
-            </p>
-            
-            
-        </section>
+        <div class="article-content-container">
+          <?php include 'header-content.php'; ?>
+          
+          <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
+          
+          <?php if(strlen($clanek) > 0) : ?>  
+          <section class="text-clanek">
+              <?php 
+                //echo strip_shortcodes($post->post_content);
+                //the_content();
+                //echo $clanek;
+                ?>
+                <p><?php echo get_the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>" class="read-more">Číst více &raquo;</a>
+              </p>
+          </section>
+        </div>
+
         <?php endif; ?>      
 
         <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  

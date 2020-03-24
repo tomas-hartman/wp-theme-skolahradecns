@@ -1,12 +1,16 @@
 @import 'paging_nav';
 // @import 'content_warning';
 @import 'content_default';
+@import 'content_warning';
+@import 'pdf';
 
 /* příspěvky */
 main.content {
     width: 100%;
     max-width: 630px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 959px) {

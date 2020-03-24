@@ -1,6 +1,8 @@
 <article class="galerie full-gallery full-clanek">
+    <div class="article-thumbnail-container">
         <?php if(has_post_thumbnail()) {the_post_thumbnail('thumbnail'); }?>
-        
+    </div>
+    <div class="article-content-container">
         <?php include 'header-single.php'; ?>
         
         <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
@@ -14,7 +16,7 @@
             ?>
         </section>
         <?php endif; ?>      
-
+    
         <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  
             <div class="content-gallery">
             
@@ -26,4 +28,6 @@
             ?>  
                   
             </div><?php } ?><!--class="mini"-->      
+    </div>
+        
 </article>

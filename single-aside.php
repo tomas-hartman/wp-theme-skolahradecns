@@ -1,7 +1,6 @@
 <article class="upozorneni">
-        <img src="<?php bloginfo('template_directory'); ?>/img/img_upozorneni.png" alt="Obrázek - upozornění, 571B" title="Upozornění" border="0" height="65" width="65">
-        
-        <?php include 'header-single.php'; ?>
+    <div class="article-content-container">
+        <?php include 'header-aside.php'; ?>
         
         <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
         
@@ -15,4 +14,5 @@
                 echo wpba_attachment_list(); } ?>
             </div>    
         </section>      
+    </div>
 </article>

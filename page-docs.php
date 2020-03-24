@@ -17,21 +17,21 @@
       if(have_posts()) :
             while (have_posts()) : the_post(); ?>        
 
-
         <article class="prispevek full-clanek">
-
-        <?php include 'header-page.php'; ?>
-
-        <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
-        <?php 
-        if(wpba_attachments_exist()) {
-        echo wpba_attachment_list(); } ?>
-            
-            <?php
-              echo the_content();
-            ?>
-            
-        </section>      
+          <div class="article-content-container">
+            <?php include 'header-page.php'; ?>
+    
+            <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
+            <?php 
+            if(wpba_attachments_exist()) {
+            echo wpba_attachment_list(); } ?>
+                
+                <?php
+                  echo the_content();
+                ?>
+                
+            </section>      
+          </div>
         </article>
           
 <?php endwhile;
