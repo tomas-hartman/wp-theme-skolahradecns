@@ -3,7 +3,9 @@
     
     /*Zji�t�n� URI prom�nn� pro view_counter*/
      $page_uri=wp_statistics_get_uri();
-?>      
+?>
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->      
 <main class="content">  
 <?php
       if(have_posts()) :

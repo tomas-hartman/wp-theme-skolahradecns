@@ -66,6 +66,4 @@
                                    ));          
           ?>
     </nav>
-    <div class="body-content-container">
-        <div class="body-content-with-navbar-container">
-        <!--container pro rozložení stránky, ukončen je ve footeru-->
+    <div class="body-content-container"><!--container pro rozložení stránky, ukončen je ve footeru-->

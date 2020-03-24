@@ -25,7 +25,8 @@ get_header();
         ?> &#8226; <a href="<?php echo get_home_url(); ?>" style="text-align: right; color: black;">zobrazit všechny články</a> </h1>
     </div>
     
-
+    <div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
 <main class="content">
 <?php
    if(have_posts()) :

@@ -10,6 +10,9 @@
 <nav class="navbar-menu blue projekty">
     <?php wp_nav_menu( array ('theme_location' => 'menu_projekty'));?>
 </nav>
+
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
       
 <main class="content">  
 <?php
@@ -23,11 +26,9 @@
 
 
         <article class="prispevek full-clanek">
-        <header class="<?php cat_to_class(); ?>">
-            <h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-            <h2>přidáno <?php the_time('d.m.Y');?></h2> 
-            
-        </header>
+
+        <?php include 'header-page.php'; ?>
+
         <section class="text-clanek page-docs">
         <?php 
         if(wpba_attachments_exist()) {

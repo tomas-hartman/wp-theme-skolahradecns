@@ -1,5 +1,5 @@
-    </div> <!-- END OF .body-content-with-container -->
     <?php get_sidebar();?>
+</div> <!-- END OF .body-content-with-container -->
 </div> <!-- END OF .body-content-container -->
 <footer id="ft-flex">
     <div class="horni">

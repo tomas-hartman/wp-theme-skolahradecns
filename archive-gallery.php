@@ -58,7 +58,9 @@ endwhile;
 wp_reset_postdata();
 
 /* -- END loop s rokama -- */ ?>
-</ul></nav>    
+</ul></nav>   
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru--> 
 <main class="content">
 <?php simpleYearlyArchive('yearly');
   echo '<br>'; ?>

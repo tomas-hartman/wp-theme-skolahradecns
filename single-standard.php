@@ -23,10 +23,9 @@
               ?>      
             </div><?php } ?><!--class="mini"-->  
         </div>
-        <header class="<?php cat_to_class(); ?>">
-            <h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-            <h2><?php the_time('d.m.Y');?> | <?php the_author_posts_link(); ?> | <?php the_category();?><?php views_count($page_uri);?> </h2>  
-        </header>
+
+        <?php include 'header-single.php'; ?>
+        
         <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
         <?php 
             if(wpba_attachments_exist()) {

@@ -22,6 +22,7 @@ function get_excerpt() {
   }
 }
 
+// @todo vykleštit tuto funkci
 function zjisti_kategorii() {
 $categories = get_the_category();
            $output = '';

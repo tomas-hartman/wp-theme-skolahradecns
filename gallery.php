@@ -1,6 +1,8 @@
 <?php
     get_header();
 ?>
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
 <main class="content">
 <?php
    if(have_posts()) :

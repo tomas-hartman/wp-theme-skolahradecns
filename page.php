@@ -1,6 +1,8 @@
 <?php 
     get_header();
 ?>      
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
 <main class="content">  
 <?php
       if(have_posts()) :
@@ -21,10 +23,9 @@
               ?>      
             </div><?php } ?><!--class="mini"-->  
         </div>
-        <header class="<?php zjisti_kategorii(); ?>">
-            <h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-            <h2><?php the_time('d.m.Y');?> | <?php the_author_posts_link(); ?> | <?php the_category();?></h2>  
-        </header>
+        
+        <?php include 'header-content.php';?>
+
         <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs"; }?>">
         <?php 
         if(wpba_attachments_exist()) {
