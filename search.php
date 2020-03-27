@@ -25,12 +25,12 @@
    ?> 
    
    <article class="prispevek format-height-160 search">
-        <div class="article-thumbnail-container">
-            <?php if(has_post_thumbnail()) {?><a href="<?php the_permalink();?>"><?php the_post_thumbnail('small-thumbnail');?></a><?php } ?>
-            <div class="search-count"><?php echo $i; $i++; ?></div>
-        </div>
+        <!-- <div class="article-thumbnail-container"> -->
+        <!-- <?php //if(has_post_thumbnail()) {?><a href="<?php //the_permalink();?>"><?php //the_post_thumbnail('small-thumbnail');?></a><?php //} ?>
+            <div class="search-count"><?php //echo $i; $i++; ?></div>
+        </div> -->
         <div class="article-content-container">
-            <?php include 'header-content.php'; ?>
+            <?php include 'header-search.php'; ?>
             
             <section class="text-clanek<?php if(has_post_thumbnail()) {echo " text-clanek-height-160";} ?>">
                 <p><?php echo get_excerpt(); ?>

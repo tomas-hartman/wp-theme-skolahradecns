@@ -4,7 +4,6 @@ main.content article.upozorneni {
     max-height: 100%;
 
     img {
-
         &.attachment-thumbnail {
             margin: 5px;
         }
@@ -36,7 +35,7 @@ main.content article.upozorneni {
             top: 0;
             left: 0;
             width: 65px;
-            align-items: center;
+            // align-items: center;
         }
     }
 
@@ -47,11 +46,5 @@ main.content article.upozorneni {
         p {
             margin: 7px 0;
         }
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    main.content article.upozorneni header {
-        clear: none;
     }
 }

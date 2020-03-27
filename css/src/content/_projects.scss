@@ -2,8 +2,8 @@
 // @todo mixin?
 main.content section {
     &.logolink-gen {
-        min-width: 650px;
         height: 120px;
+        margin-bottom: 7px;
     }
 
     &.logolink-big {

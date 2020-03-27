@@ -22,10 +22,12 @@
         <article class="prispevek full-clanek">
             <div class="article-content-container">
                 <?php include 'header-page.php'; ?>
+                <?php if(wpba_attachments_exist()) { ?>
+                    <div class="attachments attachments-upper">
+                      <?php echo wpba_attachment_list(); ?>
+                    </div> 
+                <?php } ?>
                 <section class="text-clanek page-docs">
-                <?php 
-                if(wpba_attachments_exist()) {
-                echo wpba_attachment_list(); } ?>
                     
                     <?php
                     echo the_content();

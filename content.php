@@ -10,7 +10,11 @@
             <?php include 'header-content.php'; ?>
     
             <section class="text-clanek<?php if(has_post_thumbnail()) {echo " text-clanek-height-160";} ?>">
-                <p><?php echo get_the_excerpt();?>
+                <p>
+                    <?php 
+                        // echo get_the_excerpt();
+                        echo get_excerpt();
+                    ?>
                 <a href="<?php the_permalink(); ?>" class="read-more">Číst více &raquo;</a>
                 </p>
             </section>      

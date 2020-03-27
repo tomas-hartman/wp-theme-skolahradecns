@@ -1,68 +1,113 @@
 /* START ČLÁNEK - PŘÍLOHY */
 /* @todo rewrite */
-.page-docs a.wpba-link {
-    text-decoration: none;
-    color: $black;
-}
 
-.page-docs a.wpba-link:hover {
-    text-decoration: underline;
-}
+.attachments {
+    background-color: $concrete;
 
-#wpba_attachment_list {
-    display: block;
-    width: 100%;
-    float: none;
-    margin: -10px 0px 10px -15px;
-    padding: 4px 15px 0px !important;
-    overflow: visible;
     font-size: medium;
     font-weight: 300;
-}
 
-#wpba_attachment_list {
-    box-shadow: 0px 4px rgba(0, 0, 0, 0.3) inset;
-    background-color: $blue-light;
-}
-
-main.content article .text-clanek ul.wpba-attachment-list {
-    display: inline-block;
-    margin-bottom: 0;
-}
-
-main.content article ul.wpba-attachment-list li {
-    padding: 7px 0px;
-    margin-bottom: 0px;
+    width: 615px;
+    margin-top: 0;
     margin-left: 10px;
+    margin-right: 5px;
+    padding: 10px 15px;
+
+    // ONLY MOBILNÍ
+    // margin-right: -15px;
+    // padding-right: 20px;
+
+    box-sizing: border-box;
+
+    &.attachments-upper {
+        box-shadow: 0px 4px rgba(0, 0, 0, 0.3) inset;
+        margin-bottom: -5px;
+
+        &.blue {
+            background-color: $blue-light;
+        }
+
+        &.green {
+            background-color: $green-light;
+        }
+
+        &.red {
+            background-color: $red-light;
+        }
+    }
+
+    &.attachments-lower {
+        // margin-bottom: -5px;
+        // margin-top: 10px;
+    }
+
+    a {
+        color: $black;
+    }
+
+    #wpba_attachment_list {
+        width: 100%;
+
+        ul {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            &>li {
+                padding: 7px 0px;
+                margin-bottom: 0px;
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                max-width: 100%;
+
+                .wpba-icon {
+                    margin-right: 0;
+                    height: 20px;
+                    width: auto;
+                }
+
+                .wpba-link {
+                    @include ellipsis();
+                    flex: 1;
+                    padding: initial;
+                    background-color: initial;
+                    border-radius: initial;
+                    margin-left: 10px;
+                    padding: 3px 0;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: initial;
+                        color: initial;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }
 
-ul.wpba-attachment-list li img,
-.attachment ul.wpba-attachment-list li img {
-    height: 20px;
-    width: auto;
-}
 
-/*SPECIÁL: upozornění*/
-.text-clanek.page-docs .attachment #wpba_attachment_list {
-    background-color: $concrete;
-    margin: 15px 0px -5px -15px;
-    box-shadow: unset;
-}
 
 // PŘÍLOHY - BARVY
-.text-clanek.page-docs.main-zs #wpba_attachment_list {
+.text-clanek.page-docs.main-zs #wpba_attachment_list,
+.full-clanek .main-zs+.attachments {
     background-color: $green-light;
 }
 
-.text-clanek.page-docs.main-ms #wpba_attachment_list {
+.text-clanek.page-docs.main-ms #wpba_attachment_list,
+.full-clanek .main-ms+.attachments {
     background-color: $red-light;
 }
 
-.text-clanek.page-docs.main-sd #wpba_attachment_list {
+.text-clanek.page-docs.main-sd #wpba_attachment_list,
+.full-clanek .main-sd+.attachments {
     background-color: $orange-light;
 }
 
-.text-clanek.page-docs.main-skola #wpba_attachment_list {
+.text-clanek.page-docs.main-skola #wpba_attachment_list,
+.full-clanek .main-skola+.attachments {
     background-color: $blue-light;
 }
 

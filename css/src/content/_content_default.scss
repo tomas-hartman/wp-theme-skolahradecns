@@ -10,11 +10,6 @@ main.content article {
         margin: 0;
     }
 
-    &.format-height-160 {
-        // max-height: 160px;
-        // overflow: hidden;
-    }
-
     img {
         float: left;
         width: 160px;
@@ -74,21 +69,25 @@ main.content article {
         }
 
         // BARVY
-        &.main-zs {
+        &.main-zs,
+        &.green {
             background-color: $green;
         }
 
-        &.main-ms {
+        &.main-ms,
+        &.red {
             background-color: $red;
         }
 
-        &.main-sd {
+        &.main-sd,
+        &.orange {
             background-color: $orange;
             color: $black;
             text-shadow: none;
         }
 
-        &.main-skola {
+        &.main-skola,
+        &.blue {
             background-color: $blue;
         }
     }
@@ -116,7 +115,7 @@ main.content article {
 
         ol,
         ul {
-            margin: 5px 0 5px 40px;
+            margin: 0 0 10px 40px;
         }
 
         li {
@@ -136,8 +135,17 @@ main.content article {
 
         // LINKS TODO
         a {
+            background-color: $concrete;
+            padding: 1px 4px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: $black;
+            text-decoration: none;
+
             &.read-more {
                 display: inline-block;
+                border-radius: initial;
+                padding: initial;
                 background: $concrete;
                 font-size: 90%;
                 vertical-align: middle;
@@ -147,17 +155,6 @@ main.content article {
                 line-height: 20px;
                 text-decoration: none;
                 color: inherit;
-            }
-
-            &:not(.read-more) {
-                background-color: $concrete;
-                display: inline-block;
-                padding: 3px 6px;
-                border-radius: 5px;
-                box-sizing: border-box;
-                max-width: 100%;
-                color: $black;
-                @include ellipsis;
             }
 
             &:hover,
@@ -197,12 +194,36 @@ main.content article {
         .text-clanek {
             flex: 0;
 
+            h1,
+            h2,
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+
             p {
                 margin-bottom: 10px;
+                line-height: 1.2rem;
 
                 &:last-child {
                     margin-bottom: 0;
                 }
+            }
+
+            li {
+                line-height: 1.2rem;
             }
         }
     }
@@ -214,7 +235,6 @@ main.content article {
         article,
         article.format-height-160 {
             max-height: 100%;
-            // margin-right: 10px;
         }
 
         article {

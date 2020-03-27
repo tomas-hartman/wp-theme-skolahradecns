@@ -5,8 +5,10 @@ main.content article.search {
     }
 
     header {
+        display: flex;
+        position: relative;
         padding: 5px 10px;
-        line-height: 35px;
+        height: 35px;
 
         h1 {
             font-size: 20px;
@@ -17,6 +19,23 @@ main.content article.search {
 
         h2 {
             float: right;
+        }
+
+        .search-header-container {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-left: 45px;
+        }
+
+        .search-header-div-container {
+            position: absolute;
+            display: flex;
+            height: 100%;
+            top: 0;
+            left: 0;
         }
     }
 
@@ -36,11 +55,5 @@ main.content article.search {
         font-family: "Open Sans", Serif;
         font-weight: 300;
         color: $white;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    main.content article.search header {
-        clear: none;
     }
 }

@@ -28,11 +28,12 @@
             <div class="article-content-container">
                 <?php include 'header-content.php';?>
         
+                <?php if(wpba_attachments_exist()) { ?>
+                    <div class="attachments attachments-upper">
+                      <?php echo wpba_attachment_list(); ?>
+                    </div> 
+                <?php } ?>
                 <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs"; }?>">
-                <?php 
-                if(wpba_attachments_exist()) {
-                echo wpba_attachment_list(); } ?>
-                    
                     
                     <?php
                     //echo strip_shortcodes($post->post_content);

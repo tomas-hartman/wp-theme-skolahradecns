@@ -109,11 +109,6 @@ p {
 // Šlo by nahradit za min size -> tabletový (možná ne...)
 
 @media only screen and (max-width: 959px) {
-
-    // .body-content-container {
-    //     flex-direction: column;
-    // }
-
     .body-content-with-navbar-container {
         flex-direction: column;
     }

@@ -8,11 +8,12 @@
               echo the_content(); //echo get_the_excerpt();
             ?></p>
             
-            <div class="attachment">
-                <?php 
-                if(wpba_attachments_exist()) {
-                echo wpba_attachment_list(); } ?>
-            </div>    
-        </section>      
+        </section>   
+           
+        <?php if(wpba_attachments_exist()) { ?>
+                <div class="attachments attachments-lower">
+                  <?php echo wpba_attachment_list(); ?>
+                </div> 
+        <?php } ?>   
     </div>
 </article>
