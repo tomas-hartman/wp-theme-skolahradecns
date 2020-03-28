@@ -19,6 +19,12 @@ main.content article.galerie {
     .text-clanek {
         display: none;
     }
+
+    .article-thumbnail-container {
+        a {
+            max-width: 85px;
+        }
+    }
 }
 
 /*SINGLE soubory pro jednotlivý typy příspěvků*/

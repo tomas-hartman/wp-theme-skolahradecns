@@ -168,6 +168,8 @@ main.content article {
     .article-thumbnail-container {
         &>a:first-of-type {
             margin-right: 10px;
+            max-width: 160px;
+            display: block;
         }
 
         .galerie-clanek>img:first-child {

@@ -11,14 +11,6 @@
               <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  
               <div class="mini">
                 <?php
-                // @todo .article-content-container; article-thumbnail-container
-                //Vykresluje jednotlivý obrázky z galerie    
-              /* $gallery = get_post_gallery_images( get_the_ID() );
-                foreach ($gallery as $image_url) {
-                echo '<img src="' . $image_url .'">'; 
-                                                }
-                */
-                
                 $gallery = get_post_galleries(get_the_ID()); 
                   foreach ($gallery as $images) {
                       echo $images;
@@ -40,7 +32,6 @@
                 //echo strip_shortcodes($post->post_content);
                 echo apply_filters('the_content', strip_shortcodes($post->post_content));
               ?>
-              
           </section>      
         </div>
 </article>
