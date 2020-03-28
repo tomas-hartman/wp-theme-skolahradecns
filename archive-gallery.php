@@ -9,7 +9,7 @@ get_header();
 
 /*Nastavení pro query bude: mezi tím a tím datem, categorie: galerie, výpis bude galeriovej*/
 ?>
-    <div id="nav-line"> <!-- Upravit CSS podobu tohohle -->
+    <div class="nav-line purple"> <!-- Upravit CSS podobu tohohle -->
         <h1><?php 
         
             if (is_category()) {
@@ -32,7 +32,7 @@ get_header();
         
         ?></h1>
     </div>
-<nav class="menu-docs jidelna"><ul>
+<nav class="navbar-menu blue jidelna"><ul>
 <?php
 
 /*Loop která zjistí roky... snad*/

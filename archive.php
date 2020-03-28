@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-    <div id="nav-line"> <!-- Upravit CSS podobu tohohle -->
+    <div class="nav-line purple"> <!-- Upravit CSS podobu tohohle -->
         <h1><?php 
         
             if (is_category()) {
@@ -22,7 +22,7 @@ get_header();
                 echo 'Archiv';
             }
         
-        ?> &#8226; <a href="<?php echo get_home_url(); ?>" style="text-align: right; color: black;">zobrazit všechny články</a> </h1>
+        ?> &#8226; <a href="<?php echo get_home_url(); ?>">zobrazit všechny články</a> </h1>
     </div>
     
     <div class="body-content-with-navbar-container">

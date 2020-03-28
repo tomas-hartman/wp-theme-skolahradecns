@@ -5,9 +5,9 @@
 ?>
 
 <article class="prispevek full-clanek">
-        <div class="article-thumbnail container">
+        <div class="article-thumbnail-container">
           <div class="galerie-clanek">
-              <?php if( has_post_thumbnail() ) {the_post_thumbnail('small-thumbnail');} ?>
+            <?php if( has_post_thumbnail() ) {the_post_thumbnail('small-thumbnail');} ?>
               <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  
               <div class="mini">
                 <?php
@@ -18,7 +18,8 @@
                 echo '<img src="' . $image_url .'">'; 
                                                 }
                 */
-                $gallery = get_post_galleries(get_the_ID(), 'TRUE'); 
+                
+                $gallery = get_post_galleries(get_the_ID()); 
                   foreach ($gallery as $images) {
                       echo $images;
                   }
@@ -35,7 +36,6 @@
             </div>
           <?php } ?>
           <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
-              
               <?php
                 //echo strip_shortcodes($post->post_content);
                 echo apply_filters('the_content', strip_shortcodes($post->post_content));

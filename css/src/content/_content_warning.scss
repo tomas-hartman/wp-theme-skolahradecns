@@ -42,6 +42,7 @@ main.content article.upozorneni {
     .text-clanek {
         padding: 10px 15px 5px;
         overflow: visible;
+        flex-direction: column;
 
         p {
             margin: 7px 0;

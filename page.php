@@ -11,8 +11,8 @@
 
         <article class="prispevek full-clanek">
             <div class="article-thumbnail-container">
-                <div class="galerie-clanek">
-                    <?php if( has_post_thumbnail() ) {the_post_thumbnail('small-thumbnail');} ?>
+                <div class="galerie-clanek"><?php
+                    if( has_post_thumbnail() ) {the_post_thumbnail('small-thumbnail');} ?>
                     <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  
                     <div class="mini">
                     <?php
@@ -22,8 +22,7 @@
                     echo '<img src="' . $image_url .'">'; 
                                                     }
                     ?>      
-                    </div><?php } ?><!--class="mini"-->  
-                </div>
+                    </div><?php } ?><!--class="mini"--></div>
             </div>
             <div class="article-content-container">
                 <?php include 'header-content.php';?>

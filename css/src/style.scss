@@ -61,49 +61,30 @@ p {
     display: flex;
 }
 
-@-webkit-keyframes animation {
-    0% {
-        top: -25px;
-        height: 0;
-    }
-
-    100% {
-        top: 0px;
-        height: 25px;
-    }
-}
-
-@keyframes animation {
-    0% {
-        top: -25px;
-        height: 0;
-    }
-
-    100% {
-        top: 0px;
-        height: 25px;
-    }
-}
-
-#nav-line {
+.nav-line {
     position: relative;
-    background-color: $purple-light;
-    padding: 5px 10px;
-    -webkit-animation-name: animation;
-    animation-name: animation;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-}
+    background-color: $concrete;
+    padding: 7px 10px 5px;
+    box-shadow: 0px 4px $asbestos, 0px 4px rgba(0, 0, 0, 0.3) inset;
 
-#nav-line h1 {
-    font-size: large;
-    line-height: 25px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    -webkit-animation-name: animation;
-    animation-name: animation;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    &.purple {
+        background-color: $purple-light;
+        color: $clouds-white;
+
+        h1,
+        a {
+            color: $clouds-white;
+        }
+    }
+
+    h1,
+    a {
+        font-size: large;
+        line-height: 25px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        color: $black;
+    }
 }
 
 // Šlo by nahradit za min size -> tabletový (možná ne...)
@@ -137,27 +118,6 @@ p {
 }
 
 /*Při 720px zmizí malá fotogalerie dole a nadbytečné obrázky*/
-/* TABLET LAYOUT */
-@media only screen and (max-width: 720px) {
-    footer .pravy iframe {
-        margin-left: 5px;
-    }
-
-    nav.menu-docs {
-        background-color: $blue-light;
-        z-index: -3;
-        clear: both;
-    }
-
-    nav.menu-docs li {
-        min-width: 12%;
-        text-align: left;
-        display: list-item;
-        list-style: none url();
-        float: none;
-        @include ellipsis;
-    }
-}
 
 blockquote {
     padding: 0px 0px 10px 15px;
@@ -166,30 +126,11 @@ blockquote {
     font-style: italic;
 }
 
-.task-published {
-    background-color: $navy-dark;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: center;
-    color: $clouds-white;
-    box-shadow: 0px 4px 0px $concrete;
-}
-
-.task-published:first-of-type {
-    margin-top: 0;
-}
-
-.task-published>p {
-    text-align: center;
-    font-size: medium;
-    font-weight: 300;
-}
-
 /* LAZY LOADING */
 .lazy-load {
     background-color: $silver;
-}
 
-.lazy-load::before {
-    display: none;
+    &::before {
+        display: none;
+    }
 }

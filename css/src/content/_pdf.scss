@@ -11,6 +11,8 @@ main.content article .text-clanek a.pdf-js-label {
     padding: 5px 0;
     margin: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
 
     &+br {
         display: none;

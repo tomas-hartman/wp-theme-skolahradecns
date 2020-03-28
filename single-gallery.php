@@ -1,9 +1,9 @@
 <article class="galerie full-gallery full-clanek">
-    <div class="article-thumbnail-container">
-        <?php if(has_post_thumbnail()) {the_post_thumbnail('thumbnail'); }?>
-    </div>
     <div class="article-content-container">
-        <?php include 'header-single.php'; ?>
+            <div class="article-header-container">
+            <?php if(has_post_thumbnail()) {the_post_thumbnail('thumbnail'); }?>
+            <?php include 'header-single.php'; ?>
+            </div>
         
         <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
         

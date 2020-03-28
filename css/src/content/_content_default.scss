@@ -11,10 +11,10 @@ main.content article {
     }
 
     img {
-        float: left;
+        // float: left;
         width: 160px;
         height: 160px;
-        margin-right: 10px;
+        // margin-right: 10px;
     }
 
     .article-content-container {
@@ -102,12 +102,12 @@ main.content article {
         margin-left: 10px;
         margin-right: 5px;
 
-        box-sizing: border-box;
-        flex: 1;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
+        // box-sizing: border-box;
+        // flex: 1;
+        // display: flex;
+        // align-items: flex-start;
+        // flex-direction: column;
+        // justify-content: center;
 
         &.text-clanek-height-160 {
             height: 85px;
@@ -165,6 +165,17 @@ main.content article {
         }
     }
 
+    .article-thumbnail-container {
+        &>a:first-of-type {
+            margin-right: 10px;
+        }
+
+        .galerie-clanek>img:first-child {
+            margin-right: 10px;
+        }
+    }
+
+
     .galerie-clanek {
         img {
             margin-bottom: 10px;
@@ -173,10 +184,19 @@ main.content article {
     }
 
     .mini {
-        clear: left;
+        width: 160px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // flex-direction: column;
+        // justify-content: space-between;
+
+        &>.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
         img {
-            padding: 0;
             width: 75px;
             height: 75px;
             margin-bottom: 10px;
@@ -192,7 +212,8 @@ main.content article {
         }
 
         .text-clanek {
-            flex: 0;
+            // flex: 0;
+            // flex-direction: column;
 
             h1,
             h2,
@@ -246,13 +267,33 @@ main.content article {
                 height: auto;
             }
 
+            .article-thumbnail-container {
+                display: none;
+            }
+
             .galerie-clanek {
-                float: none;
-                display: inline;
+                .mini {
+                    width: auto;
+                    margin: 10px 0;
+
+                    &>.gallery {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+
+                    img {
+                        margin: 3px;
+                    }
+                }
             }
 
             img.wp-post-image {
                 display: none;
+            }
+
+            &.full-clanek {
+                flex-direction: column-reverse;
             }
         }
     }

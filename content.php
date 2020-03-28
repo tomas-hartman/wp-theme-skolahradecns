@@ -1,5 +1,5 @@
 <article class="prispevek format-height-160">
-        <div class="arcitle-thumbnail-container">
+        <div class="article-thumbnail-container">
             <?php if(has_post_thumbnail()) {?>
                     <a href="<?php the_permalink();?>">
                         <img data-src="<?php the_post_thumbnail_url('small-thumbnail');?>" alt="<?php the_title_attribute(); ?>" class="lazy-load wp-post-image"> 

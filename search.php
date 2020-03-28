@@ -1,7 +1,7 @@
 <?php
       get_header();
 ?>   
-    <div id="nav-line">
+    <div class="nav-line purple">
     <?php if(have_posts()) : ?>
     
         <h1>Výsledky vyhledávání pro výraz "<?php the_search_query(); ?>"</h1>
@@ -45,7 +45,7 @@
     
    endwhile;
    else :
-       echo '<article><div id="nenalezeno">Hledaný výraz nenalezen</div></article>';
+       echo '<div id="nenalezeno">Hledaný výraz nenalezen</div>';
    endif; ?>
 </main>
 <?php get_footer(); ?>

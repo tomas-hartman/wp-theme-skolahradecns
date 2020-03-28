@@ -1,7 +1,7 @@
 <?php
 //Nastavení délky excerptu, pro čj asi 40 bude fajn, ale uvidíme.
 function custom_excerpt_length( $length ) {
-	return 35;
+	return 33;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

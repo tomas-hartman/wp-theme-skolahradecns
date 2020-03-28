@@ -1,11 +1,13 @@
 @import 'paging_nav';
 @import 'content_default';
-// @import 'content_gallery';
+@import 'content_gallery';
 @import 'content_warning';
 @import 'projects';
 @import 'pdf';
 @import 'search';
 @import 'attachments';
+@import 'error';
+@import 'online_edu';
 
 /* příspěvky */
 main.content {
