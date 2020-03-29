@@ -12,7 +12,9 @@
         <article class="prispevek full-clanek">
             <div class="article-thumbnail-container">
                 <div class="galerie-clanek">
-                    <img data-src="<?php the_post_thumbnail_url('small-thumbnail');?>" alt="Obrázek <?php the_title_attribute(); ?>" class="wp-post-image lazy-load mobile-no-load">
+                    <?php if( has_post_thumbnail() ): ?>
+                        <img data-src="<?php the_post_thumbnail_url('small-thumbnail');?>" alt="Obrázek <?php the_title_attribute(); ?>" class="wp-post-image lazy-load mobile-no-load">
+                    <?php endif; ?>
                     <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  
                     <div class="mini">
                     <?php
