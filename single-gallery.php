@@ -1,7 +1,7 @@
 <article class="galerie full-gallery full-clanek">
     <div class="article-content-container">
             <div class="article-header-container">
-            <?php if(has_post_thumbnail()) {the_post_thumbnail('thumbnail'); }?>
+            <img data-src="<?php the_post_thumbnail_url('thumbnail');?>" alt="Obrázek <?php the_title_attribute(); ?>" class="wp-post-image lazy-load mobile-no-load">
             <?php include 'header-single.php'; ?>
             </div>
         

@@ -110,7 +110,6 @@ if(isset($_COOKIE["online_edu_class"])){
 
 } else {
     // 2. pokud nemám nasetovanou cookie se třídou, zobrazím welcome page
-    // Pokud není nasetovaná cookie
     render_page();
                   
 } ?>

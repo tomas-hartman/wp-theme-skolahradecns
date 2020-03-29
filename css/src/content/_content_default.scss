@@ -182,6 +182,9 @@ main.content article {
         img {
             margin-bottom: 10px;
             box-shadow: 1px 8px 0px -4px $asbestos;
+            display: block;
+            max-width: 160px;
+            max-height: 160px;
         }
     }
 
@@ -296,6 +299,10 @@ main.content article {
 
             &.full-clanek {
                 flex-direction: column-reverse;
+
+                .article-thumbnail-container {
+                    display: initial;
+                }
             }
         }
     }

@@ -10,10 +10,9 @@
     <?php wp_nav_menu( array ('theme_location' => 'menu_dokumenty'));?>
 </nav>
 
-<div class="body-content-with-navbar-container">
-        <!--container pro rozložení stránky, ukončen je ve footeru-->
-<main class="content">  
-<?php
+<div class="body-content-with-navbar-container"><!--container pro rozložení stránky, ukončen je ve footeru-->
+  <main class="content">  
+    <?php
       if(have_posts()) :
             while (have_posts()) : the_post(); ?>        
 
@@ -37,11 +36,11 @@
             </section>      
           </div>
         </article>
-          
-<?php endwhile;
-              else :
-                  echo '<p>Obsah nenalezen</p>';
-              endif;
-?>        
-</main>
+              
+    <?php endwhile;
+            else :
+                echo '<p>Obsah nenalezen</p>';
+            endif;
+    ?>        
+  </main>
 <?php get_footer(); ?>
