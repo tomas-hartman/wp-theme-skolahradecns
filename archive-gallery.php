@@ -9,7 +9,7 @@ get_header();
 
 /*Nastavení pro query bude: mezi tím a tím datem, categorie: galerie, výpis bude galeriovej*/
 ?>
-    <div id="nav-line"> <!-- Upravit CSS podobu tohohle -->
+    <div class="nav-line purple">
         <h1><?php 
         
             if (is_category()) {
@@ -32,49 +32,46 @@ get_header();
         
         ?></h1>
     </div>
-<nav class="menu-docs jidelna"><ul>
-<?php
+<nav class="navbar-menu blue jidelna">
+    <ul>
+        <?php
 
-/*Loop která zjistí roky... snad*/
-$query_args = array (
-                      'category_name' => 'galerie',
-                      'order' => 'ASC',
-                      //'date_query' => array ('year' => $_GET['year']) 
-                      );
-$roky_galerii = new WP_Query($query_args);
-$year = 2013;
-/*tohle zobrazí roky ve kterých byly příspěvky publikovaný a jako takový ty roky vypíše (i v odkazu)*/
-while ($roky_galerii->have_posts()) : $roky_galerii->the_post();
-  $rok = get_the_date('Y');
-  while($rok_a<$rok) {
-      ?><li class="archive_<?php echo $rok;?>"><a href="<?php echo get_site_url() . '/archiv-galerie/' . $rok; ?>"><?php echo $rok;?></a></li><?php
-      $rok_a = get_the_date('Y');
-  }
-  
-  
-endwhile;
+        $query_args = array (
+                            'category_name' => 'galerie',
+                            'order' => 'ASC',
+                            //'date_query' => array ('year' => $_GET['year']) 
+                            );
+        $roky_galerii = new WP_Query($query_args);
 
+        /*tohle zobrazí roky ve kterých byly příspěvky publikovaný a jako takový ty roky vypíše (i v odkazu)*/
+        while ($roky_galerii->have_posts()) : $roky_galerii->the_post();
+        $rok = get_the_date('Y');
+        while($rok_a<$rok) {
+            ?><li class="archive_<?php echo $rok;?>"><a href="<?php echo get_site_url() . '/archiv-galerie/' . $rok; ?>"><?php echo $rok;?></a></li><?php
+            $rok_a = get_the_date('Y');
+        }
 
-wp_reset_postdata();
+        endwhile;
 
-/* -- END loop s rokama -- */ ?>
-</ul></nav>    
-<main>
-<?php simpleYearlyArchive('yearly');
-  echo '<br>'; ?>
+        wp_reset_postdata();
 
-   <?php if($roky_galerii->have_posts()) :
-      while ($roky_galerii->have_posts()) : $roky_galerii->the_post();
-         
-          
-   get_template_part('content', get_post_format());
-    
-   endwhile;
-   else :
-       echo '<div id="nenalezeno">Obsah nenalezen</div>';
-   endif; ?>
-</main>
-<?php 
-    include 'sidebar.php';
-    get_footer();
-?>
+        /* -- END loop s rokama -- */ ?>
+    </ul>
+</nav>   
+<div class="body-content-with-navbar-container"><!--container pro rozložení stránky, ukončen je ve footeru--> 
+    <main class="content">
+        <?php simpleYearlyArchive('yearly');
+        echo '<br>'; ?>
+
+        <?php if($roky_galerii->have_posts()) :
+            while ($roky_galerii->have_posts()) : $roky_galerii->the_post();
+                
+                
+        get_template_part('content', get_post_format());
+            
+        endwhile;
+        else :
+            echo '<div id="nenalezeno">Obsah nenalezen</div>';
+        endif; ?>
+    </main>
+<?php get_footer(); ?>

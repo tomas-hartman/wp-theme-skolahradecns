@@ -1,0 +1,34 @@
+/* Spodní navigační proužek (stránkovací) */
+nav.next-previous-posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    background-color: $navy-dark;
+
+    &>* {
+        font-size: medium;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $clouds-white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $clouds-white;
+        background-color: $navy-light;
+        text-decoration: underline;
+    }
+
+    span.current {
+        color: $navy-light;
+        background-color: $clouds-white;
+    }
+}

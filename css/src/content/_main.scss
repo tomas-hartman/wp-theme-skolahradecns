@@ -1,0 +1,26 @@
+@import 'paging_nav';
+@import 'content_default';
+@import 'content_gallery';
+@import 'content_warning';
+@import 'projects';
+@import 'pdf';
+@import 'search';
+@import 'attachments';
+@import 'error';
+@import 'online_edu';
+
+/* příspěvky */
+main.content {
+    width: 100%;
+    max-width: 630px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 959px) {
+    main.content {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

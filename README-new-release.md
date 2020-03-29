@@ -1,4 +1,21 @@
-# How to deploy a new version of the theme
+# CSS Development
+
+## dev:
+
+```bash
+sass --watch css/src/style.scss:css/style.css
+```
+
+## production:
+
+pre-deployment procedure
+
+```
+sass css/src/_header.scss:style.css --no-charset --no-source-map
+sass css/src/style.scss:css/style.css -s compressed
+```
+
+# Deployment
 
 1. Merge changes to master and then to master-release
 2. Sync master-release with the actual release by git ftp

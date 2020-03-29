@@ -7,13 +7,14 @@
     get_header();
 ?>
 
-<nav class="menu-docs projekty"> <!-- Tohle menu se pak předělá na klasický WP menu! -->
-    
+<nav class="navbar-menu blue projekty">
     <?php wp_nav_menu( array ('theme_location' => 'menu_projekty'));?>
-
 </nav>
+
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
       
-<main>  
+<main class="content">  
 <?php
       if(have_posts()) :
             while (have_posts()) : the_post(); 
@@ -23,23 +24,24 @@
       projekty_logolink();   
 ?>
 
-
         <article class="prispevek full-clanek">
-        <header class="<?php cat_to_class(); ?>">
-            <h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-            <h2>přidáno <?php the_time('d.m.Y');?></h2> 
-            
-        </header>
-        <div class="text-clanek page-docs">
-        <?php 
-        if(wpba_attachments_exist()) {
-        echo wpba_attachment_list(); } ?>
-            
-            <?php
-              echo the_content();
-            ?>
-          
-        </div>      
+          <div class="article-content-container">
+            <?php include 'header-page.php'; ?>
+    
+            <?php if(wpba_attachments_exist()) { ?>
+                    <div class="attachments attachments-upper blue">
+                      <?php echo wpba_attachment_list(); ?>
+                    </div> 
+            <?php } ?>
+
+            <section class="text-clanek page-docs">
+                
+                <?php
+                  echo the_content();
+                ?>
+              
+            </section>      
+          </div>
         </article>
           
 <?php endwhile;
@@ -48,7 +50,4 @@
               endif;
 ?>        
 </main>
-<?php get_sidebar();?>
-<?php 
-    get_footer(); 
-?>
+<?php get_footer(); ?>

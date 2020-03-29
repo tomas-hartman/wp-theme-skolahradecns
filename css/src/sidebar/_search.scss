@@ -1,0 +1,70 @@
+/*Sidebar - hledání - pokus o opravu*/
+.sidebar .searching {
+    width: 290px;
+    margin: -10px 0 -10px -10px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 35px;
+
+    .search-form {
+        box-sizing: border-box;
+
+        label {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    span {
+        display: none;
+    }
+
+    #submit-button {
+        background-image: url(../img/lupa1.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: $concrete;
+        color: rgba(0, 0, 0, 0);
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $navy-dark;
+            background-image: url(../img/lupa_hover.png);
+        }
+    }
+
+    #searchform {
+        background-color: $clouds-white;
+        border: none;
+        height: 35px;
+        padding: 10px 10px 10px 10px;
+        flex-grow: 1;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 959px) {
+
+    .sidebar .searching {
+        width: 100%;
+        margin: 0;
+
+        .search-form label {
+            background-color: $concrete;
+            margin: -10px -10px 0 -10px;
+            height: 45px;
+        }
+
+        #submit-button {
+            width: 45px;
+            height: 45px;
+        }
+
+        #searchform {
+            height: auto;
+        }
+    }
+}

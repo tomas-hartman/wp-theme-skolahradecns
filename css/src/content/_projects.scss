@@ -1,0 +1,34 @@
+/*Projekty - logolink na stránkách*/
+// @todo mixin?
+main.content section {
+    &.logolink-gen {
+        height: 120px;
+        margin-bottom: 7px;
+    }
+
+    &.logolink-big {
+        background: $white url(../img/proj/logolink_o.jpg) center center no-repeat;
+        background-size: auto 120px;
+    }
+
+    &.logolink-Visegrad {
+        background: $white url(../img/proj/visegrad_fund_logo_blue_290px.png) center center no-repeat;
+        background-size: auto 120px;
+    }
+
+    &.logolink-etwinning {
+        background: $white url(../img/proj/etwinning.svg) center center no-repeat;
+        background-size: auto 105px;
+    }
+
+    &.logolink-cez {
+        background: $white url(../img/proj/logo_cez.png) center center no-repeat;
+        background-size: auto 120px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main.content section.logolink-gen {
+        min-width: auto;
+    }
+}

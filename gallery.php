@@ -1,7 +1,9 @@
 <?php
     get_header();
 ?>
-<main>
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
+<main class="content">
 <?php
    if(have_posts()) :
       while (have_posts()) : the_post();   
@@ -20,7 +22,4 @@
        echo '<div id="nenalezeno">Obsah nenalezen</div>';
    endif; ?>
 </main>
-<?php 
-    include 'sidebar.php';
-    get_footer();
-?>
+<?php get_footer(); ?>

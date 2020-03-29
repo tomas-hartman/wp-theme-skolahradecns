@@ -1,7 +1,7 @@
 <?php
 //Nastavení délky excerptu, pro čj asi 40 bude fajn, ale uvidíme.
 function custom_excerpt_length( $length ) {
-	return 35;
+	return 33;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -11,7 +11,7 @@ function get_excerpt() {
       $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
       $excerpt = strip_shortcodes($excerpt);
       $excerpt = strip_tags($excerpt);
-      $excerpt = substr($excerpt, 0, 250);
+      $excerpt = substr($excerpt, 0, 270);
       $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
       $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
       $excerpt = $excerpt.'... ';
@@ -22,6 +22,7 @@ function get_excerpt() {
   }
 }
 
+// @todo vykleštit tuto funkci
 function zjisti_kategorii() {
 $categories = get_the_category();
            $output = '';

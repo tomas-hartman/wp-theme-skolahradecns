@@ -56,7 +56,7 @@
     <!-- <script><?php //include "js/fb_page_plugin.js"; ?></script> -->
     <header class="baner overlay">
         <a href="<?php echo home_url(); ?>">
-            <img src="<?php bloginfo('template_directory'); ?>/img/logo_zsHnS.png" alt="logo_zsHnS.png, 10kB" title="ZŠ a MŠ Hradec nad Svitavou - logo"
+            <img src="<?php bloginfo('template_directory'); ?>/img/logo_zsHnS.png" alt="ZŠ a MŠ Hradec nad Svitavou - logo" title="ZŠ a MŠ Hradec nad Svitavou - logo"
                 border="0" height="158" width="467" class="logo-skola"></a>
     </header>
     <nav class="main-menu" role="navigation">
@@ -66,5 +66,4 @@
                                    ));          
           ?>
     </nav>
-    <div class="telo">
-        <!--container pro rozložení stránky, ukončen je ve footeru-->
+    <div class="body-content-container"><!--container pro rozložení stránky, ukončen je ve footeru-->

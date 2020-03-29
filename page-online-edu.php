@@ -6,13 +6,14 @@
    
     get_header();
 ?>
-<nav class="navbar_menu"> <!-- Tohle menu se pak předělá na klasický WP menu! -->
-    
+<nav class="navbar-menu green online-edu">
     <?php wp_nav_menu( array ('theme_location' => 'menu_online_edu', 'menu_class' => 'menu_online_edu'));?>
-
 </nav>
+
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
       
-<main>  
+<main class="content">  
 <?php
 
 function render_page() {
@@ -21,32 +22,23 @@ function render_page() {
 
 
     <article class="prispevek full-clanek">
-    <header class="<?php cat_to_class(); ?>">
-        <h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-        <h2><?php 
-          $cas_pridani = get_the_time();
-          $cas_aktualizace = get_the_modified_time();
-        
-        if($cas_pridani != $cas_aktualizace) {
-            echo "aktuální k " . get_the_modified_time('d.m.Y'); 
-        }
-        else {
-            echo "přidáno " . get_the_time('d.m.Y');
-        }
-        ?>
-       </h2> 
-        
-    </header>
-    <div class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
-    <?php 
-    if(wpba_attachments_exist()) {
-    echo wpba_attachment_list(); } ?>
-        
-        <?php
-          echo the_content();
-        ?>
-        
-    </div>      
+        <div class="article-content-container">
+            <?php include 'header-page.php'; ?>
+    
+            <?php if(wpba_attachments_exist()) { ?>
+                    <div class="attachments attachments-upper green">
+                      <?php echo wpba_attachment_list(); ?>
+                    </div> 
+            <?php } ?>
+
+            <section class="text-clanek <?php if(wpba_attachments_exist()) {echo " page-docs "; } zjisti_kategorii(); ?>">
+                
+                <?php
+                echo the_content();
+                ?>
+                
+            </section>      
+        </div>
     </article>
       
 <?php endwhile;
@@ -118,12 +110,9 @@ if(isset($_COOKIE["online_edu_class"])){
 
 } else {
     // 2. pokud nemám nasetovanou cookie se třídou, zobrazím welcome page
-    // Pokud není nasetovaná cookie
     render_page();
                   
 } ?>
 
 </main>
-
-<?php get_sidebar();?>
-<?php get_footer();?>
+<?php get_footer(); ?>

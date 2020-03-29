@@ -6,8 +6,11 @@
    
     get_header();
 ?>
-      
-<main>
+
+<div class="body-content-with-navbar-container">
+        <!--container pro rozložení stránky, ukončen je ve footeru-->
+
+<main class="content">
 <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
   $kategorie=zjisti_kategorii_2();
@@ -38,28 +41,28 @@
    /*HLAVNÍ Vypisovací část*/?>
    
    <article class="galerie full-gallery page-full-gallery">
-        <!--<?php if(has_post_thumbnail()) {the_post_thumbnail('small-thumbnail');?><style>main article.full-gallery header {width: 495px;}</style><?php } ?>-->
-        <header class="<?php cat_to_class(); ?>">
-            <h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-            <h2><?php the_time('d.m.Y');?> | <?php the_author_posts_link(); ?> | <?php the_category();?></h2>  
-        </header>
-        
-        <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
-        
-        <?php if(strlen($clanek) > 0) : ?>  
-        <div class="text-clanek">
-            
-            <?php 
-              //echo strip_shortcodes($post->post_content);
-              //the_content();
-              //echo $clanek;
-              ?>
-              <p><?php echo get_the_excerpt(); ?>
-            <a href="<?php the_permalink(); ?>" class="read-more">Číst více &raquo;</a>
-            </p>
-            
-            
+        <div class="article-thumbnail-container">
+          <!--<?php if(has_post_thumbnail()) {the_post_thumbnail('small-thumbnail');?><style>main article.full-gallery header {width: 495px;}</style><?php } ?>-->
         </div>
+
+        <div class="article-content-container">
+          <?php include 'header-content.php'; ?>
+          
+          <?php $clanek = apply_filters('the_content', strip_shortcodes($post->post_content));    ?>
+          
+          <?php if(strlen($clanek) > 0) : ?>  
+          <section class="text-clanek">
+              <?php 
+                //echo strip_shortcodes($post->post_content);
+                //the_content();
+                //echo $clanek;
+                ?>
+                <p><?php echo get_the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>" class="read-more">Číst více &raquo;</a>
+              </p>
+          </section>
+        </div>
+
         <?php endif; ?>      
 
         <?php if( get_post_gallery() ) { //Zjišťujeme, jestli má galerii a jestli jo, tak ji to vykreslí ?>  
@@ -95,7 +98,4 @@
        echo '<div id="nenalezeno">Obsah nenalezen</div>';
    endif; ?>
 </main>
-<?php get_sidebar();?>
-<?php 
-    get_footer(); 
-?>
+<?php get_footer(); ?>

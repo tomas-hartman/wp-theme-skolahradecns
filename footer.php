@@ -1,3 +1,6 @@
+    <?php get_sidebar();?>
+</div> <!-- END OF .body-content-with-container -->
+</div> <!-- END OF .body-content-container -->
 <footer id="ft-flex">
     <div class="horni">
         <span class="ft-headline"><h3>Projekty a sponzoři</h3></span>
@@ -44,7 +47,7 @@
     </div>
 </footer>
 <?php wp_footer(); ?>
-    </div>
+    <!-- </div> -->
     <script>
         function checkXmasTheme () {
             var today = new Date();
@@ -53,13 +56,13 @@
 
             if(today >= xmasPeriodStart || today <= xmasPeriodEnd){
 
-                console.log(xmasPeriodStart);
-                console.log(xmasPeriodEnd);
-                console.log(today);
+                // console.log(xmasPeriodStart);
+                // console.log(xmasPeriodEnd);
+                // console.log(today);
                 document.getElementsByTagName("body")[0].style.background = "url(img/xmas_pattern_grey.png) repeat";
             }
 
-            console.log("ahoj");
+            // console.log("ahoj");
         }
         // checkXmasTheme();
     </script>

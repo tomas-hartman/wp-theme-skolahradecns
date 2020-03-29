@@ -1,0 +1,115 @@
+/* START ČLÁNEK - PŘÍLOHY */
+/* @todo rewrite */
+
+.attachments {
+    background-color: $concrete;
+
+    font-size: medium;
+    font-weight: 300;
+
+    width: 615px;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 10px 15px;
+
+    // ONLY MOBILNÍ
+    // margin-right: -15px;
+    // padding-right: 20px;
+
+    box-sizing: border-box;
+
+    &.attachments-upper {
+        box-shadow: 0px 4px rgba(0, 0, 0, 0.3) inset;
+        margin-bottom: -5px;
+
+        &.blue {
+            background-color: $blue-light;
+        }
+
+        &.green {
+            background-color: $green-light;
+        }
+
+        &.red {
+            background-color: $red-light;
+        }
+    }
+
+    a {
+        color: $black;
+    }
+
+    #wpba_attachment_list {
+        width: 100%;
+
+        ul {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            &>li {
+                padding: 7px 0px;
+                margin-bottom: 0px;
+                margin-right: 20px;
+                display: block;
+                // display: flex;
+                // align-items: center;
+
+                .wpba-icon {
+                    margin-right: 0;
+                    height: 20px;
+                    width: auto;
+                    padding: 3px 0;
+                }
+
+                .wpba-link {
+                    @include ellipsis();
+                    flex: 1;
+                    padding: initial;
+                    background-color: initial;
+                    border-radius: initial;
+                    margin-left: 10px;
+                    padding: 3px 0;
+                    text-decoration: none;
+                    max-width: 550px;
+
+                    &:hover {
+                        background-color: initial;
+                        color: initial;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    .attachments {
+        width: auto;
+    }
+}
+
+// PŘÍLOHY - BARVY
+.text-clanek.page-docs.main-zs #wpba_attachment_list,
+.full-clanek .main-zs+.attachments {
+    background-color: $green-light;
+}
+
+.text-clanek.page-docs.main-ms #wpba_attachment_list,
+.full-clanek .main-ms+.attachments {
+    background-color: $red-light;
+}
+
+.text-clanek.page-docs.main-sd #wpba_attachment_list,
+.full-clanek .main-sd+.attachments {
+    background-color: $orange-light;
+}
+
+.text-clanek.page-docs.main-skola #wpba_attachment_list,
+.full-clanek .main-skola+.attachments {
+    background-color: $blue-light;
+}
+
+/* END ČLÁNEK - PŘÍLOHY */
