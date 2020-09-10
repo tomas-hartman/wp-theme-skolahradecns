@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "sass --watch css/src/style.scss:css/style.css",
-    "deploy": "sass css/src/_header.scss:style.css --no-charset --no-source-map && sass css/src/style.scss:css/style.css -s compressed && git ftp push --branch \"master-release\""
+    "scss-prod": "sass css/src/_header.scss:style.css --no-charset --no-source-map && sass css/src/style.scss:css/style.css -s compressed",
+    "deploy": "npm run scss-prod && git ftp push --branch \"master-release\""
   },
   "repository": {
     "type": "git",
