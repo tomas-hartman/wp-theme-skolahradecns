@@ -178,6 +178,8 @@ nav.main-menu .top-menu .orange a:hover,
 nav.main-menu .top-menu .orange a:focus,
 nav.main-menu .orange .sub-menu li {
   background-color: #f39c12;
+  color: black;
+  text-shadow: none;
 }
 nav.main-menu .orange .sub-menu li a:hover {
   background-color: #f1c40f;

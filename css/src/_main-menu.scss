@@ -11,7 +11,7 @@
     #{$color-class} .sub-menu li {
         background-color: $color;
 
-        @if $color-class=="orange" {
+        @if $color-class==".orange" {
             color: $black;
             text-shadow: none;
         }
