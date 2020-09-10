@@ -2,13 +2,15 @@
 
 ## dev:
 
+`npm run scss`
+
 ```bash
 sass --watch css/src/style.scss:css/style.css
 ```
 
 ## production:
 
-pre-deployment procedure
+pre-deployment procedure: `npm run scss-prod`
 
 ```
 sass css/src/_header.scss:style.css --no-charset --no-source-map
@@ -17,14 +19,12 @@ sass css/src/style.scss:css/style.css -s compressed
 
 # Deployment
 
-1. Merge changes to master and then to master-release
-2. Sync master-release with the actual release by git ftp
-
-```bash
-cd "git-project-root:.../localhost/hradecns.cz_git/..."
-
-git ftp push --branch "master-release"
-```
+1. `git checkout master`
+2. `npm run scss-prod`
+3. commit & push to master
+4. pull request to master-release & merge
+5. `git checkout master-release`
+6. `npm run deploy`
 
 ## More info:
 
