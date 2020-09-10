@@ -91,5 +91,11 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        .right {
+            flex-direction: column;
+            display: flex;
+            align-items: end;
+        }
     }
 }

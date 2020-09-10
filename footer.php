@@ -43,7 +43,10 @@
     </div>
     <div class="spodni">
         <div class="left"><p>Copyright &copy; <?php echo date('Y'); ?> <a href="https://github.com/tomas-hartman" class="underline">t3</a></p><p>Powered by WordPress</p></div>
-        <p class="right"><a href="<?php echo admin_url();?>">administrace</a></p>
+        <div class="right">
+            <a href="<?php echo get_site_url(); ?>/prohlaseni-o-pristupnosti/" class="ft-headline">prohlášení o přístupnosti</a>
+            <a href="<?php echo admin_url();?>">administrace</a>
+        </div>
     </div>
 </footer>
 <?php wp_footer(); ?>
